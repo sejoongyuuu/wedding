@@ -1,5 +1,3 @@
-import picture from '../../public/image/picture/picture_1.PNG';
-import Image from 'next/image';
 import Fade from 'react-reveal/Fade';
 
 export default function TopContainer() {
@@ -17,7 +15,7 @@ export default function TopContainer() {
                 </div>
             </Fade>
             <Fade bottom>
-                <Image src={picture}/>
+                <img src="/static/image/picture/picture_1.PNG" style={{width: '80%'}}/>
             </Fade>
             <Fade right>
                 <div className="textContainer">

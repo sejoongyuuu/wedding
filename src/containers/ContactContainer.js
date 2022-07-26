@@ -1,10 +1,11 @@
 import AccountComponent from "../components/AccountComponent";
-import tel_blue from "../../public/image/picture/tel_blue.PNG";
-import tel_pink from "../../public/image/picture/tel_pink.PNG";
-import heart from "../../public/image/picture/heart.PNG";
-import bride from "../../public/image/picture/bride.PNG";
-import groom from "../../public/image/picture/groom.PNG";
+import tel_blue from "../../public/static/image/picture/tel_blue.PNG";
+import tel_pink from "../../public/static/image/picture/tel_pink.PNG";
+import heart from "../../public/static/image/picture/heart.PNG";
+import bride from "../../public/static/image/picture/bride.PNG";
+import groom from "../../public/static/image/picture/groom.PNG";
 import Fade from 'react-reveal/Fade';
+import Image from "next/image";
 
 export default function ContactContainer() {
     return (

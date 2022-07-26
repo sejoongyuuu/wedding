@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/globals.css'
+import '../public/static/fonts/fonts.css'
 import CssBaseline from "@mui/material/CssBaseline";
 
 function MyApp(props) {

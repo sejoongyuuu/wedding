@@ -1,6 +1,4 @@
 import MapComponent from "../components/MapComponent";
-import drinkImage from "../../public/image/picture/drink.PNG";
-import location from "../../public/image/picture/location.PNG";
 import Fade from 'react-reveal/Fade';
 
 export default function LocationContainer() {
@@ -9,7 +7,7 @@ export default function LocationContainer() {
             <Fade bottom>
                 <div className="titleDiv"> LOCATION</div>
                 <div style={{paddingBottom: '5%'}}>
-                    <img src={location} style={{width: '13%'}}/>
+                    <img src="/static/image/picture/location.PNG" style={{width: '13%'}}/>
                     <div className="fontMedium" style={{fontSize: '110%'}}> 소노펠리체 컨벤션</div>
                     <div className="fontThin" style={{fontSize: '95%'}}> 서울특별시 강남구 테헤란로 87길 22 도심공항터미널 3층
                         <div className="fontNumLight"> 02.2222.7401</div>
@@ -53,8 +51,8 @@ export default function LocationContainer() {
                 </Fade>
                 <Fade bottom>
                     <div className="guideDiv">
-                        <img src={drinkImage} style={{width: '60%'}}></img>
-                        <div className="bold">
+                        <img src="/static/image/picture/drink.PNG" style={{width: '60%'}}/>
+                        <div className="guideBold">
                             예식 1시간 전부터<br/>
                             웰컴드링크와 포토부스가 마련됩니다.
                         </div>
