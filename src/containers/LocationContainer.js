@@ -14,8 +14,8 @@ export default function LocationContainer() {
                         <div className="numLight"> 02.2222.7401</div>
                     </div>
                 </div>
-                <div>
-                <MapComponent/>
+                <div className={styles.mapDiv}>
+                    <MapComponent/>
                 </div>
             </Fade>
             <div className={styles.detailContainer}>
