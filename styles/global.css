@@ -32,21 +32,7 @@ body {
     letter-spacing: 2px;
     padding-bottom: 5%;
 }
-.accountSection {
-    padding-top: 5%;
-    padding-bottom: 20%;
-}
 
-.contactSection {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 5%;
-}
-
-.contactDiv {
-    font-size: 105%;
-}
 td {
     font-size: 90%;
     padding-bottom: 2%;
@@ -89,4 +75,9 @@ td {
     padding: 10px 15px;
     font-size: 14px;
     font-family: 'Noto Sans KR';
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -1,6 +1,9 @@
 import MapComponent from "../components/MapComponent";
 import Fade from 'react-reveal/Fade';
 import styles from '../../styles/location.module.css';
+import location from '../../public/images/picture/location.PNG';
+import drink from '../../public/images/picture/drink.PNG';
+import Image from "next/image";
 
 export default function LocationContainer() {
     return (
@@ -8,14 +11,16 @@ export default function LocationContainer() {
             <Fade bottom>
                 <div className="titleDiv"> LOCATION</div>
                 <div style={{paddingBottom: '5%'}}>
-                    <img src="/static/image/picture/location.PNG" style={{width: '13%'}}/>
+                    <div style={{width: '13%', margin: 'auto'}}>
+                        <Image src={location} alt=""/>
+                    </div>
                     <div className="medium" style={{fontSize: '110%'}}> 소노펠리체 컨벤션</div>
                     <div className="thin" style={{fontSize: '95%'}}> 서울특별시 강남구 테헤란로 87길 22 도심공항터미널 3층
                         <div className="numLight"> 02.2222.7401</div>
                     </div>
                 </div>
                 <div className={styles.mapDiv}>
-                <MapComponent/>
+                    <MapComponent/>
                 </div>
             </Fade>
             <div className={styles.detailContainer}>
@@ -54,7 +59,9 @@ export default function LocationContainer() {
                 </Fade>
                 <Fade bottom>
                     <div className={styles.guideDiv}>
-                        <img src="/static/image/picture/drink.PNG" style={{width: '50%'}}/>
+                        <div style={{width: '50%', margin: 'auto'}}>
+                            <Image src={drink} alt=""/>
+                        </div>
                         <div className={styles.guideBold}>
                             예식 1시간 전부터<br/>
                             웰컴드링크와 포토부스가 마련됩니다.

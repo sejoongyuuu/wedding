@@ -2,3 +2,9 @@
     font-size: 110%;
     font-weight: 500;
 }
+
+.box{
+    margin: 15%;
+    padding: 7%;
+    border: 1px solid #888888;
+}

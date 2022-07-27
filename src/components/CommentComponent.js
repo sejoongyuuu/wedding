@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {Box, Button, Grid, InputBase, TextField} from "@mui/material";
 import {styled} from "@mui/material/styles";
+import styles from '../../styles/comment.module.css'
 
 const TextInput = styled(InputBase)({
     '& .MuiInputBase-input': {
@@ -9,7 +10,29 @@ const TextInput = styled(InputBase)({
     },
     fontFamily: 'Noto Sans KR',
     '&:focus': {
-        border: '2px solid #000000',
+        border: '2px solid #ced4da',
+    }
+});
+
+
+const CssTextField = styled(TextField)({
+    fontFamily: 'Noto Sans KR',
+    "& label.Mui-focused": {
+        color: "black"
+    },
+    "& .MuiInput-underline:after": {
+        borderBottomColor: "gray"
+    },
+    "&:hover": {
+        backgroundColor: "transparent"
+    },
+    "& .MuiOutlinedInput-root": {
+        "& fieldset": {
+            borderColor: "gray"
+        },
+        "&.Mui-focused fieldset": {
+            borderColor: "gray"
+        }
     }
 });
 
@@ -21,18 +44,21 @@ const TextContentInput = styled(InputBase)({
     },
     fontFamily: 'Noto Sans KR',
     '&:focus': {
-        border: '2px solid #000000',
+        border: '2px solid #ced4da',
     }
 });
 
 const ColorButton = styled(Button)(({theme}) => ({
-    border: '1px solid #ced4da',
+    color: '#ffffff',
+    fontFamily: 'Noto Sans KR',
+    fontWeight: 500,
+    backgroundColor: '#FF6E5B',
     '&:hover': {
-        border: '2px solid #ced4da',
+        backgroundColor: '#FFACA1'
     },
 }));
 
-export default function CommentComponent(styles) {
+export default function CommentComponent() {
     const [nameValue, setNameValue] = useState("");
     const [passwordValue, setPasswordValue] = useState("");
     const [contentValue, setContentValue] = useState("");
@@ -91,22 +117,34 @@ export default function CommentComponent(styles) {
         <div>
             <form onSubmit={handleSubmit}>
                 <Box
+                    className={styles.box}
                     component="form"
                     noValidate
                     sx={{
                         display: "grid",
                         gridTemplateColumns: {sm: "1fr"},
-                        gap: 2
+                        gap: 1.5
                     }}
                 >
-                    <TextInput
+                    <CssTextField
+                        label={"이름"}
                         required
                         id="standard-size-small"
                         size="small"
                         name={"name"}
                         placeholder={"이름"}
                         value={nameValue}
+                        variant="standard"
                         onChange={onNameChange}
+                    />
+                    <TextContentInput
+                        required
+                        multiline
+                        rows={2}
+                        name={"content"}
+                        placeholder={"내용"}
+                        value={contentValue}
+                        onChange={onContentChange}
                     />
                     <TextInput
                         required
@@ -117,15 +155,6 @@ export default function CommentComponent(styles) {
                         value={passwordValue}
                         onChange={onPasswordChange}
                         type="password"/>
-                    <TextContentInput
-                        required
-                        multiline
-                        rows={2}
-                        name={"content"}
-                        placeholder={"내용"}
-                        value={contentValue}
-                        onChange={onContentChange}
-                    />
                     <ColorButton type="submit">등록</ColorButton>
                 </Box>
             </form>
@@ -133,7 +162,7 @@ export default function CommentComponent(styles) {
             {loading ? <div>loading...</div> : (
                 <div>
                     {comments.map(comment => (
-                        <div>
+                        <div key={comment._id}>
                             {comment.name} : {comment.content}<br/>
                             {comment.createdDate}
                         </div>

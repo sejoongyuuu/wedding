@@ -2,3 +2,19 @@
     padding-top: 15%;
     padding-bottom: 15%;
 }
+.accountSection {
+    padding-top: 5%;
+    padding-bottom: 20%;
+}
+
+.contactSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+.contactDiv {
+    font-size: 105%;
+}

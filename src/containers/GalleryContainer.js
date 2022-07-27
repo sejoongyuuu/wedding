@@ -1,5 +1,6 @@
 import Fade from 'react-reveal/Fade';
 import {ReactPhotoCollage} from "react-photo-collage";
+import img_1 from '../../public/images/gallery/0001.jpg';
 
 
 const setting = {
@@ -7,7 +8,11 @@ const setting = {
     height: ["150px", "150px", "150px"],
     layout: [3, 3, 3],
     photos: [
-        {source: '/static/image/gallery/0001.jpg'},
+        {source: '/images/gallery/0001.jpg'},
+        {source: '/images/gallery/0002.jpg'},
+        {source: '/images/gallery/0003.jpg'},
+        {source: '/images/gallery/0004.jpg'},
+        {source: '/images/gallery/0005.jpg'},
 
     ],
     showNumOfRemainingPhotos: true

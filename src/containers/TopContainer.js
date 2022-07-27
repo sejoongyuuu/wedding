@@ -1,5 +1,7 @@
 import Fade from 'react-reveal/Fade';
 import styles from '../../styles/top.module.css';
+import Image from 'next/image';
+import picture from '../../public/images/picture/picture1.PNG';
 
 export default function TopContainer() {
     return (
@@ -16,7 +18,9 @@ export default function TopContainer() {
                 </div>
             </Fade>
             <Fade bottom>
-                <img src="/static/image/picture/picture_1.PNG" style={{width: '80%'}}/>
+                <div style={{width: '80%',margin: "auto"}}>
+                    <Image src={picture} alt=""/>
+                </div>
             </Fade>
             <Fade right>
                 <div className={styles.textContainer}>
@@ -36,6 +40,5 @@ export default function TopContainer() {
                     </div>
                 </div>
             </Fade>
-        </div>
-    )
+        </div>)
 }
