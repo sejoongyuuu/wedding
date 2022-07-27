@@ -1,0 +1,57 @@
+.container {
+    padding-top: 10%;
+    padding-bottom: 15%;
+}
+
+.text {
+    text-align: left;
+    padding-left: 7%;
+    padding-right: 7%;
+    font-family: 'Gothic A1';
+    font-size: 300%;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 120%;
+}
+
+.name {
+    font-weight: 100;
+    line-height: 110%;
+    font-size: 60%;
+}
+
+.textContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+}
+
+.date {
+    font-family: 'Gothic A1';
+    font-weight: 900;
+    font-size: 105%;
+    letter-spacing: 1px;
+    line-height: 110%;
+    text-align: left;
+    padding-right: 2%;
+}
+
+.date .first {
+    font-size: 120%;
+}
+
+.eng {
+    font-family: 'Gothic A1';
+    font-weight: 400;
+    line-height: 95%;
+    letter-spacing: 0.3px;
+    text-align: left;
+    font-size: 90%;
+}
+
+.kor {
+    padding-top: 1%;
+    line-height: 100%;
+    text-align: left;
+}

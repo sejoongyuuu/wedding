@@ -1,7 +1,6 @@
 import React from 'react';
-import '../styles/globals.css'
+import '../styles/global.css'
 import '../public/static/fonts/fonts.css'
-import CssBaseline from "@mui/material/CssBaseline";
 
 function MyApp(props) {
     const {Component, pageProps} = props;
@@ -14,7 +13,6 @@ function MyApp(props) {
     }, []);
     return (
         <React.Fragment>
-            <CssBaseline/>
             <Component {...pageProps} />
         </React.Fragment>
     )

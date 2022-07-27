@@ -1,14 +1,15 @@
 import Fade from 'react-reveal/Fade';
+import styles from '../../styles/top.module.css';
 
 export default function TopContainer() {
     return (
-        <div className="topContainer">
+        <div className={styles.container}>
             <Fade left>
-                <div className="topText">
+                <div className={styles.text}>
                     <div>THE</div>
                     <div>WEDDING</div>
                     <div>DAY</div>
-                    <div className="topName">
+                    <div className={styles.name}>
                         <div>SEJOONG &</div>
                         <div>YUJEONG</div>
                     </div>
@@ -18,17 +19,17 @@ export default function TopContainer() {
                 <img src="/static/image/picture/picture_1.PNG" style={{width: '80%'}}/>
             </Fade>
             <Fade right>
-                <div className="textContainer">
-                    <div className="textDate">
-                        <div className="first">2022</div>
+                <div className={styles.textContainer}>
+                    <div className={styles.date}>
+                        <div className={styles.first}>2022</div>
                         09/18
                     </div>
                     <div>
                         <div>
-                            <div className="textEng">
+                            <div className={styles.eng}>
                                 SUN 15:00 SONO FELICE CONVENTION
                             </div>
-                            <div className="textKor">
+                            <div className={styles.kor}>
                                 일요일 오후 3시 소노펠리체 컨벤션
                             </div>
                         </div>

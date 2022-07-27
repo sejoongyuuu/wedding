@@ -60,11 +60,11 @@ export default function AccountComponent() {
                     <AccordionDetails>
                         <Typography variant="fontDetail">
                             <div>
-                                <div className="fontRegular" style={{paddingRight: '3%'}}>신부 최유정</div>
+                                <div className="regular" style={{paddingRight: '3%'}}>신부 최유정</div>
                                 우리은행 <span style={{letterSpacing: '0'}}>1002-756-471511 </span>
                             </div>
                             <div>
-                                <div className="fontRegular" style={{paddingRight: '3%', paddingTop: '3%'}}>신부 최유정
+                                <div className="regular" style={{paddingRight: '3%', paddingTop: '3%'}}>신부 최유정
                                 </div>
                                 우리은행 <span style={{letterSpacing: '0'}}>1002-756-471511 </span>
                             </div>

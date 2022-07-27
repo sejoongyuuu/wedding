@@ -1,0 +1,111 @@
+
+.container {
+    width: 100%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+
+.mapDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customoverlay {
+    bottom: 85px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    border-bottom: 2px solid #ddd;
+    float: left;
+    font-family: 'Gothic A1';
+    font-weight: 600;
+}
+
+.customoverlay:nth-of-type(n) {
+    border: 0;
+    box-shadow: 0px 1px 2px #888;
+}
+
+.customoverlay a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 14px;
+    overflow: hidden;
+    background: #3a3a3a;
+    background: #3a3a3a url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;
+}
+
+.customoverlay .title {
+    display: block;
+    text-align: center;
+    background: #fff;
+    margin-right: 35px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-family: 'Noto Sans KR';
+}
+
+.line {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-bottom: 1px solid #5A5A5A;
+}
+
+
+.detailContainer {
+    padding: 5% 10%;
+}
+
+.title {
+    font-weight: 500;
+    width: 20%;
+    vertical-align: top;
+    text-align: center;
+}
+
+.detail {
+    font-weight: 300;
+    font-size: 88%;
+}
+
+
+
+.line2 {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 90%;
+    color: white;
+    background: #2F9F27;
+    border-radius: 50%;
+    width: 21px;
+    height: 21px;
+    text-align: center;
+    vertical-align: center;
+}
+
+.line9 {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 90%;
+    color: white;
+    background: #B0963C;
+    border-radius: 50%;
+    width: 21px;
+    height: 21px;
+    text-align: center;
+    vertical-align: center;
+}
+
+.guideDiv {
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+
+.guideBold {
+    font-weight: 500;
+    padding-bottom: 3%;
+    padding-top: 3%;
+}

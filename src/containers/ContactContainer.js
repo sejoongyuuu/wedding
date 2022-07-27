@@ -22,14 +22,14 @@ export default function ContactContainer() {
                     <div style={{paddingLeft: '15%'}}>
                         <a href='tel:010-8875-8665'><img src={tel_blue} style={{width: '35%'}}/></a>
                         <div className="contactDiv">
-                            <span className="fontRegular">신랑 김세중</span>에게<br/>
+                            <span className="regular">신랑 김세중</span>에게<br/>
                             연락하기
                         </div>
                     </div>
                     <div style={{paddingRight: '15%'}}>
                         <a href='tel:010-8875-8665'><img src={tel_pink} style={{width: '35%'}}/></a>
                         <div className="contactDiv">
-                            <span className="fontRegular">신부 최유정</span>에게<br/>
+                            <span className="regular">신부 최유정</span>에게<br/>
                             연락하기
                         </div>
                     </div>

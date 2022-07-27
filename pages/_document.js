@@ -6,7 +6,6 @@ export default class MyDocument extends Document {
     render() {
         return (
             <Html lang="ko">
-
                 <Head>
                 </Head>
                 <body>

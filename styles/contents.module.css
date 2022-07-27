@@ -1,0 +1,18 @@
+.container {
+    font-family: 'Noto Sans KR';
+    font-size: 97%;
+    padding-top: 40%;
+    padding-bottom: 20%;
+    font-weight: 300;
+    line-height: 300%;
+}
+
+.title {
+    padding-bottom: 10%;
+    font-weight: 600;
+    font-size: 110%;
+}
+.body {
+    padding-bottom: 10%;
+    font-size: 97%;
+}
