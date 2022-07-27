@@ -12,9 +12,9 @@ export default function Home() {
             <TopContainer/>
             <ContentsContainer/>
             <LocationContainer/>
-            <GalleryContainer/>
-{/*            <CarouselComponent/>
-            <ContactContainer/>*/}
+{/*            <GalleryContainer/>
+            <CarouselComponent/>*/}
+            <ContactContainer/>
             <CommentContainer/>
         </div>
     )
