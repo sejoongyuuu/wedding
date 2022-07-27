@@ -1,6 +1,5 @@
 /*global kakao*/
 import React, {useEffect} from "react";
-import styles from '../../styles/location.module.css';
 
 const MapComponent = () => {
     useEffect(() => {
@@ -28,7 +27,7 @@ const MapComponent = () => {
                     map: map // 마커를 표시할 지도 객체
                 });
                 // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-                var content = '<div class={styles.customoverlay}>' +
+                var content = '<div class="customoverlay">' +
                     '  <a href="https://map.kakao.com/?itemId=8229296" target="_blank">' +
                     '    <span class="title">소노펠리체 컨벤션</span>' +
                     '  </a>' +

@@ -15,7 +15,7 @@ export default function LocationContainer() {
                     </div>
                 </div>
                 <div className={styles.mapDiv}>
-                    <MapComponent/>
+                <MapComponent/>
                 </div>
             </Fade>
             <div className={styles.detailContainer}>
