@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import TopContainer from "../src/containers/TopContainer";
+import {useEffect} from "react";
 
 const ContentsContainer = dynamic(() => import("../src/containers/ContentsContainer"), {
     ssr: false,
@@ -28,12 +29,16 @@ const CommentContainer = dynamic(() => import("../src/containers/CommentContaine
     loading: () => null,
 })
 
-
 export default function Home() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    });
     return (
         <div>
             <TopContainer/>
-            <ContentsContainer/>
+            <ContentsContainer
+                loading="lazy"
+            />
             <LocationContainer/>
             <GalleryContainer
                 loading="lazy"
