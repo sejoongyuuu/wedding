@@ -1,10 +1,30 @@
 import TopContainer from "../src/containers/TopContainer";
 import ContentsContainer from "../src/containers/ContentsContainer";
-import LocationContainer from "../src/containers/LocationContainer";
-import GalleryContainer from "../src/containers/GalleryContainer";
-import CommentContainer from "../src/containers/CommentContainer";
-import ContactContainer from "../src/containers/ContactContainer";
-import CarouselComponent from "../src/containers/CarouselComponent";
+import dynamic from "next/dynamic";
+
+const LocationContainer = dynamic(() => import("../src/containers/LocationContainer"), {
+    ssr: false,
+    loading: () => null,
+})
+
+const GalleryContainer = dynamic(() => import("../src/containers/GalleryContainer"), {
+    ssr: false,
+    loading: () => null,
+})
+
+const ContactContainer = dynamic(() => import("../src/containers/ContactContainer"), {
+    ssr: false,
+    loading: () => null,
+})
+
+const CarouselComponent = dynamic(() => import("../src/containers/CarouselComponent"), {
+    ssr: false,
+    loading: () => null,
+})
+const CommentContainer = dynamic(() => import("../src/containers/CommentContainer"), {
+    loading: () => null,
+})
+
 
 export default function Home() {
     return (
@@ -12,8 +32,8 @@ export default function Home() {
             <TopContainer/>
             <ContentsContainer/>
             <LocationContainer/>
-{/*            <GalleryContainer/>
-            <CarouselComponent/>*/}
+            <GalleryContainer/>
+            <CarouselComponent/>
             <ContactContainer/>
             <CommentContainer/>
         </div>
