@@ -18,8 +18,8 @@ export default function TopContainer() {
                 </div>
             </Fade>
             <Fade bottom>
-                <div style={{width: '80%',margin: "auto"}}>
-                    <Image src={picture} alt=""/>
+                <div style={{margin: "auto"}}>
+                    <Image src={picture} alt="" width={1084*0.8} height={985*0.8}/>
                 </div>
             </Fade>
             <Fade right>

@@ -7,8 +7,8 @@ export default function ContentsContainer() {
     return (
         <div className={styles.container}>
             <Fade bottom>
-                <div style={{width: '20%', margin: 'auto'}} >
-                    <Image src={flower} alt=""/>
+                <div style={{margin: 'auto'}}>
+                    <Image src={flower} alt="" width={340*0.2} height={136*0.2}/>
                 </div>
                 <div className={styles.title}>초대합니다.</div>
                 <div className={styles.body}>
@@ -17,8 +17,8 @@ export default function ContentsContainer() {
                     소중한 분들을<br/>
                     모십니다.
                 </div>
-                <div style={{width: '20%', margin: 'auto'}} >
-                    <Image src={flower} alt=""/>
+                <div style={{margin: 'auto'}}>
+                    <Image src={flower} alt="" width={340*0.2} height={136*0.2}/>
                 </div>
             </Fade>
         </div>

@@ -1,9 +1,5 @@
 import dynamic from "next/dynamic";
-
-const TopContainer = dynamic(() => import("../src/containers/TopContainer"), {
-    ssr: false,
-    loading: () => null,
-})
+import TopContainer from "../src/containers/TopContainer";
 
 const ContentsContainer = dynamic(() => import("../src/containers/ContentsContainer"), {
     ssr: false,
@@ -39,10 +35,16 @@ export default function Home() {
             <TopContainer/>
             <ContentsContainer/>
             <LocationContainer/>
-            <GalleryContainer/>
-            <CarouselComponent/>
+            <GalleryContainer
+                loading="lazy"
+            />
+            <CarouselComponent
+                loading="lazy"
+            />
             <ContactContainer/>
-            <CommentContainer/>
+            <CommentContainer
+                loading="lazy"
+            />
         </div>
     )
 }

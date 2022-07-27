@@ -26,18 +26,6 @@ const CssTextField = styled(TextField)({
     }
 });
 
-const TextContentInput = styled(InputBase)({
-    '& .MuiInputBase-input': {
-        border: '1px solid #ced4da',
-        padding: '1% 2%',
-        width: '150%'
-    },
-    fontFamily: 'Noto Sans KR',
-    '&:focus': {
-        border: '2px solid #ced4da',
-    }
-});
-
 const ColorButton = styled(Button)(({theme}) => ({
     color: '#ffffff',
     fontFamily: 'Noto Sans KR',
