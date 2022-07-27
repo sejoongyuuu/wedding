@@ -17,7 +17,7 @@ export default class MyDocument extends Document {
     }
 }
 
-/*
+
 MyDocument.getInitialProps = async ctx => {
     const materialSheets = new ServerStyleSheets();
     const originalRenderPage = ctx.renderPage;
@@ -32,4 +32,4 @@ MyDocument.getInitialProps = async ctx => {
         ...initialProps,
         styles: <>{initialProps.styles}</>
     };
-};*/
+};

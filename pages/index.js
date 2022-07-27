@@ -2,27 +2,11 @@ import dynamic from "next/dynamic";
 import TopContainer from "../src/containers/TopContainer";
 import {useEffect} from "react";
 
-const ContentsContainer = dynamic(() => import("../src/containers/ContentsContainer"), {
-    ssr: false,
-    loading: () => null,
-})
-const LocationContainer = dynamic(() => import("../src/containers/LocationContainer"), {
-    ssr: false,
-    loading: () => null,
-})
-
-const ContactContainer = dynamic(() => import("../src/containers/ContactContainer"), {
-    ssr: false,
-    loading: () => null,
-})
-
-const CarouselComponent = dynamic(() => import("../src/containers/CarouselComponent"), {
-    ssr: false,
-    loading: () => null,
-})
-const CommentContainer = dynamic(() => import("../src/containers/CommentContainer"), {
-    loading: () => null,
-})
+const ContentsContainer = dynamic(() => import("../src/containers/ContentsContainer"), )
+const LocationContainer = dynamic(() => import("../src/containers/LocationContainer"), )
+const ContactContainer = dynamic(() => import("../src/containers/ContactContainer"),)
+const CarouselComponent = dynamic(() => import("../src/containers/CarouselComponent"), )
+const CommentContainer = dynamic(() => import("../src/containers/CommentContainer"), )
 
 export default function Home() {
     useEffect(() => {
@@ -31,17 +15,11 @@ export default function Home() {
     return (
         <div>
             <TopContainer/>
-            <ContentsContainer
-                loading="lazy"
-            />
+            <ContentsContainer/>
             <LocationContainer/>
-            <CarouselComponent
-                loading="lazy"
-            />
+            <CarouselComponent/>
             <ContactContainer/>
-            <CommentContainer
-                loading="lazy"
-            />
+            <CommentContainer/>
         </div>
     )
 }
