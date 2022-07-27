@@ -17,6 +17,7 @@
     "@mui/styled-engine-sc": "^5.8.0",
     "@mui/styles": "^5.9.1",
     "connect-mongo": "^4.6.0",
+    "formik": "^2.2.9",
     "middlewares": "^0.1.1",
     "mongoose": "^6.5.0",
     "next": "^12.2.3",
@@ -24,10 +25,12 @@
     "next-images": "^1.8.4",
     "passport-local": "^1.0.0",
     "react": "18.2.0",
+    "react-bootstrap": "^2.4.0",
     "react-dom": "18.2.0",
     "react-photo-collage": "^1.0.9",
     "react-reveal": "^1.2.2",
     "styled-components": "^5.3.5",
+    "swiper": "^8.3.2",
     "yup": "^0.32.11"
   },
   "devDependencies": {

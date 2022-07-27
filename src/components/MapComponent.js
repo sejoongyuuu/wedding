@@ -11,7 +11,7 @@ const MapComponent = () => {
         document.head.appendChild(mapScript);
 
         const onLoadKakaoMap = () => {
-            window.kakao.maps.load(() => {
+            kakao.maps.load(() => {
                 const mapContainer = document.getElementById("map");
                 let mapOption = {
                     center: new kakao.maps.LatLng(37.50961746196608, 127.05947919675475), // 지도의 중심좌표
