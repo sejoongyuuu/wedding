@@ -12,7 +12,7 @@ const commentSchema = new Schema({
     content: String,
     createdDate: {
         type: Date,
-        default: Date.now.toLocaleString()
+        default: Date.now
     }
 })
 
