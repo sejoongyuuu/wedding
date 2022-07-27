@@ -6,7 +6,7 @@ const MapComponent = () => {
         const mapScript = document.createElement("script");
 
         mapScript.async = true;
-        mapScript.src = "//dapi.kakao.com/v2/maps/sdk.js?appkey=56b60bc6bba722310089af688f521491&autoload=false";
+        mapScript.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_APPKEY}&autoload=false`;
 
         document.head.appendChild(mapScript);
 
