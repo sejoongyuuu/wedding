@@ -19,7 +19,7 @@ export default function TopContainer() {
             </Fade>
             <Fade bottom>
                 <div style={{margin: "auto"}}>
-                    <Image src={picture} alt="" width="867.2" height="788"/>
+                    <Image priority={true} src={picture} alt="" width="867.2" height="788"/>
                 </div>
             </Fade>
             <Fade right>
