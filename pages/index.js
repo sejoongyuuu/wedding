@@ -1,7 +1,14 @@
-import TopContainer from "../src/containers/TopContainer";
-import ContentsContainer from "../src/containers/ContentsContainer";
 import dynamic from "next/dynamic";
 
+const TopContainer = dynamic(() => import("../src/containers/TopContainer"), {
+    ssr: false,
+    loading: () => null,
+})
+
+const ContentsContainer = dynamic(() => import("../src/containers/ContentsContainer"), {
+    ssr: false,
+    loading: () => null,
+})
 const LocationContainer = dynamic(() => import("../src/containers/LocationContainer"), {
     ssr: false,
     loading: () => null,
