@@ -11,11 +11,6 @@ const LocationContainer = dynamic(() => import("../src/containers/LocationContai
     loading: () => null,
 })
 
-const GalleryContainer = dynamic(() => import("../src/containers/GalleryContainer"), {
-    ssr: false,
-    loading: () => null,
-})
-
 const ContactContainer = dynamic(() => import("../src/containers/ContactContainer"), {
     ssr: false,
     loading: () => null,
@@ -40,9 +35,6 @@ export default function Home() {
                 loading="lazy"
             />
             <LocationContainer/>
-            <GalleryContainer
-                loading="lazy"
-            />
             <CarouselComponent
                 loading="lazy"
             />
