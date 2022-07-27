@@ -1,12 +1,11 @@
 import {useEffect, useState} from "react";
-import {Button, Grid, InputBase, TextField} from "@mui/material";
+import {Box, Button, Grid, InputBase, TextField} from "@mui/material";
 import {styled} from "@mui/material/styles";
 
 const TextInput = styled(InputBase)({
     '& .MuiInputBase-input': {
         border: '1px solid #ced4da',
         padding: '1% 2%',
-        margin: '2%'
     },
     fontFamily: 'Noto Sans KR',
     '&:focus': {
@@ -18,7 +17,6 @@ const TextContentInput = styled(InputBase)({
     '& .MuiInputBase-input': {
         border: '1px solid #ced4da',
         padding: '1% 2%',
-        margin: '2%',
         width: '150%'
     },
     fontFamily: 'Noto Sans KR',
@@ -27,10 +25,10 @@ const TextContentInput = styled(InputBase)({
     }
 });
 
-const ColorButton = styled(Button)(({ theme }) => ({
+const ColorButton = styled(Button)(({theme}) => ({
     border: '1px solid #ced4da',
     '&:hover': {
-        border:'2px solid #ced4da',
+        border: '2px solid #ced4da',
     },
 }));
 
@@ -92,37 +90,46 @@ export default function CommentComponent(styles) {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <TextInput
-                    required
-                    id="standard-size-small"
-                    size="small"
-                    name={"name"}
-                    placeholder={"이름"}
-                    value={nameValue}
-                    onChange={onNameChange}
-                />
-                <TextInput
-                    required
-                    id="standard-size-small"
-                    size="small"
-                    name={"password"}
-                    placeholder={"비밀번호"}
-                    value={passwordValue}
-                    onChange={onPasswordChange}
-                    type="password"/>
-                <br/>
-                <TextContentInput
-                    required
-                    multiline
-                    rows={2}
-                    name={"content"}
-                    placeholder={"내용"}
-                    value={contentValue}
-                    onChange={onContentChange}
-                />
-
-                <ColorButton type="submit">등록</ColorButton>
+                <Box
+                    component="form"
+                    noValidate
+                    sx={{
+                        display: "grid",
+                        gridTemplateColumns: {sm: "1fr"},
+                        gap: 2
+                    }}
+                >
+                    <TextInput
+                        required
+                        id="standard-size-small"
+                        size="small"
+                        name={"name"}
+                        placeholder={"이름"}
+                        value={nameValue}
+                        onChange={onNameChange}
+                    />
+                    <TextInput
+                        required
+                        id="standard-size-small"
+                        size="small"
+                        name={"password"}
+                        placeholder={"비밀번호"}
+                        value={passwordValue}
+                        onChange={onPasswordChange}
+                        type="password"/>
+                    <TextContentInput
+                        required
+                        multiline
+                        rows={2}
+                        name={"content"}
+                        placeholder={"내용"}
+                        value={contentValue}
+                        onChange={onContentChange}
+                    />
+                    <ColorButton type="submit">등록</ColorButton>
+                </Box>
             </form>
+
             {loading ? <div>loading...</div> : (
                 <div>
                     {comments.map(comment => (
