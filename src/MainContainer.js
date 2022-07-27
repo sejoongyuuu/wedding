@@ -11,7 +11,7 @@ export default function MainContainer() {
     return (
         <div>
             <TopContainer/>
-            <ContentsContainer/>
+{/*            <ContentsContainer/>*/}
             <LocationContainer/>
             <ContactContainer/>
             <CommentContainer/>
