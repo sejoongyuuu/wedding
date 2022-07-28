@@ -1,5 +1,7 @@
 import mongoose, {Schema} from "mongoose";
 
+const moment = require('moment-timezone');
+moment.tz.setDefault("Asia/Seoul");
 const commentSchema = new Schema({
     name: {
         type: String,
@@ -9,10 +11,13 @@ const commentSchema = new Schema({
         type: String,
         required: true
     },
-    content: String,
+    content: {
+        type: String,
+        required: true
+    },
     createdDate: {
-        type: Date,
-        default: Date.now
+        type: String,
+        default: moment().format("YYYY-MM-DD HH:mm")
     }
 })
 

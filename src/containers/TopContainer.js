@@ -15,7 +15,7 @@ export default function TopContainer() {
                     <div>YUJEONG</div>
                 </div>
             </div>
-            <div style={{width: '80%', margin: "auto"}}>
+            <div style={{width: '80%', margin: "auto" , transition: '0.3s'}}>
                 <Image priority src={picture} alt="" width="867.2" height="788"/>
             </div>
             <div className={styles.textContainer}>

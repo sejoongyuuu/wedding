@@ -1,29 +1,39 @@
 import {useEffect, useState} from "react";
-import {Box, Button, Grid, InputBase, TextField} from "@mui/material";
+import * as React from 'react';
+import {
+    Box,
+    Button,
+    CircularProgress,
+    Dialog,
+    DialogActions,
+    DialogContent, DialogContentText,
+    DialogTitle,
+    IconButton,
+    TextField
+} from "@mui/material";
 import {styled} from "@mui/material/styles";
+import DeleteIcon from '@mui/icons-material/Delete';
+import Grid from '@mui/material/Grid';
 import styles from '../../styles/comment.module.css'
 import {useFormik} from "formik";
 import {Validation} from "../../util/validation";
+import Pagination from "./Pagination";
+import CommentList from "./CommetList";
 
 const CssTextField = styled(TextField)({
     fontFamily: 'Noto Sans KR',
-    "& label.Mui-focused": {
-        color: "black"
+    '& label.Mui-focused': {
+        color: '#FF7664',
     },
-    "& .MuiInput-underline:after": {
-        borderBottomColor: "gray"
+    '& .MuiInput-underline:after': {
+        borderBottomColor: '#FF7664',
     },
-    "&:hover": {
-        backgroundColor: "transparent"
-    },
-    "& .MuiOutlinedInput-root": {
-        "& fieldset": {
-            borderColor: "gray"
+    '& .MuiOutlinedInput-root': {
+        '& fieldset': {},
+        '&.Mui-focused fieldset': {
+            borderColor: '#FF7664',
         },
-        "&.Mui-focused fieldset": {
-            borderColor: "gray"
-        }
-    }
+    },
 });
 
 const ColorButton = styled(Button)(({theme}) => ({
@@ -36,37 +46,62 @@ const ColorButton = styled(Button)(({theme}) => ({
     },
 }));
 
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    boxShadow: 24,
+    p: 4,
+};
+
 export default function CommentComponent() {
     const [comments, setComments] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [totalCount, setTotalCount] = useState(0);
+
+    const [currentPage, setCurrentPage] = useState(1);
+    const [commentsPerPage, setCommentsPerPage] = useState(5);
+
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    const [tobeDelete, setTobeDelete] = useState(null);
 
     const getComments = async () => {
         const response = await (await fetch("/api/comment", {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json',
-            }
+            },
         })).json();
-        setComments(response.comments);
+        const resComments = response.comments;
+        console.log(resComments);
+        resComments.map((comment) => {
+            let date = comment.createdDate;
+            console.log(date);
+        })
+        setComments(resComments);
+        setTotalCount(response.totalCount);
         setLoading(false);
     }
 
-    const formik = useFormik({
-        initialValues: {
-            name: '',
-            password: '',
-            content: '',
-            date: new Date()
-        },
-        validationSchema: Validation,
-        onSubmit: (values, {resetForm}) => {
-            resetForm({});
-            createComment(values).then(res => {
-                console.log(res);
-                getComments();
-            })
-        }
-    });
+    const indexOfLast = currentPage * commentsPerPage;
+    const indexOfFirst = indexOfLast - commentsPerPage;
+    const currentComments = (comments) => {
+        let currentComments = 0;
+        currentComments = comments.slice(indexOfFirst, indexOfLast);
+        return currentComments;
+    };
 
     const createComment = async (data) => {
         const response = await (await fetch("/api/comment", {
@@ -78,69 +113,92 @@ export default function CommentComponent() {
         })).json();
         return response;
     }
+    const formik = useFormik({
+        initialValues: {
+            name: '',
+            password: '',
+            content: '',
+        },
+        validationSchema: Validation,
+        onSubmit: (values, {resetForm}) => {
+            resetForm({});
+            createComment(values).then(res => {
+                console.log(res);
+                getComments().then();
+            })
+        }
+    });
 
     useEffect(() => {
         getComments().then(response => console.log(response));
     }, []);
-
-
     const {values, touched, errors, handleChange, handleSubmit} = formik;
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <div className={styles.box}>
+            <Box
+                component="form"
+                padding='10%'
+                margin='10%'
+                sx={{flexGrow: 1}}
+                onSubmit={handleSubmit}
+            >
+                <div>
                     <CssTextField
+                        required
                         name={"name"}
                         label={"이름"}
-                        required
-                        id="standard-size-small"
-                        size="small"
                         placeholder={"이름"}
+                        id="custom-css-outlined-input"
+                        size={"small"}
                         value={values.name}
                         error={touched.name && Boolean(errors.name)}
-                        variant="standard"
                         onChange={handleChange}
+                        helperText={touched.name && errors.name}
                     />
                     <CssTextField
+                        required
                         name={"content"}
                         label={"내용"}
-                        required
-                        multiline
-                        rows={2}
                         placeholder={"내용"}
+                        id="custom-css-outlined-input"
+                        size={"small"}
                         value={values.content}
                         error={touched.content && Boolean(errors.content)}
-                        variant="standard"
                         onChange={handleChange}
+                        helperText={touched.content && errors.content}
                     />
                     <CssTextField
-                        name={"password"}
-                        type="password"
-                        label={"비밀번호"}
                         required
-                        id="standard-size-small"
-                        size="small"
+                        type={"password"}
+                        name={"password"}
+                        label={"비밀번호"}
                         placeholder={"비밀번호"}
+                        id="custom-css-outlined-input"
+                        size={"small"}
                         value={values.password}
                         error={touched.password && Boolean(errors.password)}
                         onChange={handleChange}
-                        variant="standard"
+                        helperText={touched.password && errors.password}
                     />
                     <br/>
                     <ColorButton type="submit">등록</ColorButton>
                 </div>
-            </form>
-            {loading ? <div>loading...</div> : (
+            </Box>
+            <div className={styles.comments}>
+               <CommentList
+                    loading={loading}
+                    comments={currentComments(comments)}
+                    getComments={getComments}
+               />
                 <div>
-                    {comments.map(comment => (
-                        <div key={comment._id}>
-                            {comment.name} : {comment.content}<br/>
-                            {comment.createdDate.toLocaleString()}
-                        </div>
-                    ))}
+                    <Pagination
+                        postsPerPage={commentsPerPage}
+                        totalPosts={totalCount}
+                        paginate={setCurrentPage}
+                    />
                 </div>
-            )}
+            </div>
         </div>
     )
 
