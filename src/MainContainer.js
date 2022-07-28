@@ -11,10 +11,10 @@ export default function MainContainer() {
     return (
         <div>
             <TopContainer/>
-{/*            <ContentsContainer/>*/}
-{/*            <LocationContainer/>
+            <ContentsContainer/>
+            <LocationContainer/>
             <ContactContainer/>
-            <CommentContainer/>*/}
+            <CommentContainer/>
         </div>
     )
 }
