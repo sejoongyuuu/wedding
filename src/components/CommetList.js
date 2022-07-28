@@ -21,6 +21,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Fade from '@mui/material/Fade';
 import DeleteIcon from '@mui/icons-material/Delete';
+import styles from '../../styles/comment.module.css';
 
 export default function CommentList(props) {
     const {loading, comments, getComments} = props;
@@ -92,7 +93,7 @@ export default function CommentList(props) {
         <>
             {loading ? <CircularProgress color="inherit"/> :
                 <div>
-                    <div>
+                    <div className={styles.cardContainer}>
                         {comments.map(comment => (
                             <div key={comment._id}>
                                 <Box sx={{
@@ -108,12 +109,11 @@ export default function CommentList(props) {
                                                     {comment.name.substring(0, 1)}
                                                 </Avatar>
                                             }
-/*                                            action={
-                                                <IconButton aria-label="settings">
-                                                    <MoreVertIcon/>
+                                            action={
+                                                <IconButton onClick={() => handleClickOpen(comment)}>
+                                                    <DeleteIcon/>
                                                 </IconButton>
-
-                                            }*/
+                                            }
                                             title={comment.name}
                                             subheader={comment.createdDate.toString()}
                                         />
@@ -121,15 +121,12 @@ export default function CommentList(props) {
                                             <Typography variant="body2" color="text.secondary">
                                                 {comment.content}
                                             </Typography>
-                                        </CardContent>
+                                        </CardContent>{/*
                                         <CardActions disableSpacing>
                                             <IconButton aria-label="add to favorites">
                                                 <FavoriteIcon/>
                                             </IconButton>
-                                            <IconButton onClick={() => handleClickOpen(comment)}>
-                                                <DeleteIcon/>
-                                            </IconButton>
-                                        </CardActions>
+                                        </CardActions>*/}
                                     </Card>
                                 </Box>
                             </div>
