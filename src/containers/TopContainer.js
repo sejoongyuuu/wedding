@@ -8,8 +8,7 @@ export default function TopContainer() {
         <div className={styles.container}>
             <div className={styles.name}>
                 <div>SEJOONG</div>
-                <div>&</div>
-                <div>YUJEONG</div>
+                <div>& YUJEONG</div>
             </div>
             <div className={styles.thin_2}>
                 SAVE THE DATE

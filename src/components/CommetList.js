@@ -12,16 +12,11 @@ import {
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import {red} from '@mui/material/colors';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import Fade from '@mui/material/Fade';
 import CloseIcon from '@mui/icons-material/Close';
-import DeleteIcon from '@mui/icons-material/Delete';
 import styles from '../../styles/comment.module.css';
 
 export default function CommentList(props) {
@@ -32,7 +27,6 @@ export default function CommentList(props) {
     const [target, setTarget] = useState(null);
     const [invalid, setInvalid] = useState(false);
 
-    const [anchorEl, setAnchorEl] = React.useState(null);
     const [popperOpen, setPopperOpen] = React.useState(false);
     const [placement, setPlacement] = React.useState();
 
