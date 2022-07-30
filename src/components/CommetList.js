@@ -20,6 +20,7 @@ import {red} from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Fade from '@mui/material/Fade';
+import CloseIcon from '@mui/icons-material/Close';
 import DeleteIcon from '@mui/icons-material/Delete';
 import styles from '../../styles/comment.module.css';
 
@@ -111,7 +112,7 @@ export default function CommentList(props) {
                                             }
                                             action={
                                                 <IconButton onClick={() => handleClickOpen(comment)}>
-                                                    <DeleteIcon/>
+                                                    <CloseIcon style={{fontSize: 'medium'}}/>
                                                 </IconButton>
                                             }
                                             title={comment.name}
@@ -121,12 +122,7 @@ export default function CommentList(props) {
                                             <Typography variant="body2" color="text.secondary">
                                                 {comment.content}
                                             </Typography>
-                                        </CardContent>{/*
-                                        <CardActions disableSpacing>
-                                            <IconButton aria-label="add to favorites">
-                                                <FavoriteIcon/>
-                                            </IconButton>
-                                        </CardActions>*/}
+                                        </CardContent>
                                     </Card>
                                 </Box>
                             </div>

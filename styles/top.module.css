@@ -1,8 +1,7 @@
 .container {
     padding-top: 10%;
 }
-
-.text {
+.title{
     text-align: left;
     padding-left: 7%;
     padding-right: 7%;
@@ -14,9 +13,33 @@
 }
 
 .name {
+    text-align: center;
+    padding-left: 7%;
+    padding-right: 7%;
+    font-family: 'Gothic A1';
+    font-size: 290%;
+    font-weight: 900;
+    letter-spacing: 3px;
+    line-height: 120%;
+    color: #262626;
+}
+
+.thin {
     font-weight: 100;
     line-height: 110%;
-    font-size: 60%;
+    font-size: 130%;
+    padding-bottom: 5%;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.thin_2 {
+    font-weight: 100;
+    line-height: 110%;
+    font-size: 150%;
+    padding-bottom: 5%;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 .textContainer {

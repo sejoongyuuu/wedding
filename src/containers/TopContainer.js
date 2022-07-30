@@ -6,16 +6,15 @@ import picture from '../../public/images/picture/picture1.PNG';
 export default function TopContainer() {
     return (
         <div className={styles.container}>
-            <div className={styles.text}>
-                <div>THE</div>
-                <div>WEDDING</div>
-                <div>DAY</div>
-                <div className={styles.name}>
-                    <div>SEJOONG &</div>
-                    <div>YUJEONG</div>
-                </div>
+            <div className={styles.name}>
+                <div>SEJOONG</div>
+                <div>&</div>
+                <div>YUJEONG</div>
             </div>
-            <div style={{width: '80%', margin: "auto" , transition: '0.3s'}}>
+            <div className={styles.thin_2}>
+                SAVE THE DATE
+            </div>
+            <div style={{width: '80%', margin: "auto", transition: '0.3s', paddingTop:'5%'}}>
                 <Image priority src={picture} alt="" width="867.2" height="788"/>
             </div>
             <div className={styles.textContainer}>

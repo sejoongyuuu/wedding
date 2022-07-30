@@ -4,6 +4,9 @@ import styles from '../../styles/location.module.css';
 import location from '../../public/images/picture/location.PNG';
 import drink from '../../public/images/picture/drink.PNG';
 import Image from "next/image";
+import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
+import DirectionsSubwayIcon from '@mui/icons-material/DirectionsSubway';
+import DirectionsBusIcon from '@mui/icons-material/DirectionsBus';
 
 export default function LocationContainer() {
     return (
@@ -27,14 +30,19 @@ export default function LocationContainer() {
                 <Fade bottom>
                     <table style={{textAlign: 'left'}}>
                         <tr>
-                            <td className={styles.title}>자가용
+                            <td className={styles.title} >
+                                <DirectionsCarIcon/><br/>
+                                자가용
                             </td>
-                            <td>한국도심공항 터미널 주차장 이용</td>
+                            <td style={{borderBottom: '1px solid #5a5a5a'}}>한국도심공항 터미널 주차장 이용</td>
                         </tr>
-                        <tr>
-                            <td className={styles.title}>지하철
+                        <tr >
+                            <td className={styles.title}>
+                                <DirectionsSubwayIcon/><br/>
+                                지하철
                             </td>
-                            <td><span className={styles.line2}>2</span>삼성역 5번 출구 도보 약 7분<br/>
+                            <td style={{borderBottom: '1px solid #5a5a5a'}}>
+                                <span className={styles.line2}>2</span>삼성역 5번 출구 도보 약 7분<br/>
                                 <div className={styles.detail}>* 지하 코엑스몰 이동보다는 <span
                                     className="medium">지상으로</span> 찾아오시면
                                     편리합니다.<br/></div>
@@ -42,7 +50,11 @@ export default function LocationContainer() {
                             </td>
                         </tr>
                         <tr>
-                            <td className={styles.title}>버스</td>
+                            <td className={styles.title}>
+                                <DirectionsBusIcon/>
+                                <br/>
+                                버스
+                            </td>
                             <td>한국무역센터삼성역 정류장<br/>
                                 (정류장 코드 23-201)<br/>
                                 <span className="medium">간선</span> <span

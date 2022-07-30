@@ -21,7 +21,7 @@ body {
 .regular {
     font-weight: 400;
 }
-
+x
 .medium {
     font-weight: 500;
 }
@@ -38,6 +38,8 @@ td {
     padding-bottom: 2%;
     padding-top: 2%;
     font-weight: 400;
+    vertical-align: top;
+
 }
 
 .customoverlay {
