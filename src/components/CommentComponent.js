@@ -12,6 +12,8 @@ import {
     TextField
 } from "@mui/material";
 import {styled} from "@mui/material/styles";
+import DeleteIcon from '@mui/icons-material/Delete';
+import Grid from '@mui/material/Grid';
 import styles from '../../styles/comment.module.css'
 import {useFormik} from "formik";
 import {Validation} from "../../util/validation";
@@ -83,11 +85,6 @@ export default function CommentComponent() {
             },
         })).json();
         const resComments = response.comments;
-        console.log(resComments);
-        resComments.map((comment) => {
-            let date = comment.createdDate;
-            console.log(date);
-        })
         setComments(resComments);
         setTotalCount(response.totalCount);
         setLoading(false);
@@ -133,7 +130,7 @@ export default function CommentComponent() {
     const {values, touched, errors, handleChange, handleSubmit} = formik;
 
     return (
-        <div className={styles.comments}>
+        <div>
             <Box
                 component="form"
                 padding='10%'
@@ -183,7 +180,7 @@ export default function CommentComponent() {
                     <ColorButton type="submit">등록</ColorButton>
                 </div>
             </Box>
-            <div >
+            <div className={styles.comments}>
                <CommentList
                     loading={loading}
                     comments={currentComments(comments)}

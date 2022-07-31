@@ -80,7 +80,6 @@ export default function CommentList(props) {
             },
             body: JSON.stringify({id: id})
         })).json();
-        console.log(response.result);
         return response;
     }
 

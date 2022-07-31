@@ -1,7 +1,8 @@
 .container {
-    padding-top: 10%;
+    margin-top: 10%;
 }
-.title{
+
+.title {
     text-align: left;
     padding-left: 7%;
     padding-right: 7%;
@@ -17,28 +18,21 @@
     padding-left: 7%;
     padding-right: 7%;
     font-family: 'Gothic A1';
-    font-size: 290%;
+    font-size: 150%;
     font-weight: 900;
     letter-spacing: 1px;
     line-height: 120%;
     color: #262626;
+    padding-top: 50%;
 }
 
 .thin {
     font-weight: 100;
     line-height: 110%;
-    font-size: 130%;
+    font-size: 160%;
+    padding-top: 3%;
     padding-bottom: 5%;
-    letter-spacing: 1px;
-    text-align: center;
-}
-
-.thin_2 {
-    font-weight: 100;
-    line-height: 110%;
-    font-size: 150%;
-    padding-bottom: 5%;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     text-align: center;
 }
 
@@ -76,4 +70,58 @@
     padding-top: 1%;
     line-height: 100%;
     text-align: left;
+}
+
+.moveDiv {
+    text-align: center;
+    padding-left: 7%;
+    padding-right: 7%;
+    font-family: 'Gothic A1';
+    font-size: 290%;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 120%;
+    color: #262626;
+    padding-top: 20%;
+    position: relative;
+    animation: move 1s;
+    animation-timing-function: ease;
+}
+
+@keyframes move {
+    from {
+        font-size: 150%;
+    }
+    to {
+        font-size: 290%;
+    }
+}
+
+.transparent{
+    opacity: 0;
+}
+
+
+.appearDiv{
+    position: relative;
+    animation: appear 1s;
+    animation-timing-function: ease;
+}
+@keyframes appear {
+    from {
+        top: 100px;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 100%;
+    }
+}
+.wow-enter {
+    opacity: 0;
+}
+
+.wow-enter-active {
+    opacity: 1;
+    transition: all 500ms;
 }

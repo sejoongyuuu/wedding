@@ -26,6 +26,9 @@ x
     font-weight: 500;
 }
 
+.font-Large{
+    font-size: 500%
+}
 .titleDiv {
     font-weight: 700;
     font-size: 120%;
