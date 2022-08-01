@@ -11,7 +11,7 @@ import DirectionsBusIcon from '@mui/icons-material/DirectionsBus';
 export default function LocationContainer() {
     return (
         <div className={styles.container}>
-            <Fade bottom>
+            <Fade>
                 <div className="titleDiv"> LOCATION</div>
                 <div style={{paddingBottom: '5%'}}>
                     <div style={{width: '13%', margin: 'auto'}}>
@@ -27,7 +27,7 @@ export default function LocationContainer() {
                 </div>
             </Fade>
             <div className={styles.detailContainer}>
-                <Fade bottom>
+                <Fade>
                     <table style={{textAlign: 'left'}}>
                         <tr>
                             <td className={styles.title} >
@@ -69,7 +69,7 @@ export default function LocationContainer() {
                         </tr>
                     </table>
                 </Fade>
-                <Fade bottom>
+                <Fade>
                     <div className={styles.guideDiv}>
                         <div style={{width: '50%', margin: 'auto'}}>
                             <Image src={drink} alt=""/>

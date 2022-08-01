@@ -7,7 +7,7 @@ body {
     font-size: 97%;
     color: #232323;
     letter-spacing: -1.2px;
-    background-color: #FFFCF6;
+    background-color: #fffefd;
 }
 .numLight {
     font-weight: 300;
@@ -171,6 +171,68 @@ td {
     }
 }
 @keyframes modal-bg-show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.before{
+    opacity: 0;
+}
+.reveal {
+    text-align: center;
+    opacity: 0;
+    transform: translate(0%, 100%) matrix(1, 0, 0, 1, 0, 0);
+    will-change: opacity, transform;
+    animation: reveal 1s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+}
+
+.reveal_2 {
+    text-align: center;
+    opacity: 0;
+    transform: translate(0%, 100%) matrix(1, 0, 0, 1, 0, 0);
+    will-change: opacity, transform;
+    animation: reveal 1s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+    animation-delay: 0.3s
+}
+
+.reveal_3 {
+    text-align: center;
+    opacity: 0;
+    transform: translate(0%, 100%) matrix(1, 0, 0, 1, 0, 0);
+    will-change: opacity, transform;
+    animation: reveal 1s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+    animation-delay: 0.6s
+}
+
+.mask {
+    display: block;
+    position: relative;
+    text-align: start;
+    overflow: hidden;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translate(0%, 100%) matrix(1, 0, 0, 1, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0%, 0%) matrix(1, 0, 0, 1, 0, 0);
+    }
+}
+
+.appear {
+    animation: appear 1.2s forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+@keyframes appear {
     from {
         opacity: 0;
     }
