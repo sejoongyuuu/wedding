@@ -2,12 +2,14 @@ import styles from '../../styles/top.module.css';
 import Image from 'next/image';
 import picture from '../../public/images/picture/picture1.PNG';
 import {useCallback, useEffect, useRef, useState} from "react";
+import ContentsContainer from "./ContentsContainer";
 
 export default function TopContainer() {
     const targetImage = useRef(null);
     const targetText = useRef(null);
     const [scrollY, setScrollY] = useState(0);
-    const [animate, setAnimate] = useState(false);
+    const [show, setShow] = useState(false);
+    const [showContent, setShowContent] = useState(false);
 
     useEffect(() => {
         document.getElementById('html')?.scrollTo(0, 0);
@@ -23,14 +25,9 @@ export default function TopContainer() {
     const handleScroll = useCallback(() => {
         const y = window.scrollY;
         setScrollY(y);
-        if (y > 40) setAnimate(true);
+        if (y > 40) setShow(true);
+        if (y > 200) setShowContent(true);
     });
-
-    const transformImage = (scrollY) => {
-        let value = (scrollY <= 200) ? 1 + scrollY / 1000 : 1.2;
-        console.log('value: ' + value);
-        targetImage.current.style.transform = `scale(${value}, ${value})`;
-    }
 
     return (
         <div className={styles.container}>
@@ -53,7 +50,7 @@ export default function TopContainer() {
                     <Image src={picture} alt="" width="867.2" height="788"/>
                 </div>
                 <div className="mask">
-                    <div className={animate ? "reveal" : "before"}>
+                    <div className={show ? "reveal" : "before"}>
                         <div className={styles.textContainer}>
                             <div className={styles.date}>
                                 <div className={styles.first}>2022</div>
@@ -72,6 +69,11 @@ export default function TopContainer() {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className={showContent ? "appear" : "before"}>
+                <ContentsContainer
+                    scrollY={scrollY}
+                />
             </div>
         </div>
     );

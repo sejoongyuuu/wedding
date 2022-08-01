@@ -1,9 +1,7 @@
 import dynamic from "next/dynamic";
 import TopContainer from "../src/containers/TopContainer";
-import {useCallback, useEffect, useState} from "react";
 
 export default function MainContainer() {
-    const ContentsContainer = dynamic(() => import("../src/containers/ContentsContainer"),)
     const LocationContainer = dynamic(() => import("../src/containers/LocationContainer"),)
     const ContactContainer = dynamic(() => import("../src/containers/ContactContainer"),)
     const GalleryContainer = dynamic(() => import("../src/containers/GalleryContainer"),)
@@ -12,7 +10,6 @@ export default function MainContainer() {
     return (
         <div>
             <TopContainer/>
-            <ContentsContainer/>
             <LocationContainer/>
             <GalleryContainer/>
             <ContactContainer/>
