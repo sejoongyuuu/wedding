@@ -18,12 +18,12 @@
     padding-left: 7%;
     padding-right: 7%;
     font-family: 'Gothic A1';
-    font-size: 150%;
+    font-size: 290%;
     font-weight: 900;
     letter-spacing: 1px;
     line-height: 120%;
     color: #262626;
-    padding-top: 50%;
+    padding-top: 10%;
 }
 
 .thin {
@@ -34,6 +34,7 @@
     padding-bottom: 5%;
     letter-spacing: 3px;
     text-align: center;
+
 }
 
 .textContainer {
@@ -72,56 +73,9 @@
     text-align: left;
 }
 
-.moveDiv {
-    text-align: center;
-    padding-left: 7%;
-    padding-right: 7%;
-    font-family: 'Gothic A1';
-    font-size: 290%;
-    font-weight: 900;
-    letter-spacing: 1px;
-    line-height: 120%;
-    color: #262626;
-    padding-top: 20%;
-    position: relative;
-    animation: move 1s;
-    animation-timing-function: ease;
-}
-
-@keyframes move {
-    from {
-        font-size: 150%;
-    }
-    to {
-        font-size: 290%;
-    }
-}
-
-.transparent{
-    opacity: 0;
-}
-
-
-.appearDiv{
-    position: relative;
-    animation: appear 1s;
-    animation-timing-function: ease;
-}
-@keyframes appear {
-    from {
-        top: 100px;
-        opacity: 0;
-    }
-    to {
-        top: 0px;
-        opacity: 100%;
-    }
-}
-.wow-enter {
-    opacity: 0;
-}
-
-.wow-enter-active {
-    opacity: 1;
-    transition: all 500ms;
+.image {
+    width: 70%;
+    margin: auto;
+    paddingTop: 5%;
+    padding-bottom: 10%;
 }

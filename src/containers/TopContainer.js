@@ -4,8 +4,9 @@ import picture from '../../public/images/picture/picture1.PNG';
 import {useCallback, useEffect, useRef, useState} from "react";
 
 export default function TopContainer() {
-    const target = useRef(null);
-    const [animate, setAnimate] = useState(false);
+    const targetImage = useRef(null);
+    const targetText = useRef(null);
+    const [scrollY, setScrollY] = useState(0);
 
     useEffect(() => {
         document.getElementById('html')?.scrollTo(0, 0);
@@ -19,26 +20,35 @@ export default function TopContainer() {
     }, []);
 
     const handleScroll = useCallback(() => {
-        console.log(window.scrollY);
-        if (window.scrollY >= 50) {
-            setAnimate(true);
-        }
+        const y = window.scrollY;
+        setScrollY(y);
+        console.log(y);
+        transformImage(y);
+
     });
 
+    const transformImage = (scrollY) => {
+        let value = (scrollY <= 200)?  1 + scrollY / 1000 : 1.2;
+        console.log('value: ' + value);
+        targetImage.current.style.transform = `scale(${value}, ${value})`;
+    }
+
+    const transformText = (scrollY) => {
+    }
 
     return (
-        <div className={styles.container}>
-            <div className={animate ? styles.moveDiv : styles.name}>
+        <div className={styles.container} >
+            <div className={styles.name} ref={targetText}>
                 <div>SEJOONG</div>
                 <div>& YUJEONG</div>
             </div>
-            <div className={animate? styles.appearDiv : styles.transparent}>
-                <div className={styles.thin}>
-                    SAVE THE DATE
-                </div>
-                <div style={{width: '80%', margin: "auto", transition: '0.3s', paddingTop: '5%'}}>
-                    <Image priority src={picture} alt="" width="867.2" height="788"/>
-                </div>
+            <div className={styles.thin}>
+                SAVE THE DATE
+            </div>
+            <div ref={targetImage} className={styles.image}>
+                <Image src={picture} alt="" width="867.2" height="788"/>
+            </div>
+            <div>
                 <div className={styles.textContainer}>
                     <div className={styles.date}>
                         <div className={styles.first}>2022</div>
