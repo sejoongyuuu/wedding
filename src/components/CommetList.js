@@ -102,24 +102,22 @@ export default function CommentList(props) {
                             <div key={comment._id}>
                                 <Box sx={{flexGrow: 1, overflow: 'hidden', px: 1}} className={styles.comment}>
                                     <Grid container spacing={0}>
-                                        <Grid item xs={1.5}>
+                                        <Grid item xs={1.5} style={{verticalAlign: 'bottom'}}>
                                             <Avatar
                                                 sx={{
-                                                    width: 30,
-                                                    height: 30,
+                                                    width: 25,
+                                                    height: 25,
                                                     fontSize: '80%',
                                                 }}
                                             >{comment.name.substring(0, 1)}</Avatar>
                                         </Grid>
-                                        <Grid item xs={2}>
-                                            <div className={styles.name}>{comment.name}</div>
-                                        </Grid>
-                                        <Grid item xs={7.5}>
-                                            <div className={styles.content}>{comment.content}</div>
+                                        <Grid item xs={8}>
+                                            <span className={styles.name}>{comment.name}</span>
+                                            <span className={styles.content}>{comment.content}</span>
                                         </Grid>
                                         <Grid item xs={1} style={{textAlign: 'right'}}>
                                             <IconButton onClick={() => handleClickOpen(comment)}>
-                                                <CloseIcon style={{fontSize: 'medium'}}/>
+                                                <CloseIcon style={{fontSize: 'small'}}/>
                                             </IconButton>
                                         </Grid>
                                         <Grid item xs={8}>
