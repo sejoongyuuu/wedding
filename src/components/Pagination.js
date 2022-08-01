@@ -4,17 +4,15 @@ import styled from "styled-components";
 const PageUl = styled.ul`
   list-style: none;
   text-align: center;
-  border-radius: 3px;
   color: #545454;
   padding: 1px;
 `;
 
 const PageLi = styled.li`
+  font-family: 'Gothic A1';
   display: inline-block;
-  font-weight: 600;
-  padding: 5px;
-  border-radius: 5px;
-  width: 25px;
+  font-weight: 300;
+  padding: 2%;
   &:hover {
     cursor: pointer;
     color: #FF7664;
@@ -27,12 +25,11 @@ const PageLi = styled.li`
 const PageSpan = styled.span`
   &:hover::after,
   &:focus::after {
-    border-radius: 100%;
     color: white;
   }
 `;
 
-const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
+const Pagination = ({postsPerPage, totalPosts, paginate, currentPage}) => {
     const pageNumbers = [];
     for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
         pageNumbers.push(i);

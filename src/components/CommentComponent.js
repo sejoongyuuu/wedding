@@ -12,13 +12,13 @@ import {
     TextField
 } from "@mui/material";
 import {styled} from "@mui/material/styles";
-import DeleteIcon from '@mui/icons-material/Delete';
-import Grid from '@mui/material/Grid';
 import styles from '../../styles/comment.module.css'
 import {useFormik} from "formik";
 import {Validation} from "../../util/validation";
 import Pagination from "./Pagination";
-import CommentList from "./CommetList";
+import CommentList from "./CommetList"
+import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
+import {pink} from "@mui/material/colors";
 
 const CssTextField = styled(TextField)({
     fontFamily: 'Noto Sans KR',
@@ -68,14 +68,13 @@ export default function CommentComponent() {
     const [open, setOpen] = React.useState(false);
 
     const handleClickOpen = () => {
+        console.log("handleClickOpen");
         setOpen(true);
     };
 
     const handleClose = () => {
         setOpen(false);
     };
-
-    const [tobeDelete, setTobeDelete] = useState(null);
 
     const getComments = async () => {
         const response = await (await fetch("/api/comment", {
@@ -120,7 +119,8 @@ export default function CommentComponent() {
             createComment(values).then(res => {
                 console.log(res);
                 getComments().then();
-            })
+            });
+            handleClose();
         }
     });
 
@@ -131,66 +131,72 @@ export default function CommentComponent() {
 
     return (
         <div>
-            <Box
-                component="form"
-                padding='10%'
-                margin='10%'
-                sx={{flexGrow: 1}}
-                onSubmit={handleSubmit}
-            >
-                <div>
-                    <CssTextField
-                        required
-                        name={"name"}
-                        label={"이름"}
-                        placeholder={"이름"}
-                        id="custom-css-outlined-input"
-                        size={"small"}
-                        value={values.name}
-                        error={touched.name && Boolean(errors.name)}
-                        onChange={handleChange}
-                        helperText={touched.name && errors.name}
-                    />
-                    <CssTextField
-                        required
-                        name={"content"}
-                        label={"내용"}
-                        placeholder={"내용"}
-                        id="custom-css-outlined-input"
-                        size={"small"}
-                        value={values.content}
-                        error={touched.content && Boolean(errors.content)}
-                        onChange={handleChange}
-                        helperText={touched.content && errors.content}
-                    />
-                    <CssTextField
-                        required
-                        type={"password"}
-                        name={"password"}
-                        label={"비밀번호"}
-                        placeholder={"비밀번호"}
-                        id="custom-css-outlined-input"
-                        size={"small"}
-                        value={values.password}
-                        error={touched.password && Boolean(errors.password)}
-                        onChange={handleChange}
-                        helperText={touched.password && errors.password}
-                    />
-                    <br/>
-                    <ColorButton type="submit">등록</ColorButton>
-                </div>
-            </Box>
+            <IconButton onClick={handleClickOpen} style={{fontSize: 'extra-large'}}>
+                <AddCircleRoundedIcon style={{color: pink[500]}}/>
+            </IconButton>
+            <Dialog open={open} onClose={handleClose}>
+                <Box
+                    component="form"
+                    padding='10%'
+                    margin='10%'
+                    sx={{flexGrow: 1}}
+                    onSubmit={handleSubmit}
+                >
+                    <div>
+                        <CssTextField
+                            required
+                            name={"name"}
+                            label={"이름"}
+                            placeholder={"이름"}
+                            id="custom-css-outlined-input"
+                            size={"small"}
+                            value={values.name}
+                            error={touched.name && Boolean(errors.name)}
+                            onChange={handleChange}
+                            helperText={touched.name && errors.name}
+                        />
+                        <CssTextField
+                            required
+                            name={"content"}
+                            label={"내용"}
+                            placeholder={"내용"}
+                            id="custom-css-outlined-input"
+                            size={"small"}
+                            value={values.content}
+                            error={touched.content && Boolean(errors.content)}
+                            onChange={handleChange}
+                            helperText={touched.content && errors.content}
+                        />
+                        <CssTextField
+                            required
+                            type={"password"}
+                            name={"password"}
+                            label={"비밀번호"}
+                            placeholder={"비밀번호"}
+                            id="custom-css-outlined-input"
+                            size={"small"}
+                            value={values.password}
+                            error={touched.password && Boolean(errors.password)}
+                            onChange={handleChange}
+                            helperText={touched.password && errors.password}
+                        />
+                        <br/>
+                        <ColorButton type="submit">등록</ColorButton>
+                    </div>
+                </Box>
+            </Dialog>
             <div className={styles.comments}>
-               <CommentList
+                <CommentList
                     loading={loading}
                     comments={currentComments(comments)}
                     getComments={getComments}
-               />
+                />
                 <div>
                     <Pagination
                         postsPerPage={commentsPerPage}
                         totalPosts={totalCount}
                         paginate={setCurrentPage}
+                        currentPage={currentPage}
                     />
                 </div>
             </div>

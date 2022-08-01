@@ -71,7 +71,7 @@ export default function LocationContainer() {
                 </Fade>
                 <Fade>
                     <div className={styles.guideDiv}>
-                        <div style={{width: '60%', margin: 'auto'}}>
+                        <div style={{width: '70%', margin: 'auto'}}>
                             <Image src={drink} alt=""/>
                         </div>
                         <div className={styles.guideBold}>

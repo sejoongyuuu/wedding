@@ -25,14 +25,10 @@ export default function CommentList(props) {
     const [target, setTarget] = useState(null);
     const [invalid, setInvalid] = useState(false);
 
-    const [popperOpen, setPopperOpen] = React.useState(false);
-    const [placement, setPlacement] = React.useState();
-
     const handleClickOpen = (comment) => {
         console.log("handleClickOpen, comment=>" + comment)
         setInvalid(false);
         setPassword("");
-        setPopperOpen(false);
         setTarget(comment);
         setOpen(true);
     };
@@ -105,8 +101,8 @@ export default function CommentList(props) {
                                         <Grid item xs={2} style={{paddingTop:'2%'}}>
                                             <Avatar
                                                 sx={{
-                                                    width: 27,
-                                                    height: 27,
+                                                    width: 30,
+                                                    height: 30,
                                                     fontSize: '80%',
                                                 }}
                                             >{comment.name.substring(0, 1)}</Avatar>
