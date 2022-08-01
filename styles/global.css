@@ -4,10 +4,10 @@ body {
     text-align: center;
     font-family: 'Noto Sans KR';
     font-weight: 300;
-    font-size: 97%;
+    font-size: 93%;
     color: #232323;
     letter-spacing: -1.2px;
-    background-color: #FFFCF6;
+    background-color: #ffffff;
 }
 .numLight {
     font-weight: 300;
@@ -21,7 +21,6 @@ body {
 .regular {
     font-weight: 400;
 }
-x
 .medium {
     font-weight: 500;
 }

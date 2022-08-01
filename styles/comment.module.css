@@ -1,7 +1,48 @@
-.cardContainer{
-
-    padding-top: 10%;
+.container {
+    padding-bottom: 20%;
+    font-weight: 300;
 }
-.comments{
-    background-color: #E9E9E9;
+
+.commentListContainer {
+    margin-right: 10%;
+    margin-left: 10%;
+
+}
+
+.comment {
+    text-align: left;
+    margin-bottom: 2%;
+    border: 1px solid black;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.name {
+    font-size: 95%;
+    font-weight: 500;
+}
+
+.content {
+    font-size: 95%;
+}
+
+.date {
+    font-size: 85%;
+    font-weight: 100;
+    letter-spacing: 1px;
+    padding-left: 2%;
+}
+
+.dialog {
+    padding-top: 5%;
+}
+
+.profile {
+    color: white;
+    background: #ff5454;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: center;
 }

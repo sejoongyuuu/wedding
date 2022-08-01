@@ -1,8 +1,9 @@
-
 .container {
-    width: 100%;
-    padding-top: 15%;
-    padding-bottom: 15%;
+    font-family: 'Noto Sans KR';
+    font-size: 97%;
+    padding-top: 40%;
+    padding-bottom: 20%;
+    font-weight: 300;
 }
 
 .mapDiv {
@@ -72,4 +73,8 @@
     font-weight: 500;
     padding-bottom: 3%;
     padding-top: 3%;
+}
+
+.guideBody{
+    font-size: 97%;
 }

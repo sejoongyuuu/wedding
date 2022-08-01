@@ -1,6 +1,7 @@
 import * as React from "react";
 import {useState} from "react";
 import {
+    Avatar,
     Box,
     Button,
     CircularProgress,
@@ -9,15 +10,12 @@ import {
     DialogContent, Paper, Popper,
     TextField
 } from "@mui/material";
-import Card from '@mui/material/Card';
-import CardHeader from '@mui/material/CardHeader';
-import CardContent from '@mui/material/CardContent';
-import Avatar from '@mui/material/Avatar';
+import {styled} from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import {red} from '@mui/material/colors';
 import CloseIcon from '@mui/icons-material/Close';
 import styles from '../../styles/comment.module.css';
+import Grid from "@mui/material/Grid";
+import {orange, pink} from "@mui/material/colors";
 
 export default function CommentList(props) {
     const {loading, comments, getComments} = props;
@@ -29,14 +27,6 @@ export default function CommentList(props) {
 
     const [popperOpen, setPopperOpen] = React.useState(false);
     const [placement, setPlacement] = React.useState();
-
-    const handleClick = (newPlacement, comment) => (event) => {
-        console.log("handleClick, comment=>" + comment)
-        setTarget(comment);
-        setAnchorEl(event.currentTarget);
-        setPopperOpen((prev) => placement !== newPlacement || !prev);
-        setPlacement(newPlacement);
-    };
 
     const handleClickOpen = (comment) => {
         console.log("handleClickOpen, comment=>" + comment)
@@ -83,47 +73,66 @@ export default function CommentList(props) {
         return response;
     }
 
+    function stringToColor(string) {
+        let hash = 0;
+        let i;
+
+        /* eslint-disable no-bitwise */
+        for (i = 0; i < string.length; i += 1) {
+            hash = string.charCodeAt(i) + ((hash << 3) - hash);
+        }
+
+        let color = '#';
+
+        for (i = 0; i < comments.length; i += 1) {
+            const value = (hash >> (i * 8)) & 0xff;
+            color += `00${value.toString(16)}`.slice(-2);
+        }
+        /* eslint-enable no-bitwise */
+
+        return color;
+    }
+
     return (
         <>
             {loading ? <CircularProgress color="inherit"/> :
                 <div>
-                    <div className={styles.cardContainer}>
+                    <div className={styles.commentListContainer}>
                         {comments.map(comment => (
                             <div key={comment._id}>
-                                <Box sx={{
-                                    '& .MuiTextField-root': {m: 1, width: '25ch'},
-                                }}>
-
-                                    <Card sx={{maxWidth: 345}}
-                                          style={{textAlign: 'left', margin: 'auto', marginBottom: '2%'}}>
-                                        <CardHeader
-                                            avatar={
-                                                <Avatar sx={{bgcolor: red[500], fontFamily: 'Noto Sans KR'}}
-                                                        aria-label="recipe">
-                                                    {comment.name.substring(0, 1)}
-                                                </Avatar>
-                                            }
-                                            action={
-                                                <IconButton onClick={() => handleClickOpen(comment)}>
-                                                    <CloseIcon style={{fontSize: 'medium'}}/>
-                                                </IconButton>
-                                            }
-                                            title={comment.name}
-                                            subheader={comment.createdDate.toString()}
-                                        />
-                                        <CardContent>
-                                            <Typography variant="body2" color="text.secondary">
-                                                {comment.content}
-                                            </Typography>
-                                        </CardContent>
-                                    </Card>
+                                <Box sx={{flexGrow: 1, overflow: 'hidden', px: 1}} className={styles.comment}>
+                                    <Grid container spacing={0}>
+                                        <Grid item xs={1.5}>
+                                            <Avatar
+                                                sx={{
+                                                    width: 30,
+                                                    height: 30,
+                                                    fontSize: '80%',
+                                                }}
+                                            >{comment.name.substring(0, 1)}</Avatar>
+                                        </Grid>
+                                        <Grid item xs={2}>
+                                            <div className={styles.name}>{comment.name}</div>
+                                        </Grid>
+                                        <Grid item xs={7.5}>
+                                            <div className={styles.content}>{comment.content}</div>
+                                        </Grid>
+                                        <Grid item xs={1} style={{textAlign: 'right'}}>
+                                            <IconButton onClick={() => handleClickOpen(comment)}>
+                                                <CloseIcon style={{fontSize: 'medium'}}/>
+                                            </IconButton>
+                                        </Grid>
+                                        <Grid item xs={8}>
+                                            <div className={styles.date}>{comment.createdDate.toString()}</div>
+                                        </Grid>
+                                    </Grid>
                                 </Box>
                             </div>
                         ))}
                     </div>
                     <div>
                         <Dialog open={open} onClose={handleClose}>
-                            <div className="medium">방명록 삭제</div>
+                            <div className={styles.dialog}><span className="medium">방명록 삭제</span></div>
                             <DialogContent>
                                 <div>
                                     삭제하시려면 비밀번호를 입력해주세요.

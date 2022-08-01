@@ -1,6 +1,4 @@
 .container {
-    font-family: 'Noto Sans KR';
-    font-size: 97%;
     padding-top: 40%;
     padding-bottom: 20%;
     font-weight: 300;
@@ -14,5 +12,4 @@
 }
 .body {
     padding-bottom: 10%;
-    font-size: 97%;
 }

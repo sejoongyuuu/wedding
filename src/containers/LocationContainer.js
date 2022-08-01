@@ -30,13 +30,13 @@ export default function LocationContainer() {
                 <Fade>
                     <table style={{textAlign: 'left'}}>
                         <tr>
-                            <td className={styles.title} >
+                            <td className={styles.title}>
                                 <DirectionsCarIcon/><br/>
                                 자가용
                             </td>
                             <td style={{borderBottom: '1px solid #5a5a5a'}}>한국도심공항 터미널 주차장 이용</td>
                         </tr>
-                        <tr >
+                        <tr>
                             <td className={styles.title}>
                                 <DirectionsSubwayIcon/><br/>
                                 지하철
@@ -71,16 +71,18 @@ export default function LocationContainer() {
                 </Fade>
                 <Fade>
                     <div className={styles.guideDiv}>
-                        <div style={{width: '50%', margin: 'auto'}}>
+                        <div style={{width: '60%', margin: 'auto'}}>
                             <Image src={drink} alt=""/>
                         </div>
                         <div className={styles.guideBold}>
                             예식 1시간 전부터<br/>
                             웰컴드링크와 포토부스가 마련됩니다.
                         </div>
-                        촬영은 무료 및 무제한이며, <br/>
-                        좋은 날 추억을 기록으로 남길 수 있도록<br/>
-                        많은 참여 부탁드립니다.
+                        <div className={styles.guideBody}>
+                            촬영은 무료 및 무제한이며, <br/>
+                            좋은 날 추억을 기록으로 남길 수 있도록<br/>
+                            많은 참여 부탁드립니다.
+                        </div>
                     </div>
                 </Fade>
             </div>
