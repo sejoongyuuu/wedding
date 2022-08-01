@@ -102,26 +102,28 @@ export default function CommentList(props) {
                             <div key={comment._id}>
                                 <Box sx={{flexGrow: 1, overflow: 'hidden', px: 1}} className={styles.comment}>
                                     <Grid container spacing={0}>
-                                        <Grid item xs={1.5} style={{verticalAlign: 'bottom'}}>
+                                        <Grid item xs={2} style={{paddingTop:'2%'}}>
                                             <Avatar
                                                 sx={{
-                                                    width: 25,
-                                                    height: 25,
+                                                    width: 27,
+                                                    height: 27,
                                                     fontSize: '80%',
                                                 }}
                                             >{comment.name.substring(0, 1)}</Avatar>
                                         </Grid>
-                                        <Grid item xs={8}>
-                                            <span className={styles.name}>{comment.name}</span>
-                                            <span className={styles.content}>{comment.content}</span>
+                                        <Grid item xs={9}>
+                                            <Grid item xs={8}>
+                                                <span className={styles.name}>{comment.name}</span>
+                                                <span className={styles.content}>{comment.content}</span>
+                                            </Grid>
+                                            <Grid item xs={8}>
+                                                <div className={styles.date}>{comment.createdDate.toString()}</div>
+                                            </Grid>
                                         </Grid>
                                         <Grid item xs={1} style={{textAlign: 'right'}}>
                                             <IconButton onClick={() => handleClickOpen(comment)}>
                                                 <CloseIcon style={{fontSize: 'small'}}/>
                                             </IconButton>
-                                        </Grid>
-                                        <Grid item xs={8}>
-                                            <div className={styles.date}>{comment.createdDate.toString()}</div>
                                         </Grid>
                                     </Grid>
                                 </Box>
