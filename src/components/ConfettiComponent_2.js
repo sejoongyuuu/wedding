@@ -59,11 +59,10 @@ export default function Realistic(prop) {
     }, [makeShot]);
 
     useEffect(() => {
-        setAction(false);
         setTimeout(() => {
             fire();
-        }, i * 1500)
-    }, [prop]);
+        }, 1500)
+    }, []);
     return (
         <>
             <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles}/>
