@@ -19,6 +19,8 @@ import Pagination from "./Pagination";
 import CommentList from "./CommetList"
 import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
 import {pink} from "@mui/material/colors";
+import Image from "next/image";
+import message from "../../public/images/picture/message.PNG"
 
 const CssTextField = styled(TextField)({
     fontFamily: 'Noto Sans KR',
@@ -131,9 +133,14 @@ export default function CommentComponent() {
 
     return (
         <div>
-            <IconButton onClick={handleClickOpen} style={{fontSize: 'extra-large'}}>
-                <AddCircleRoundedIcon style={{color: pink[500]}}/>
+            <IconButton onClick={handleClickOpen}>
+                <AddCircleRoundedIcon sx={{fontSize: 50, color: "#FF625B"}}/>
             </IconButton>
+            <div style={{width: '40%', margin: 'auto'}}>
+                <div>
+                    <Image src={message} alt="" width="734" height="209"/>
+                </div>
+            </div>
             <Dialog open={open} onClose={handleClose}>
                 <Box
                     component="form"

@@ -22,7 +22,7 @@ export default function ContentsContainer(prop) {
                     <div>초대합니다.</div>
                 </div>
                 <div className={styles.body}>
-                    <div>함께 맞는 여섯 번째 가을</div>
+                    <div>함께 맞는 여섯 번째 가을,</div>
                     <div>결혼합니다.</div>
                     <div>소중한 분들을 모십니다.</div>
                 </div>
