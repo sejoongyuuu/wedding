@@ -46,3 +46,11 @@
     vertical-align: center;
     padding-top: 1%;
 }
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    padding-bottom: 5%;
+}

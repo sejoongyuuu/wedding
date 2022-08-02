@@ -1,15 +1,7 @@
 import {useEffect, useState} from "react";
 import * as React from 'react';
 import {
-    Box,
-    Button,
-    CircularProgress,
-    Dialog,
-    DialogActions,
-    DialogContent, DialogContentText,
-    DialogTitle,
-    IconButton,
-    TextField
+    Box, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton, TextField
 } from "@mui/material";
 import {styled} from "@mui/material/styles";
 import styles from '../../styles/comment.module.css'
@@ -21,43 +13,31 @@ import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
 import {pink} from "@mui/material/colors";
 import Image from "next/image";
 import message from "../../public/images/picture/message.PNG"
+import Grid from "@mui/material/Grid";
+import CloseIcon from "@mui/icons-material/Close";
 
 const CssTextField = styled(TextField)({
-    fontFamily: 'Noto Sans KR',
-    '& label.Mui-focused': {
-        color: '#FF7664',
-    },
-    '& .MuiInput-underline:after': {
-        borderBottomColor: '#FF7664',
-    },
-    '& .MuiOutlinedInput-root': {
-        '& fieldset': {},
-        '&.Mui-focused fieldset': {
-            borderColor: '#FF7664',
+    fontFamily: 'Noto Sans KR', width: "40%", paddingRight: "2%", '& label.Mui-focused': {
+        color: '#38c7a7',
+    }, '& .MuiInput-underline:after': {
+        borderBottomColor: '#38c7a7',
+    }, '& .MuiOutlinedInput-root': {
+        '& fieldset': {}, '&.Mui-focused fieldset': {
+            borderColor: '#38c7a7',
         },
     },
 });
-
-const ColorButton = styled(Button)(({theme}) => ({
-    color: '#ffffff',
-    fontFamily: 'Noto Sans KR',
-    fontWeight: 500,
-    backgroundColor: '#FF6E5B',
-    '&:hover': {
-        backgroundColor: '#FFACA1'
+const CssContentsField = styled(TextField)({
+    fontFamily: 'Noto Sans KR', width: "82%", '& label.Mui-focused': {
+        color: '#38c7a7',
+    }, '& .MuiInput-underline:after': {
+        borderBottomColor: '#38c7a7',
+    }, '& .MuiOutlinedInput-root': {
+        '& fieldset': {}, '&.Mui-focused fieldset': {
+            borderColor: '#38c7a7',
+        },
     },
-}));
-
-const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
-    boxShadow: 24,
-    p: 4,
-};
+});
 
 export default function CommentComponent() {
     const [comments, setComments] = useState([]);
@@ -80,8 +60,7 @@ export default function CommentComponent() {
 
     const getComments = async () => {
         const response = await (await fetch("/api/comment", {
-            method: "GET",
-            headers: {
+            method: "GET", headers: {
                 'Content-Type': 'application/json',
             },
         })).json();
@@ -101,22 +80,16 @@ export default function CommentComponent() {
 
     const createComment = async (data) => {
         const response = await (await fetch("/api/comment", {
-            method: "POST",
-            headers: {
+            method: "POST", headers: {
                 'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
+            }, body: JSON.stringify(data)
         })).json();
         return response;
     }
     const formik = useFormik({
         initialValues: {
-            name: '',
-            password: '',
-            content: '',
-        },
-        validationSchema: Validation,
-        onSubmit: (values, {resetForm}) => {
+            name: '', password: '', content: '',
+        }, validationSchema: Validation, onSubmit: (values, {resetForm}) => {
             resetForm({});
             createComment(values).then(res => {
                 console.log(res);
@@ -131,83 +104,106 @@ export default function CommentComponent() {
     }, []);
     const {values, touched, errors, handleChange, handleSubmit} = formik;
 
-    return (
-        <div>
-            <IconButton onClick={handleClickOpen}>
-                <AddCircleRoundedIcon sx={{fontSize: 50, color: "#FF625B"}}/>
-            </IconButton>
-            <div style={{width: '40%', margin: 'auto'}}>
-                <div>
-                    <Image src={message} alt="" width="734" height="209"/>
-                </div>
+    return (<div>
+        <IconButton onClick={handleClickOpen}>
+            <AddCircleRoundedIcon sx={{fontSize: 50, color: "#FF625B"}}/>
+        </IconButton>
+        <div style={{width: '40%', margin: 'auto'}}>
+            <div>
+                <Image src={message} alt="" width="734" height="209"/>
             </div>
-            <Dialog open={open} onClose={handleClose}>
+        </div>
+        <Dialog open={open} onClose={handleClose}>
+            <DialogContent>
                 <Box
                     component="form"
-                    padding='10%'
-                    margin='10%'
                     sx={{flexGrow: 1}}
                     onSubmit={handleSubmit}
                 >
-                    <div>
-                        <CssTextField
-                            required
-                            name={"name"}
-                            label={"이름"}
-                            placeholder={"이름"}
-                            id="custom-css-outlined-input"
-                            size={"small"}
-                            value={values.name}
-                            error={touched.name && Boolean(errors.name)}
-                            onChange={handleChange}
-                            helperText={touched.name && errors.name}
-                        />
-                        <CssTextField
-                            required
-                            name={"content"}
-                            label={"내용"}
-                            placeholder={"내용"}
-                            id="custom-css-outlined-input"
-                            size={"small"}
-                            value={values.content}
-                            error={touched.content && Boolean(errors.content)}
-                            onChange={handleChange}
-                            helperText={touched.content && errors.content}
-                        />
-                        <CssTextField
-                            required
-                            type={"password"}
-                            name={"password"}
-                            label={"비밀번호"}
-                            placeholder={"비밀번호"}
-                            id="custom-css-outlined-input"
-                            size={"small"}
-                            value={values.password}
-                            error={touched.password && Boolean(errors.password)}
-                            onChange={handleChange}
-                            helperText={touched.password && errors.password}
-                        />
-                        <br/>
-                        <ColorButton type="submit">등록</ColorButton>
+                    <div style={{paddingBottom: '5%'}}>
+                        <span className="medium">
+                            방명록 작성</span>
+                        <span style={{alignContent: 'right', textAlign:'right'}}>
+                            <IconButton onClick={handleClose}>
+                                <CloseIcon style={{fontSize: 'medium'}}/>
+                            </IconButton>
+                        </span>
                     </div>
-                </Box>
-            </Dialog>
-            <div className={styles.comments}>
-                <CommentList
-                    loading={loading}
-                    comments={currentComments(comments)}
-                    getComments={getComments}
-                />
-                <div>
-                    <Pagination
-                        postsPerPage={commentsPerPage}
-                        totalPosts={totalCount}
-                        paginate={setCurrentPage}
-                        currentPage={currentPage}
+                    <CssTextField
+                        required
+                        margin="dense"
+                        name={"name"}
+                        label={"이름"}
+                        id="custom-css-outlined-input"
+                        size={"small"}
+                        value={values.name}
+                        error={touched.name && Boolean(errors.name)}
+                        onChange={handleChange}
+                        helperText={touched.name && errors.name}
+                        InputProps={{style: {fontSize: "90%"}}}
+                        InputLabelProps={{style: {fontSize: "90%"}}}
                     />
+                    <CssTextField
+                        required
+                        margin="dense"
+                        type={"password"}
+                        name={"password"}
+                        label={"비밀번호"}
+                        id="custom-css-outlined-input"
+                        size={"small"}
+                        value={values.password}
+                        error={touched.password && Boolean(errors.password)}
+                        onChange={handleChange}
+                        helperText={touched.password && errors.password}
+                        InputProps={{style: {fontSize: "90%"}}}
+                        InputLabelProps={{style: {fontSize: "90%"}}}
+                    />
+                    <CssContentsField
+                        required
+                        variant="standard"
+                        margin="dense"
+                        multiline
+                        rows={3}
+                        name={"content"}
+                        label={"내용"}
+                        id="custom-css-outlined-input"
+                        size={"small"}
+                        value={values.content}
+                        error={touched.content && Boolean(errors.content)}
+                        onChange={handleChange}
+                        helperText={touched.content && errors.content}
+                        InputProps={{style: {fontSize: "90%"}}}
+                        InputLabelProps={{style: {fontSize: "90%"}}}
+                    />
+                </Box>
+            </DialogContent>
+            <DialogActions style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                verticalAlign: 'center',
+                paddingBottom: '5%'
+            }}>
+                <div>
+                    <Button onClick={handleSubmit}>등록</Button>
                 </div>
+            </DialogActions>
+        </Dialog>
+        <div>
+            <CommentList
+                loading={loading}
+                comments={currentComments(comments)}
+                getComments={getComments}
+            />
+            <div>
+                <Pagination
+                    postsPerPage={commentsPerPage}
+                    totalPosts={totalCount}
+                    paginate={setCurrentPage}
+                    currentPage={currentPage}
+                />
             </div>
         </div>
-    )
+    </div>)
 
 }

@@ -104,6 +104,7 @@ export default function CommentList(props) {
                                                     width: 30,
                                                     height: 30,
                                                     fontSize: '80%',
+                                                    fontWeight: '700'
                                                 }}
                                             >{comment.name.substring(0, 1)}</Avatar>
                                         </Grid>
@@ -144,7 +145,13 @@ export default function CommentList(props) {
                                 />
                                 {invalid && <div>비밀번호가 일치하지 않습니다.</div>}
                             </DialogContent>
-                            <DialogActions>
+                            <DialogActions style={{
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                verticalAlign: 'center',
+                                paddingBottom: '5%'
+                            }}>
                                 <Button onClick={handleConfirm}>확인</Button>
                                 <Button onClick={handleClose}>취소</Button>
                             </DialogActions>
