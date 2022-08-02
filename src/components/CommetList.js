@@ -128,7 +128,7 @@ export default function CommentList(props) {
                         ))}
                     </div>
                     <div>
-                        <Dialog open={open} onClose={handleClose}>
+                        <Dialog open={open} onClose={handleClose}  style={{fontFamily: 'Noto Sans KR'}}>
                             <div className={styles.dialog}><span className="medium">방명록 삭제</span></div>
                             <DialogContent>
                                 <div>
