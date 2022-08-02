@@ -60,13 +60,13 @@ export default function Realistic(prop) {
     }, [makeShot]);
 
     useEffect(() => {
-        if (action && prop.scrollY > 10) {
-            setAction(false);
+        if (action) {
             for (let i = 1; i < 5; i++) {
                 setTimeout(() => {
                     fire();
                 }, i * 1500)
             }
+            setAction(false);
         }
         (prop.scrollY > 500) && setAction(true);
     }, [prop]);
