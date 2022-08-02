@@ -11,7 +11,6 @@ const canvasStyles = {
 };
 
 export default function Realistic(prop) {
-    const [action, setAction] = useState(true);
     const refAnimationInstance = useRef(null);
 
     const getInstance = useCallback((instance) => {
@@ -60,14 +59,10 @@ export default function Realistic(prop) {
     }, [makeShot]);
 
     useEffect(() => {
-        if (action) {
-            setAction(false);
-            for (let i = 1; i < 3; i++) {
-                setTimeout(() => {
-                    fire();
-                }, i * 1500)
-            }
-        }
+        setAction(false);
+        setTimeout(() => {
+            fire();
+        }, i * 1500)
     }, [prop]);
     return (
         <>
