@@ -15,8 +15,18 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import styles from '../../styles/comment.module.css';
 import Grid from "@mui/material/Grid";
-import {orange, pink} from "@mui/material/colors";
 
+const CssTextField = styled(TextField)({
+    fontFamily: 'Noto Sans KR', width: "40%", paddingRight: "2%", '& label.Mui-focused': {
+        color: '#38c7a7',
+    }, '& .MuiInput-underline:after': {
+        borderBottomColor: '#38c7a7',
+    }, '& .MuiOutlinedInput-root': {
+        '& fieldset': {}, '&.Mui-focused fieldset': {
+            borderColor: '#38c7a7',
+        },
+    },
+});
 export default function CommentList(props) {
     const {loading, comments, getComments} = props;
 
@@ -134,7 +144,7 @@ export default function CommentList(props) {
                                 <div>
                                     삭제하시려면 비밀번호를 입력해주세요.
                                 </div>
-                                <TextField
+                                <CssTextField
                                     autoFocus
                                     type="password"
                                     margin="dense"
@@ -161,5 +171,4 @@ export default function CommentList(props) {
             }
         </>
     )
-
 }

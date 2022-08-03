@@ -239,3 +239,6 @@ td {
         opacity: 1;
     }
 }
+.swiper-pagination-progressbar-fill{
+    background-color: #cccccc;
+}
