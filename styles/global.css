@@ -239,6 +239,26 @@ td {
         opacity: 1;
     }
 }
-.swiper-pagination-progressbar-fill{
-    background-color: #cccccc;
+
+.swiper-button-next, .swiper-button-prev{
+    color: #5A5A5A !important;
+    font-size: 15px  !important;
+}
+.swiper-pagination-progressbar-fill {
+    background-color: #414141 !important;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 15px  !important;
+}
+
+.swiper-pagination-progressbar {
+    background: rgba(255, 255, 255, 0.71);
+    position: absolute;
+}
+
+.swiper-wrapper {
+    text-align:center !important;
+    display:flex !important;
+    align-items:center !important;
 }

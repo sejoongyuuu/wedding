@@ -5,3 +5,9 @@
     padding-bottom: 20%;
     font-weight: 300;
 }
+
+.thumbs {
+    width:20px !important;
+    height:20px !important;
+    object-fit:cover !important;
+}

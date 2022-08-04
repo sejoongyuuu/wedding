@@ -3,6 +3,7 @@ import Image from "next/image";
 import flower from "../../public/images/picture/flower_line.PNG"
 import {useEffect, useState} from "react";
 import Fade from 'react-reveal/Fade';
+import photo_9 from "../../public/images/gallery/009.jpg";
 
 export default function ContentsContainer(prop) {
     const [scrollY, setScrollY] = useState(0);

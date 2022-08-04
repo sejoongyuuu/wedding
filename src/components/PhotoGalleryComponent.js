@@ -4,7 +4,9 @@ import Image from "next/image";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import {useState} from "react";
+import {useRef, useState} from "react";
+import NavigateBeforeRoundedIcon from '@mui/icons-material/NavigateBeforeRounded';
+import NavigateNextRoundedIcon from '@mui/icons-material/NavigateNextRounded';
 import photo_1 from '../../public/images/gallery/001.jpg';
 import photo_2 from '../../public/images/gallery/002.jpg';
 import photo_3 from '../../public/images/gallery/003.jpg';
@@ -36,7 +38,6 @@ import photo_28 from '../../public/images/gallery/027.JPG';
 import photo_29 from '../../public/images/gallery/028.JPG';
 import photo_30 from '../../public/images/gallery/029.JPG';
 import photo_31 from '../../public/images/gallery/030.jpg';
-import photo_32 from '../../public/images/gallery/031.JPG';
 import photo_33 from '../../public/images/gallery/032.jpg';
 import photo_34 from '../../public/images/gallery/033.jpg';
 import photo_35 from '../../public/images/gallery/034.jpg';
@@ -64,17 +65,20 @@ import photo_56 from '../../public/images/gallery/055.JPG';
 import photo_57 from '../../public/images/gallery/056.JPG';
 import photo_58 from '../../public/images/gallery/057.JPG';
 import photo_59 from '../../public/images/gallery/058.JPG';
+import styles from '../../styles/gallery.module.css';
 
 
 export default function PhotoGalleryComponent() {
     SwiperCore.use([Navigation, Thumbs, Pagination]);
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const navigationPrevRef = useRef(null);
+    const navigationNextRef = useRef(null);
 
     const images = [
         photo_1, photo_2, photo_3, photo_4, photo_6, photo_7, photo_8, photo_9, photo_10,
         photo_11, photo_12, photo_13, photo_14, photo_15, photo_16, photo_17, photo_17_1, photo_18, photo_19, photo_20,
         photo_21, photo_22, photo_23, photo_24, photo_25, photo_26, photo_27, photo_28, photo_29, photo_30,
-        photo_31, photo_32, photo_33, photo_34, photo_35, photo_36, photo_37, photo_38, photo_39, photo_40,
+        photo_31, photo_33, photo_34, photo_35, photo_36, photo_37, photo_38, photo_39, photo_40,
         photo_41, photo_42, photo_43, photo_44, photo_45, photo_46, photo_47, photo_48, photo_49, photo_50,
         photo_51, photo_52, photo_53, photo_54, photo_55, photo_56, photo_57, photo_58, photo_59
     ];
@@ -85,12 +89,19 @@ export default function PhotoGalleryComponent() {
             </SwiperSlide>
         )
     })
+    const imageRender_thumbs = images.map((item, index) => {
+        return (
+            <SwiperSlide key={`swiper-${index}`}>
+                <Image src={item}/>
+            </SwiperSlide>
+        )
+    })
+
     return (
         <div>
             <Swiper
-                slidesPerView={1}
                 navigation
-                autoHeight={true}
+                slidesPerView={1}
                 thumbs={{swiper: thumbsSwiper}}
                 loop
                 pagination={{
@@ -100,12 +111,11 @@ export default function PhotoGalleryComponent() {
                 {imageRender}
             </Swiper>
             <Swiper
-                autoHeight={true}
                 onSwiper={setThumbsSwiper}
                 slidesPerView={5}
                 watchSlidesProgress={true}
                 freeMode
-            >{imageRender}</Swiper>
+            >{imageRender_thumbs}</Swiper>
         </div>
     );
 }
