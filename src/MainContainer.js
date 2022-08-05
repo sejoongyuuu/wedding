@@ -1,7 +1,6 @@
 import dynamic from "next/dynamic";
 import TopContainer from "../src/containers/TopContainer";
 import GalleryContainer from "./containers/GalleryContainer";
-import KakaoShareButton from "./components/KakaoShareButton";
 import ShareContainer from "./containers/ShareContainer";
 
 export default function MainContainer() {

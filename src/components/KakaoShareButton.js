@@ -11,14 +11,13 @@ export default function KakaoShareButton() {
         mapScript.src = "https://developers.kakao.com/sdk/js/kakao.js";
 
         document.head.appendChild(mapScript);
-
-       const share = ()=>{
-           window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_APPKEY);
-           window.Kakao.Share.createCustomButton({
-               container: '#kakaotalk-sharing-btn',
-               templateId: process.env.NEXT_PUBLIC_TEMPLATE_ID,
-           });
-       }
+        const share = () => {
+            window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_APPKEY);
+            window.Kakao.Share.createCustomButton({
+                container: '#kakaotalk-sharing-btn',
+                templateId: parseInt(process.env.NEXT_PUBLIC_TEMPLATE_ID),
+            });
+        }
         mapScript.addEventListener("load", share);
         return () => mapScript.removeEventListener("load", share);
     }, []);

@@ -18,23 +18,23 @@ import CloseIcon from "@mui/icons-material/Close";
 
 const CssTextField = styled(TextField)({
     fontFamily: 'Noto Sans KR', width: "40%", paddingRight: "2%", '& label.Mui-focused': {
-        color: '#38c7a7',
+        color: '#000000',
     }, '& .MuiInput-underline:after': {
-        borderBottomColor: '#38c7a7',
+        borderBottomColor: '#000000',
     }, '& .MuiOutlinedInput-root': {
         '& fieldset': {}, '&.Mui-focused fieldset': {
-            borderColor: '#38c7a7',
+            borderColor: '#000000',
         },
     },
 });
 const CssContentsField = styled(TextField)({
     fontFamily: 'Noto Sans KR', width: "82%", '& label.Mui-focused': {
-        color: '#38c7a7',
+        color: '#000000',
     }, '& .MuiInput-underline:after': {
-        borderBottomColor: '#38c7a7',
+        borderBottomColor: '#000000',
     }, '& .MuiOutlinedInput-root': {
         '& fieldset': {}, '&.Mui-focused fieldset': {
-            borderColor: '#38c7a7',
+            borderColor: '#000000',
         },
     },
 });
