@@ -39,6 +39,39 @@ const CssContentsField = styled(TextField)({
     },
 });
 
+const RedditTextField = styled((props) => (
+    <TextField InputProps={{disableUnderline: true}} {...props} />
+))(({theme}) => ({
+    "& label": {
+
+        fontSize: "90%"
+    },
+    '& label.Mui-focused': {
+        color: 'Black',
+    },
+    '& .MuiFilledInput-root': {
+        fontFamily: 'Noto Sans KR',
+        fontSize: '90%',
+        border: '1px solid #C6C6C6',
+        overflow: 'hidden',
+        borderRadius: 4,
+        backgroundColor: "#fcfcfb",
+        transition: theme.transitions.create([
+            "border-color",
+            "background-color",
+            "box-shadow"
+        ]),
+        '&:hover': {
+            backgroundColor: 'transparent',
+        },
+        '&.Mui-focused': {
+            backgroundColor: 'transparent',
+            borderColor: '#4F4F4F'
+        },
+    }
+}));
+
+
 export default function CommentComponent() {
     const [comments, setComments] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -108,77 +141,65 @@ export default function CommentComponent() {
             <IconButton onClick={handleClickOpen}>
                 <AddCircleRoundedIcon sx={{fontSize: 50, color: "#FF625B"}}/>
             </IconButton>
-            <div style={{width: '40%', margin: 'auto'}}>
-                <div>
-                    <Image src={message} alt="" width="734" height="209"/>
-                </div>
-            </div>
-            <Dialog open={open} onClose={handleClose}  style={{fontFamily: 'Noto Sans KR'}}>
+            <Dialog open={open} onClose={handleClose} style={{fontFamily: 'Noto Sans KR'}}>
                 <DialogContent>
+                    <DialogTitle sx={{m: 0, p: 2, fontWeight: '500'}}>
+                        <div style={{fontSize: '80%', fontWeight: '700'}}>축하 메시지 작성</div>
+                        <IconButton
+                            onClick={handleClose}
+                            sx={{
+                                position: 'absolute',
+                                right: 8,
+                                top: 8,
+                                color: (theme) => theme.palette.grey[500]
+                            }}
+                        >
+                            <CloseIcon style={{fontSize: 'medium'}}/>
+                        </IconButton>
+                    </DialogTitle>
                     <Box
                         component="form"
-                        sx={{flexGrow: 1}}
+                        sx={{
+                            display: "grid",
+                            gap: 2
+                        }}
                         onSubmit={handleSubmit}
                     >
-                        <DialogTitle sx={{m: 0, p: 2, fontWeight: '500'}}>
-                            <div style={{fontSize: '80%', fontWeight: '700'}}>방명록 작성</div>
-                            <IconButton
-                                onClick={handleClose}
-                                sx={{
-                                    position: 'absolute',
-                                    right: 8,
-                                    top: 8,
-                                    color: (theme) => theme.palette.grey[500]
-                                }}
-                            >
-                                <CloseIcon style={{fontSize: 'medium'}}/>
-                            </IconButton>
-                        </DialogTitle>
-                        <CssTextField
+                        <RedditTextField
                             required
-                            margin="dense"
-                            name={"name"}
-                            label={"이름"}
-                            id="custom-css-outlined-input"
+                            label="이름"
+                            id="=name"
+                            variant="filled"
                             size={"small"}
+                            name={"name"}
                             value={values.name}
                             error={touched.name && Boolean(errors.name)}
                             onChange={handleChange}
-                            helperText={touched.name && errors.name}
-                            InputProps={{style: {fontSize: "90%"}}}
-                            InputLabelProps={{style: {fontSize: "90%"}}}
                         />
-                        <CssTextField
+                        <RedditTextField
                             required
-                            margin="dense"
-                            type={"password"}
-                            name={"password"}
-                            label={"비밀번호"}
-                            id="custom-css-outlined-input"
+                            label="비밀번호"
+                            id="password"
+                            variant="filled"
                             size={"small"}
+                            type={"password"}
                             value={values.password}
                             error={touched.password && Boolean(errors.password)}
                             onChange={handleChange}
                             helperText={touched.password && errors.password}
-                            InputProps={{style: {fontSize: "90%"}}}
-                            InputLabelProps={{style: {fontSize: "90%"}}}
                         />
-                        <CssContentsField
+                        <RedditTextField
                             required
-                            variant="standard"
-                            margin="dense"
+                            label="내용"
+                            id="content"
+                            variant="filled"
+                            size={"small"}
                             multiline
                             rows={3}
-                            name={"content"}
-                            label={"내용"}
-                            id="custom-css-outlined-input"
-                            size={"small"}
                             value={values.content}
                             error={touched.content && Boolean(errors.content)}
                             onChange={handleChange}
                             helperText={touched.content && errors.content}
-                            InputProps={{style: {fontSize: "90%"}}}
-                            InputLabelProps={{style: {fontSize: "90%"}}}
                         />
                     </Box>
                 </DialogContent>
