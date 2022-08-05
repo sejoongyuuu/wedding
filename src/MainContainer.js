@@ -1,6 +1,8 @@
 import dynamic from "next/dynamic";
 import TopContainer from "../src/containers/TopContainer";
 import GalleryContainer from "./containers/GalleryContainer";
+import KakaoShareButton from "./components/KakaoShareButton";
+import ShareContainer from "./containers/ShareContainer";
 
 export default function MainContainer() {
     const GalleryContainer = dynamic(() => import("../src/containers/GalleryContainer"),)
@@ -15,6 +17,7 @@ export default function MainContainer() {
             <GalleryContainer/>
             <ContactContainer/>
             <CommentContainer/>
+            <ShareContainer/>
         </div>
     )
 }
