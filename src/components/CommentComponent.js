@@ -43,11 +43,11 @@ const RedditTextField = styled((props) => (
     <TextField InputProps={{disableUnderline: true}} {...props} />
 ))(({theme}) => ({
     "& label": {
-
-        fontSize: "90%"
+        color: '8E8E8E',
+        fontSize: "85%"
     },
     '& label.Mui-focused': {
-        color: 'Black',
+        color:'#4F4F4F'
     },
     '& .MuiFilledInput-root': {
         fontFamily: 'Noto Sans KR',
