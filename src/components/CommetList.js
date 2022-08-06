@@ -4,10 +4,9 @@ import {
     Avatar,
     Box,
     Button,
-    CircularProgress,
     Dialog,
     DialogActions,
-    DialogContent, Paper, Popper,
+    DialogContent,
     TextField
 } from "@mui/material";
 import {styled} from '@mui/material/styles';
@@ -15,6 +14,7 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import styles from '../../styles/comment.module.css';
 import Grid from "@mui/material/Grid";
+import {Container, Divider, Icon, List} from "semantic-ui-react";
 
 const CssTextField = styled(TextField)({
     fontFamily: 'Noto Sans KR', width: "40%", paddingRight: "2%", '& label.Mui-focused': {
@@ -78,68 +78,48 @@ export default function CommentList(props) {
         })).json();
         return response;
     }
-
-    function stringToColor(string) {
-        let hash = 0;
-        let i;
-
-        /* eslint-disable no-bitwise */
-        for (i = 0; i < string.length; i += 1) {
-            hash = string.charCodeAt(i) + ((hash << 3) - hash);
-        }
-
-        let color = '#';
-
-        for (i = 0; i < comments.length; i += 1) {
-            const value = (hash >> (i * 8)) & 0xff;
-            color += `00${value.toString(16)}`.slice(-2);
-        }
-        /* eslint-enable no-bitwise */
-
-        return color;
-    }
-
     return (
         <>
-            {loading ? <CircularProgress color="inherit"/> :
+            {loading ? <Icon loading name='spinner'/> :
                 <div>
                     <div className={styles.commentListContainer}>
                         {comments.map(comment => (
                             <div key={comment._id}>
                                 <Box sx={{flexGrow: 1, overflow: 'hidden', px: 1}} className={styles.comment}>
                                     <Grid container spacing={0}>
-                                        <Grid item xs={2} style={{paddingTop:'2%'}}>
+                                        <Grid item xs={2} style={{margin:'auto'}}>
                                             <Avatar
                                                 sx={{
                                                     width: 30,
                                                     height: 30,
-                                                    fontSize: '80%',
+                                                    fontSize: '85%',
                                                     fontWeight: '700'
                                                 }}
                                             >{comment.name.substring(0, 1)}</Avatar>
                                         </Grid>
                                         <Grid item xs={9}>
-                                            <Grid item xs={8}>
+                                            <Grid item xs={12}>
                                                 <span className={styles.name}>{comment.name}</span>
                                                 <span className={styles.content}>{comment.content}</span>
                                             </Grid>
-                                            <Grid item xs={8}>
+                                            <Grid item xs={12}>
                                                 <div className={styles.date}>{comment.createdDate.toString()}</div>
                                             </Grid>
                                         </Grid>
-                                        <Grid item xs={1} style={{textAlign: 'right'}}>
+                                        <Grid item xs={1} style={{textAlign: 'right', margin:'auto'}}>
                                             <IconButton onClick={() => handleClickOpen(comment)}>
                                                 <CloseIcon style={{fontSize: 'small'}}/>
                                             </IconButton>
                                         </Grid>
                                     </Grid>
                                 </Box>
+                                <Divider fitted/>
                             </div>
                         ))}
                     </div>
                     <div>
-                        <Dialog open={open} onClose={handleClose}  style={{fontFamily: 'Noto Sans KR'}}>
-                            <div className={styles.dialog}><span className="medium">방명록 삭제</span></div>
+                        <Dialog open={open} onClose={handleClose} style={{fontFamily: 'Noto Sans KR'}}>
+                            <div className={styles.dialog}><span className="medium">축하 메시지 삭제</span></div>
                             <DialogContent>
                                 <div>
                                     삭제하시려면 비밀번호를 입력해주세요.

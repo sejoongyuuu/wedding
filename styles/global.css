@@ -2,12 +2,12 @@ body {
     width: 100%;
     margin: 0;
     text-align: center;
-    font-family: 'Noto Sans KR';
-    font-weight: 300;
-    font-size: 97%;
     color: #232323;
-    letter-spacing: -1.2px;
     background-color: #ffffff;
+    font-family: 'Noto Sans KR' !important;
+    font-size: 98% !important;
+    font-weight: 300 !important;
+    letter-spacing: -1px;
 }
 .numLight {
     font-weight: 300;
@@ -261,4 +261,22 @@ td {
     text-align:center !important;
     display:flex !important;
     align-items:center !important;
+}
+
+.ui.form input[type=text]{
+    font-family: "Noto Sans KR" !important;
+}
+
+.ui.form .field>label {
+    font-family: "Gothic A1";
+    letter-spacing: 0.3px;
+}
+
+.ui.form .field .prompt.label{
+    font-weight: 500;
+}
+
+ui.button {
+    font-family: "Noto Sans KR" !important;
+    font-weight: 500 !important;
 }

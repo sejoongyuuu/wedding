@@ -1,32 +1,30 @@
 .container {
     padding-bottom: 20%;
-    font-weight: 300;
 }
 
 .commentListContainer {
+    margin-top: 5%;
     margin-right: 10%;
     margin-left: 10%;
+    font-family: 'Noto Sans KR';
 }
 
 .comment {
+    padding-top: 1%;
+    padding-bottom: 1%;
     text-align: left;
-    margin-bottom: 2%;
-    padding-top: 2%;
-    padding-bottom: 2%;
 }
 
 .name {
     padding-right: 4%;
-    font-size: 95%;
     font-weight: 500;
 }
 
 .content {
-    font-size: 95%;
 }
 
 .date {
-    font-size: 80%;
+    font-size: 90%;
     font-weight: 100;
     letter-spacing: 1px;
     padding-left: 2%;
@@ -53,4 +51,14 @@
     align-items: center;
     vertical-align: center;
     padding-bottom: 5%;
+}
+
+.write{
+    text-align: left;
+}
+
+.title {
+    font-size: 110%;
+    font-weight: 500;
+    padding-right: 3%;
 }

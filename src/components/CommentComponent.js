@@ -1,53 +1,30 @@
 import {useEffect, useState} from "react";
 import * as React from 'react';
 import {
-    Box, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton, TextField
+    Box, Dialog, DialogActions, DialogContent, IconButton, TextField
 } from "@mui/material";
 import {styled} from "@mui/material/styles";
-import styles from '../../styles/comment.module.css'
 import {useFormik} from "formik";
 import {Validation} from "../../util/validation";
 import Pagination from "./Pagination";
 import CommentList from "./CommetList"
 import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
-import {pink} from "@mui/material/colors";
-import Image from "next/image";
-import message from "../../public/images/picture/message.PNG"
-import Grid from "@mui/material/Grid";
 import CloseIcon from "@mui/icons-material/Close";
-
-const CssTextField = styled(TextField)({
-    fontFamily: 'Noto Sans KR', width: "40%", paddingRight: "2%", '& label.Mui-focused': {
-        color: '#000000',
-    }, '& .MuiInput-underline:after': {
-        borderBottomColor: '#000000',
-    }, '& .MuiOutlinedInput-root': {
-        '& fieldset': {}, '&.Mui-focused fieldset': {
-            borderColor: '#000000',
-        },
-    },
-});
-const CssContentsField = styled(TextField)({
-    fontFamily: 'Noto Sans KR', width: "82%", '& label.Mui-focused': {
-        color: '#000000',
-    }, '& .MuiInput-underline:after': {
-        borderBottomColor: '#000000',
-    }, '& .MuiOutlinedInput-root': {
-        '& fieldset': {}, '&.Mui-focused fieldset': {
-            borderColor: '#000000',
-        },
-    },
-});
+import 'semantic-ui-css/semantic.min.css'
+import {Button, Container, Divider, Form, Icon, Input, Label, TextArea} from "semantic-ui-react";
+import styles from '../../styles/comment.module.css'
 
 const RedditTextField = styled((props) => (
     <TextField InputProps={{disableUnderline: true}} {...props} />
 ))(({theme}) => ({
+    fontFamily: 'Noto Sans KR',
+    fontSize: '95%',
     "& label": {
         color: '8E8E8E',
         fontSize: "85%"
     },
     '& label.Mui-focused': {
-        color:'#4F4F4F'
+        color: '#4F4F4F'
     },
     '& .MuiFilledInput-root': {
         fontFamily: 'Noto Sans KR',
@@ -71,6 +48,16 @@ const RedditTextField = styled((props) => (
     }
 }));
 
+const ColorButton = styled(Button)(({theme}) => ({
+    fontFamily: 'Noto Sans KR',
+    fontWeight: '500',
+    backgroundColor: "#FF625B",
+    boxShadow: 'none',
+    '&:hover': {
+        boxShadow: 'none',
+        backgroundColor: "#e1524d",
+    },
+}));
 
 export default function CommentComponent() {
     const [comments, setComments] = useState([]);
@@ -129,7 +116,7 @@ export default function CommentComponent() {
                 getComments().then();
             });
             handleClose();
-        }
+        },
     });
 
     useEffect(() => {
@@ -137,84 +124,8 @@ export default function CommentComponent() {
     }, []);
     const {values, touched, errors, handleChange, handleSubmit} = formik;
 
-    return (<div>
-            <IconButton onClick={handleClickOpen}>
-                <AddCircleRoundedIcon sx={{fontSize: 50, color: "#FF625B"}}/>
-            </IconButton>
-            <Dialog open={open} onClose={handleClose} style={{fontFamily: 'Noto Sans KR'}}>
-                <DialogContent>
-                    <DialogTitle sx={{m: 0, p: 2, fontWeight: '500'}}>
-                        <div style={{fontSize: '80%', fontWeight: '700'}}>축하 메시지 작성</div>
-                        <IconButton
-                            onClick={handleClose}
-                            sx={{
-                                position: 'absolute',
-                                right: 8,
-                                top: 8,
-                                color: (theme) => theme.palette.grey[500]
-                            }}
-                        >
-                            <CloseIcon style={{fontSize: 'medium'}}/>
-                        </IconButton>
-                    </DialogTitle>
-                    <Box
-                        component="form"
-                        sx={{
-                            display: "grid",
-                            gap: 2
-                        }}
-                        onSubmit={handleSubmit}
-                    >
-                        <RedditTextField
-                            required
-                            label="이름"
-                            id="=name"
-                            variant="filled"
-                            size={"small"}
-                            name={"name"}
-                            value={values.name}
-                            error={touched.name && Boolean(errors.name)}
-                            onChange={handleChange}
-                        />
-                        <RedditTextField
-                            required
-                            label="비밀번호"
-                            id="password"
-                            variant="filled"
-                            size={"small"}
-                            type={"password"}
-                            value={values.password}
-                            error={touched.password && Boolean(errors.password)}
-                            onChange={handleChange}
-                            helperText={touched.password && errors.password}
-                        />
-                        <RedditTextField
-                            required
-                            label="내용"
-                            id="content"
-                            variant="filled"
-                            size={"small"}
-                            multiline
-                            rows={3}
-                            value={values.content}
-                            error={touched.content && Boolean(errors.content)}
-                            onChange={handleChange}
-                            helperText={touched.content && errors.content}
-                        />
-                    </Box>
-                </DialogContent>
-                <DialogActions style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    verticalAlign: 'center',
-                    paddingBottom: '5%'
-                }}>
-                    <div>
-                        <Button onClick={handleSubmit}>등록</Button>
-                    </div>
-                </DialogActions>
-            </Dialog>
+    return (
+        <div>
             <div>
                 <CommentList
                     loading={loading}
@@ -230,7 +141,51 @@ export default function CommentComponent() {
                     />
                 </div>
             </div>
+            <Divider/>
+            <div className={styles.write}>
+                <Container style={{margin: 50}}>
+                   {/* <span className={styles.title}>축하 메시지 작성</span><Icon name='comment alternate outline'/>*/}
+                    <Form size={'tiny'}>
+                        <Form.Group widths='equal'>
+                            <Form.Field
+                                control={Input}
+                                label='Name'
+                                placeholder='이름'
+                                name={"name"}
+                                value={values.name}
+                                error={touched.name && Boolean(errors.name) && {
+                                    content: '이름을 입력해주세요',
+                                    pointing: 'below',
+                                }}
+                                onChange={handleChange}
+                            />
+                            <Form.Field
+                                control={Input}
+                                label='Password'
+                                placeholder='비밀번호'
+                                name={"password"}
+                                value={values.password}
+                                error={touched.password && Boolean(errors.password)}
+                                onChange={handleChange}
+                                helperText={touched.password && errors.password}
+                            />
+                        </Form.Group>
+                        <Form.Field
+                            control={TextArea}
+                            label='Content'
+                            placeholder='내용을 입력해주세요.'
+                            name={"content"}
+                            value={values.content}
+                            error={touched.content && Boolean(errors.content)}
+                            onChange={handleChange}
+                            helperText={touched.content && errors.content}
+                        />
+                        <Button basic >취소</Button>
+                        <Button color="teal" >등록</Button>
+                    </Form>
+                </Container>
+                <Divider/>
+            </div>
         </div>
     )
-
 }
