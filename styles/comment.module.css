@@ -2,8 +2,14 @@
     padding-bottom: 20%;
 }
 
+.text{
+    font-weight: 500;
+    font-size: 100%;
+}
+
 .commentListContainer {
-    margin-top: 5%;
+    text-align: left;
+    margin-top: 10%;
     margin-right: 10%;
     margin-left: 10%;
     font-family: 'Noto Sans KR';
@@ -24,10 +30,7 @@
 }
 
 .date {
-    font-size: 90%;
-    font-weight: 100;
     letter-spacing: 1px;
-    padding-left: 2%;
 }
 
 .dialog {
@@ -53,7 +56,7 @@
     padding-bottom: 5%;
 }
 
-.write{
+.alignLeft{
     text-align: left;
 }
 
@@ -61,4 +64,20 @@
     font-size: 110%;
     font-weight: 500;
     padding-right: 3%;
+}
+
+.buttonGroup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    padding-top: 5%;
+}
+
+.buttonGroup_2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    padding-bottom: 5%;
 }

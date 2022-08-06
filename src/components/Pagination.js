@@ -2,23 +2,25 @@ import React from "react";
 import styled from "styled-components";
 
 const PageUl = styled.ul`
+  font-family: 'Gothic A1';
   list-style: none;
   text-align: center;
-  color: #545454;
+  font-weight: 300;
+  color: #828282;
   padding: 1px;
 `;
 
 const PageLi = styled.li`
   font-family: 'Gothic A1';
   display: inline-block;
-  font-weight: 300;
+  font-weight: 700;
   padding: 2%;
   &:hover {
     cursor: pointer;
-    color: #FF7664;
+    color: #FD3C22;
   }
   &:focus::after {
-    color: #FF7664;
+    color: #FD3C22;
   }
 `;
 
@@ -34,6 +36,8 @@ const Pagination = ({postsPerPage, totalPosts, paginate, currentPage}) => {
     for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
         pageNumbers.push(i);
     }
+    console.log('currentPage: ' + currentPage);
+
     return (
         <div>
             <nav>
@@ -41,6 +45,7 @@ const Pagination = ({postsPerPage, totalPosts, paginate, currentPage}) => {
                     {pageNumbers.map((number) => (
                         <PageLi key={number} className="page-item">
                             <PageSpan onClick={() => paginate(number)} className="page-link">
+                                <span style={{color: currentPage == number ? '#FD3C22' : '#828282'}}></span>
                                 {number}
                             </PageSpan>
                         </PageLi>
