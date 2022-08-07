@@ -75,11 +75,6 @@ export default function TopContainer() {
                     </div>
                 </div>
             </div>
-            <div className={showContent ? "appear" : "before"}>
-                <ContentsContainer
-                    scrollY={scrollY}
-                />
-            </div>
         </div>
     );
 }
