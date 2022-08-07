@@ -5,7 +5,7 @@ import {Validation} from "../../util/validation";
 import Pagination from "./Pagination";
 import CommentList from "./CommetList"
 import 'semantic-ui-css/semantic.min.css'
-import {Button, Container, Divider, Form, Icon, Input, Label, TextArea} from "semantic-ui-react";
+import {Button, Container, Divider, Form, Icon, Input, Label, Radio, TextArea} from "semantic-ui-react";
 import styles from '../../styles/comment.module.css'
 
 
@@ -18,11 +18,6 @@ export default function CommentComponent() {
     const [commentsPerPage, setCommentsPerPage] = useState(5);
 
     const [open, setOpen] = React.useState(false);
-
-
-    const handleClose = () => {
-        setOpen(false);
-    };
 
     const getComments = async () => {
         const response = await (await fetch("/api/comment", {
@@ -55,14 +50,13 @@ export default function CommentComponent() {
     }
     const formik = useFormik({
         initialValues: {
-            name: '', password: '', content: '',
+            name: '', password: '', content: '', avatar: ''
         }, validationSchema: Validation, onSubmit: (values, {resetForm}) => {
             resetForm({});
             createComment(values).then(res => {
                 console.log(res);
                 getComments().then();
             });
-            handleClose();
         },
     });
 
@@ -70,6 +64,10 @@ export default function CommentComponent() {
         getComments().then(response => console.log(response));
     }, []);
     const {values, touched, errors, handleChange, handleSubmit} = formik;
+
+    useEffect(()=>{
+        console.log(values);
+    }, [values])
 
     return (
         <div>
@@ -88,38 +86,27 @@ export default function CommentComponent() {
                     />
                 </div>
             </div>
-            <Divider/>
-            <div>
-                <Container style={{margin: 20, paddingLeft: '5%', paddingRight: '5%'}}>
-                    {/* <span className={styles.title}>축하 메시지 작성</span><Icon name='comment alternate outline'/>*/}
+            <div style={{backgroundColor: '#e8e8e8'}}>
+                <Divider/>
+                <Container style={{margin: 20, padding: '5%', backgroundColor:'#ffffff'}}>
                     <Form size={'tiny'}>
                         <div className={styles.alignLeft}>
-                            <Form.Group widths='equal'>
-                                <Form.Field
-                                    control={Input}
-                                    label='Name'
-                                    placeholder='이름'
-                                    name={"name"}
-                                    value={values.name}
-                                    error={touched.name && Boolean(errors.name) && {
-                                        content: '이름을 입력해주세요',
-                                        pointing: 'below',
-                                    }}
-                                    onChange={handleChange}
-                                />
-                                <Form.Field
-                                    control={Input}
-                                    label='Password'
-                                    placeholder='비밀번호'
-                                    name={"password"}
-                                    value={values.password}
-                                    error={touched.password && Boolean(errors.password)}
-                                    onChange={handleChange}
-                                    helperText={touched.password && errors.password}
-                                />
-                            </Form.Group>
+                            <Form.Field>{values.avatar}</Form.Field>
+                            <Form.Field
+                                control={Input}
+                                label='Name'
+                                placeholder='이름'
+                                name={"name"}
+                                value={values.name}
+                                error={touched.name && Boolean(errors.name) && {
+                                    content: '이름을 입력해주세요',
+                                    pointing: 'below',
+                                }}
+                                onChange={handleChange}
+                            />
                             <Form.Field
                                 control={TextArea}
+                                rows={2}
                                 label='Content'
                                 placeholder='내용을 입력해주세요.'
                                 name={"content"}
@@ -128,10 +115,19 @@ export default function CommentComponent() {
                                 onChange={handleChange}
                                 helperText={touched.content && errors.content}
                             />
+                            <Form.Field
+                                control={Input}
+                                label='Password'
+                                placeholder='비밀번호'
+                                name={"password"}
+                                value={values.password}
+                                error={touched.password && Boolean(errors.password)}
+                                onChange={handleChange}
+                                helperText={touched.password && errors.password}
+                            />
+
                         </div>
                         <Form.Group widths='equal' className={styles.buttonGroup}>
-                            <Button circular icon='cancel' size='tiny' onClick={handleClose}
-                                    style={{marginRight: '3%'}}/>
                             <Button circular icon='checkmark' size='tiny' color="red" onClick={handleSubmit}/>
                         </Form.Group>
                     </Form>

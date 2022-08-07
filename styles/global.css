@@ -29,18 +29,19 @@ body {
     font-size: 500%
 }
 .titleDiv {
-    font-weight: 700;
-    font-size: 120%;
+    font-family: 'Gothic A1';
+    font-weight: 900;
+    font-size: 110%;
     letter-spacing: 2px;
     padding-bottom: 5%;
 }
 
 td {
-    font-size: 90%;
+    font-size: 95%;
     padding-bottom: 2%;
     padding-top: 2%;
     font-weight: 400;
-    vertical-align: top;
+    vertical-align: center;
 
 }
 

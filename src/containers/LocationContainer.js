@@ -87,6 +87,5 @@ export default function LocationContainer() {
                 </Fade>
             </div>
         </div>
-    )
-        ;
+    );
 }

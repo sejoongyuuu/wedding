@@ -1,33 +1,11 @@
 import * as React from "react";
 import {useState} from "react";
-import {
-    Avatar,
-    Box,
-    TextField
-} from "@mui/material";
-import {styled} from '@mui/material/styles';
-import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
 import styles from '../../styles/comment.module.css';
 import Grid from "@mui/material/Grid";
 import {Button, Comment, Container, Divider, Header, Icon, Input, Label, List, Modal} from "semantic-ui-react";
-import picture from '../../public/images/picture/bride.PNG'
+import {Avatar, Box, IconButton} from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
 
-const colors = [
-    'red',
-    'orange',
-    'yellow',
-    'olive',
-    'green',
-    'teal',
-    'blue',
-    'violet',
-    'purple',
-    'pink',
-    'brown',
-    'grey',
-    'black',
-]
 export default function CommentList(props) {
     const {loading, comments, getComments} = props;
 
@@ -84,42 +62,40 @@ export default function CommentList(props) {
             {loading ? <Icon loading name='spinner'/> :
                 <div>
                     <div className={styles.commentListContainer}>
-                        <Comment.Group>
-                            <Header as='h3' dividing>
-                                Comments
-                            </Header>
-                            {comments.map(comment => (
-                                <div key={comment._id}>
-                                    {/* <Box sx={{flexGrow: 1, overflow: 'hidden', px: 1}} className={styles.comment}>
-                                        <Grid container spacing={0}>
-                                            <Grid item xs={2} style={{margin: 'auto'}}>
-                                                <Avatar
-                                                    sx={{
-                                                        width: 30,
-                                                        height: 30,
-                                                        fontSize: '85%',
-                                                        fontWeight: '700'
-                                                    }}
-                                                >{comment.name.substring(0, 1)}</Avatar>
+                        {/*                        <Comment.Group>*/}
+                        {comments.map(comment => (
+                            <div key={comment._id}>
+                                <Box sx={{flexGrow: 1, overflow: 'hidden', px: 1}} className={styles.comment}>
+                                    <Grid container spacing={0}>
+                                        <Grid item xs={2} style={{margin: 'auto', verticalAlign:'top', display:'flex', justifyItems:'top'}}>
+                                            <Avatar
+                                                sx={{
+                                                    width: 30,
+                                                    height: 30,
+                                                    fontSize: '85%',
+                                                    fontWeight: '500',
+                                                    backgroundColor: '#ff826c'
+                                                }}
+                                            >{comment.name.substring(0, 1)}</Avatar>
+                                        </Grid>
+                                        <Grid item xs={9}>
+                                            <Grid item xs={12}>
+                                                <span className={styles.name}>{comment.name}</span>
+                                                <span className={styles.date}>{comment.createdDate.toString()}</span>
                                             </Grid>
-                                            <Grid item xs={9}>
-                                                <Grid item xs={12}>
-                                                    <span className={styles.name}>{comment.name}</span>
-                                                    <span className={styles.content}>{comment.content}</span>
-                                                </Grid>
-                                                <Grid item xs={12}>
-                                                    <div className={styles.date}>{comment.createdDate.toString()}</div>
-                                                </Grid>
-                                            </Grid>
-                                            <Grid item xs={1} style={{textAlign: 'right', margin: 'auto'}}>
-                                                <IconButton onClick={() => handleClickOpen(comment)}>
-                                                    <CloseIcon style={{fontSize: 'small'}}/>
-                                                </IconButton>
+                                            <Grid item xs={12}>
+                                                <span className={styles.content}>{comment.content}</span>
                                             </Grid>
                                         </Grid>
-                                    </Box>*/}
-                                    <Comment>
-                                        <Comment.Avatar src={picture}/>
+                                        <Grid item xs={1} style={{textAlign: 'right', margin: 'auto'}}>
+                                            <IconButton onClick={() => handleClickOpen(comment)}>
+                                                <CloseIcon style={{fontSize: 'small'}}/>
+                                            </IconButton>
+                                        </Grid>
+                                    </Grid>
+                                </Box>
+                                {/* <Comment>
+                                       <><Icon name='heart' color='red' size='small' circular avatar/></>
                                         <Comment.Content>
                                             <div style={{display: "flex"}}>
                                                 <div>
@@ -131,16 +107,18 @@ export default function CommentList(props) {
                                                     <Comment.Text>{comment.content}</Comment.Text>
                                                 </div>
                                                 <div style={{marginLeft: 'auto'}}>
-                                                    <Button circular icon='delete' size='mini' basic
+                                                    <Icon name='delete' size='mini'
+                                                          onClick={() => handleClickOpen(comment)}></Icon>
+                                                     <Button circular icon='delete' size='mini' basic
                                                             onClick={() => handleClickOpen(comment)}></Button>
                                                 </div>
                                             </div>
                                         </Comment.Content>
-                                    </Comment>
-                                    <Divider fitted style={{paddingTop: '1%', paddingBottom: '1%'}}/>
-                                </div>
-                            ))}
-                        </Comment.Group>
+                                    </Comment>*/}
+                                <Divider fitted/>
+                            </div>
+                        ))}
+                        {/*                        </Comment.Group>*/}
                     </div>
                     <div>
                         <Modal
