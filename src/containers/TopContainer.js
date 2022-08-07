@@ -55,7 +55,7 @@ export default function TopContainer() {
                     <Image src={picture} alt="" width="867.2" height="788"/>
                 </div>
                 <div className="mask">
-                    <div className={show ? "reveal" : "before"}>
+                    <div className="reveal_3">
                         <div className={styles.textContainer}>
                             <div className={styles.date}>
                                 <div className={styles.first}>2022</div>
