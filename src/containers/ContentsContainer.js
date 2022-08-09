@@ -24,8 +24,10 @@ export default function ContentsContainer(prop) {
                 </div>
                 <div className={styles.body}>
                     <div>함께 맞는 여섯 번째 가을,</div>
-                    <div>결혼합니다.</div>
-                    <div>소중한 분들을 모십니다.</div>
+                    <div>결혼합니다!</div>
+                    <div>소중한 분들을 모시고자 하니,</div>
+                    <div>참석하여 자리를 빛내주시면</div>
+                    <div>감사하겠습니다.</div>
                 </div>
                 <div style={{width: '20%', margin: 'auto'}}>
                     <div>
