@@ -62,7 +62,6 @@ export default function CommentList(props) {
             {loading ? <Icon loading name='spinner'/> :
                 <div>
                     <div className={styles.commentListContainer}>
-                        {/*                        <Comment.Group>*/}
                         {comments.map(comment => (
                             <div key={comment._id}>
                                 <Box sx={{flexGrow: 1, overflow: 'hidden', px: 1}} className={styles.comment}>
@@ -94,31 +93,9 @@ export default function CommentList(props) {
                                         </Grid>
                                     </Grid>
                                 </Box>
-                                {/* <Comment>
-                                       <><Icon name='heart' color='red' size='small' circular avatar/></>
-                                        <Comment.Content>
-                                            <div style={{display: "flex"}}>
-                                                <div>
-                                                    <Comment.Author as='a'>{comment.name}</Comment.Author>
-                                                    <Comment.Metadata>
-                                                        <span
-                                                            style={{letterSpacing: '0'}}>{comment.createdDate.toString()}</span>
-                                                    </Comment.Metadata>
-                                                    <Comment.Text>{comment.content}</Comment.Text>
-                                                </div>
-                                                <div style={{marginLeft: 'auto'}}>
-                                                    <Icon name='delete' size='mini'
-                                                          onClick={() => handleClickOpen(comment)}></Icon>
-                                                     <Button circular icon='delete' size='mini' basic
-                                                            onClick={() => handleClickOpen(comment)}></Button>
-                                                </div>
-                                            </div>
-                                        </Comment.Content>
-                                    </Comment>*/}
                                 <Divider fitted/>
                             </div>
                         ))}
-                        {/*                        </Comment.Group>*/}
                     </div>
                     <div>
                         <Modal

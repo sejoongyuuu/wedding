@@ -3,8 +3,10 @@
 }
 
 .text{
+    font-family: "Nanum Barun Pen";
     font-weight: 500;
-    font-size: 100%;
+    font-size: 105%;
+    letter-spacing: 0;
 }
 
 .commentListContainer {
