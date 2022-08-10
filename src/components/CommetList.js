@@ -2,9 +2,23 @@ import * as React from "react";
 import {useState} from "react";
 import styles from '../../styles/comment.module.css';
 import Grid from "@mui/material/Grid";
-import {Button, Comment, Container, Divider, Header, Icon, Input, Label, List, Modal} from "semantic-ui-react";
+import {
+    Button,
+    Comment,
+    Container,
+    Dimmer,
+    Divider,
+    Header,
+    Icon,
+    Input,
+    Label,
+    List, Loader,
+    Modal,
+    Segment
+} from "semantic-ui-react";
 import {Avatar, Box, IconButton} from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
+import Image from "next/image";
 
 export default function CommentList(props) {
     const {loading, comments, getComments} = props;
@@ -59,14 +73,23 @@ export default function CommentList(props) {
     }
     return (
         <>
-            {loading ? <Icon loading name='spinner'/> :
+            {loading ? <Segment>
+                    <Dimmer active inverted>
+                        <Loader size='small'>Loading</Loader>
+                    </Dimmer>
+                </Segment> :
                 <div>
                     <div className={styles.commentListContainer}>
                         {comments.map(comment => (
                             <div key={comment._id}>
                                 <Box sx={{flexGrow: 1, overflow: 'hidden', px: 1}} className={styles.comment}>
                                     <Grid container spacing={0}>
-                                        <Grid item xs={2} style={{margin: 'auto', verticalAlign:'top', display:'flex', justifyItems:'top'}}>
+                                        <Grid item xs={2} style={{
+                                            margin: 'auto',
+                                            verticalAlign: 'top',
+                                            display: 'flex',
+                                            justifyItems: 'top'
+                                        }}>
                                             <Avatar
                                                 sx={{
                                                     width: 30,

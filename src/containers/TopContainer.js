@@ -2,8 +2,8 @@ import styles from '../../styles/top.module.css';
 import Image from 'next/image';
 import picture from '../../public/images/picture/picture1.PNG';
 import {useCallback, useEffect, useRef, useState} from "react";
-import ContentsContainer from "./ContentsContainer";
 import Realistic from "../components/ConfettiComponent_2";
+import star from '../../public/images/shape/star.png';
 
 export default function TopContainer() {
     const targetImage = useRef(null);
@@ -36,6 +36,11 @@ export default function TopContainer() {
             <Realistic
                 scrollY={scrollY}
             />
+            <div className="mask">
+                <div className="reveal_0">
+                    <Image src={star}/>
+                </div>
+            </div>
             <div className={styles.name}>
                 <div className="mask">
                     <div className="reveal">SEJOONG</div>
@@ -45,14 +50,16 @@ export default function TopContainer() {
                 </div>
             </div>
 
-            <div className={styles.thin}>
-                <div className="mask">
-                    <div className="reveal_3">SAVE THE DATE</div>
-                </div>
-            </div>
             <div className="appear">
                 <div ref={targetImage} className={styles.image}>
                     <Image src={picture} alt="" width="867.2" height="788"/>
+                </div>
+                <div className={styles.text}>
+                    <div className="mask">
+                        <div className="reveal_3">
+                            Save the Date
+                        </div>
+                    </div>
                 </div>
                 <div className="mask">
                     <div className="reveal_3">

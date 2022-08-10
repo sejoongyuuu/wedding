@@ -89,11 +89,18 @@ td {
 
 .before{
     opacity: 0;
+
 }
+.reveal_0{
+    text-align: center;
+    opacity: 0;
+    will-change: opacity, transform;
+    animation: reveal 1s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+}
+
 .reveal {
     text-align: center;
     opacity: 0;
-    transform: translate(0%, 100%) matrix(1, 0, 0, 1, 0, 0);
     will-change: opacity, transform;
     animation: reveal 1s cubic-bezier(0.7, 0, 0.3, 1) forwards;
 }
@@ -119,7 +126,7 @@ td {
 .mask {
     display: block;
     position: relative;
-    text-align: start;
+    text-align: center;
     overflow: hidden;
 }
 

@@ -7,6 +7,8 @@ import Image from "next/image";
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import DirectionsSubwayIcon from '@mui/icons-material/DirectionsSubway';
 import DirectionsBusIcon from '@mui/icons-material/DirectionsBus';
+import {Divider} from "semantic-ui-react";
+import {Box} from "@mui/material";
 
 export default function LocationContainer() {
     return (
@@ -26,22 +28,24 @@ export default function LocationContainer() {
                     <MapComponent/>
                 </div>
             </Fade>
-            <div className={styles.detailContainer}>
+            <Box className={styles.detailContainer}>
                 <Fade>
+                    <Divider/>
                     <table style={{textAlign: 'left'}}>
                         <tr>
                             <td className={styles.title}>
                                 <DirectionsCarIcon/><br/>
                                 자가용
                             </td>
-                            <td style={{borderBottom: '1px solid #5a5a5a'}}>한국도심공항 터미널 주차장 이용</td>
+                            <td style={{borderBottom: '0.5px solid #D0D0D0', verticalAlign:' top'}}>한국도심공항 터미널 주차장 이용</td>
+                            <Divider/>
                         </tr>
                         <tr>
                             <td className={styles.title}>
                                 <DirectionsSubwayIcon/><br/>
                                 지하철
                             </td>
-                            <td style={{borderBottom: '1px solid #5a5a5a'}}>
+                            <td style={{borderBottom: '0.5px solid #D0D0D0'}}>
                                 <span className={styles.line2}>2</span>삼성역 5번 출구 도보 약 7분<br/>
                                 <div className={styles.detail}>* 지하 코엑스몰 이동보다는 <span
                                     className="medium">지상으로</span> 찾아오시면
@@ -68,6 +72,7 @@ export default function LocationContainer() {
                             </td>
                         </tr>
                     </table>
+                    <Divider/>
                 </Fade>
                 <Fade>
                     <div className={styles.guideDiv}>
@@ -85,7 +90,7 @@ export default function LocationContainer() {
                         </div>
                     </div>
                 </Fade>
-            </div>
+            </Box>
         </div>
     );
 }

@@ -155,3 +155,24 @@
     url('../fonts/nanum/NanumBarunpenB.ttf') format('woff'),
     url('../fonts/nanum/NanumBarunpenB.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'Kyobo';
+    font-display: block;
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/Kyobo Handwriting 2019.ttf') format('woff2'),
+    url('../fonts/Kyobo Handwriting 2019.ttf') format('woff'),
+    url('../fonts/Kyobo Handwriting 2019.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Ballet Harmony';
+    font-display: block;
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/Ballet Harmony.ttf') format('woff2'),
+    url('../fonts/Ballet Harmony.ttf') format('woff'),
+    url('../fonts/Ballet Harmony.ttf') format('truetype');
+}

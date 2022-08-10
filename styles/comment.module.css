@@ -3,8 +3,8 @@
 }
 
 .text{
-    font-family: "Nanum Barun Pen";
-    font-weight: 500;
+    font-family: 'Kyobo';
+    font-weight: 300;
     font-size: 105%;
     letter-spacing: 0;
 }
@@ -30,11 +30,12 @@
 
 .content {
     font-weight: 300;
+    font-size: 95%;
 }
 
 .date {
     letter-spacing: 0px;
-    font-size: 85%;
+    font-size: 80%;
     color: #858585;
 }
 

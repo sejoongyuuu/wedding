@@ -69,11 +69,6 @@ export default function CommentComponent() {
         getComments().then(response => console.log(response));
     }, []);
     const {values, touched, errors, handleChange, handleSubmit} = formik;
-
-    useEffect(() => {
-        console.log(values);
-    }, [values])
-
     return (
         <div>
             <div>
@@ -103,10 +98,13 @@ export default function CommentComponent() {
                                         control={TextArea}
                                         rows={2}
                                         label='Content'
-                                        placeholder='내용을 입력해주세요.'
+                                        placeholder='내용'
                                         name={"content"}
                                         value={values.content}
-                                        error={touched.content && Boolean(errors.content)}
+                                        error={touched.content && Boolean(errors.content)&& {
+                                            content: '내용을 입력해주세요',
+                                            pointing: 'below',
+                                        }}
                                         onChange={handleChange}
                                         helperText={touched.content && errors.content}
                                     />
@@ -116,14 +114,17 @@ export default function CommentComponent() {
                                         placeholder='비밀번호'
                                         name={"password"}
                                         value={values.password}
-                                        error={touched.password && Boolean(errors.password)}
+                                        error={touched.password && Boolean(errors.password)&& {
+                                            content: '비밀번호를 입력해주세요',
+                                            pointing: 'below',
+                                        }}
                                         onChange={handleChange}
                                         helperText={touched.password && errors.password}
                                     />
 
                                 </div>
                                 <Form.Group widths='equal' className={styles.buttonGroup}>
-                                    <Button circular icon='checkmark' size='tiny' color="red" onClick={handleSubmit}/>
+                                    <Button circular icon='write' size='tiny' color="red" onClick={handleSubmit}/>
                                 </Form.Group>
                             </Form>
                         </Container>

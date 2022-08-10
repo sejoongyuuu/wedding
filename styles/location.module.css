@@ -20,6 +20,12 @@
 .detailContainer {
     padding: 5% 10%;
 }
+.way{
+    margin: auto;
+    verticalAlign:top;
+    display: flex;
+    justifyItems: top;
+}
 
 .title {
     font-weight: 500;
@@ -32,8 +38,6 @@
     font-weight: 300;
     font-size: 88%;
 }
-
-
 
 .line2 {
     display: inline-block;
