@@ -21,17 +21,16 @@
     font-weight: 900;
     letter-spacing: 1px;
     line-height: 120%;
-    color: #262626;
+    color: #756F68;
     padding-top: 10%;
 }
 
 .thin {
     font-weight: 100;
     line-height: 110%;
-    font-size: 160%;
-    padding-top: 3%;
-    padding-bottom: 5%;
-    letter-spacing: 3px;
+    font-size: 150%;
+    padding-bottom: 2%;
+
     text-align: center;
 }
 

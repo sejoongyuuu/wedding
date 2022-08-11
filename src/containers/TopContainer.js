@@ -37,7 +37,7 @@ export default function TopContainer() {
                 scrollY={scrollY}
             />
             <div className="mask">
-                <div className="reveal_0" style={{paddingRight: '5%', paddingLeft:'5%'}}>
+                <div className="reveal_0" style={{paddingRight: '5%', paddingLeft: '5%'}}>
                     <Image src={star}/>
                 </div>
             </div>
@@ -54,10 +54,10 @@ export default function TopContainer() {
                 <div ref={targetImage} className={styles.image}>
                     <Image src={picture} alt="" width="867.2" height="788"/>
                 </div>
-                <div className={styles.text}>
+                <div className={styles.thin}>
                     <div className="mask">
                         <div className="reveal_3">
-                            Save the Date
+                            ───<span style={{letterSpacing: '2px'}}> Save the Date </span>───
                         </div>
                     </div>
                 </div>
