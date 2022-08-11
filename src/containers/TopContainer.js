@@ -37,7 +37,7 @@ export default function TopContainer() {
                 scrollY={scrollY}
             />
             <div className="mask">
-                <div className="reveal_0">
+                <div className="reveal_0" style={{paddingRight: '5%', paddingLeft:'5%'}}>
                     <Image src={star}/>
                 </div>
             </div>

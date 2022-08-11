@@ -8,6 +8,7 @@ body {
     font-weight: 300;
     letter-spacing: -1px;
 }
+
 .numLight {
     font-weight: 300;
     letter-spacing: 0;
@@ -20,13 +21,15 @@ body {
 .regular {
     font-weight: 400;
 }
+
 .medium {
     font-weight: 500;
 }
 
-.font-Large{
+.font-Large {
     font-size: 500%
 }
+
 .titleDiv {
     font-family: 'Gothic A1';
     font-weight: 900;
@@ -80,22 +83,24 @@ td {
     font-size: 14px;
     font-family: 'Noto Sans KR';
 }
-.center{
+
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 
-.before{
+.before {
     opacity: 0;
 
 }
-.reveal_0{
+
+.reveal_0 {
     text-align: center;
     opacity: 0;
     will-change: opacity, transform;
-    animation: reveal 1s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+    animation: reveal_reverse 1s cubic-bezier(0.7, 0, 0.3, 1) forwards;
 }
 
 .reveal {
@@ -141,6 +146,18 @@ td {
     }
 }
 
+@keyframes reveal_reverse {
+    from {
+        opacity: 0;
+        transform: translate(0%, -100%) matrix(1, 0, 0, 1, 0, 0);
+
+    }
+    to {
+        opacity: 1;
+        transform: translate(0%, 0%) matrix(1, 0, 0, 1, 0, 0);
+    }
+}
+
 .appear {
     animation: appear 1.2s forwards;
     animation-delay: 1s;
@@ -156,16 +173,17 @@ td {
     }
 }
 
-.swiper-button-next, .swiper-button-prev{
+.swiper-button-next, .swiper-button-prev {
     color: #5A5A5A !important;
-    font-size: 15px  !important;
+    font-size: 15px !important;
 }
+
 .swiper-pagination-progressbar-fill {
     background-color: #414141 !important;
 }
 
 .swiper-button-next:after, .swiper-button-prev:after {
-    font-size: 15px  !important;
+    font-size: 15px !important;
 }
 
 .swiper-pagination-progressbar {
@@ -174,24 +192,25 @@ td {
 }
 
 .swiper-wrapper {
-    text-align:center !important;
-    display:flex !important;
-    align-items:center !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
 }
 
-.ui.form input[type=text]{
+.ui.form input[type=text] {
     font-family: "Noto Sans KR" !important;
 }
 
-.ui.form .field>label {
+.ui.form .field > label {
     font-family: "Gothic A1";
     letter-spacing: 0.3px;
 }
 
-.ui.form .field .prompt.label{
+.ui.form .field .prompt.label {
     font-weight: 400;
 }
-.ui red pointing basic label{
+
+.ui red pointing basic label {
     font-weight: 400;
 }
 
