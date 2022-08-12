@@ -12,17 +12,27 @@
     line-height: 120%;
 }
 
+.wedding{
+    padding-top: 20%;
+    color: #363636;
+    font-family: "Coco Gothic";
+    font-weight: 200;
+    font-size: 110%;
+    letter-spacing: 2px;
+    padding-bottom: 3%;
+}
+
 .name {
     text-align: center;
     padding-left: 7%;
     padding-right: 7%;
-    font-family: 'Gothic A1';
-    font-size: 290%;
-    font-weight: 900;
-    letter-spacing: 1px;
-    line-height: 120%;
-    color: #756F68;
-    padding-top: 10%;
+    font-family: 'Nevrada';
+    font-size: 300%;
+    font-weight: 500;
+    letter-spacing: 0px;
+    line-height: 100%;
+    color: #5BB372;
+    vertical-align: center;
 }
 
 .thin {
@@ -30,18 +40,7 @@
     line-height: 110%;
     font-size: 150%;
     padding-bottom: 2%;
-
     text-align: center;
-}
-
-.text {
-    font-weight: 300;
-    font-size: 150%;
-    font-family: "Ballet Harmony";
-    text-align: center;
-    letter-spacing: 1px;
-    vertical-align: center !important;
-    color: #414141;
 }
 
 .textContainer {
@@ -53,15 +52,12 @@
 }
 
 .date {
-    font-family: 'Gothic A1';
-    font-weight: 900;
-    font-size: 105%;
-    letter-spacing: 1px;
+    font-family: Nevrada;
+    font-size: 150%;
+    letter-spacing: 0px;
     line-height: 110%;
-    text-align: left;
-    padding-right: 2%;
+    color: #494949;
 }
-
 .date .first {
     font-size: 120%;
 }
@@ -76,9 +72,8 @@
 }
 
 .kor {
-    padding-top: 1%;
     line-height: 100%;
-    text-align: left;
+    color: #5E5C5A;
 }
 
 .image {

@@ -2,7 +2,7 @@ import styles from '../../styles/top.module.css';
 import Image from 'next/image';
 import picture from '../../public/images/picture/picture1.PNG';
 import {useCallback, useEffect, useRef, useState} from "react";
-import Realistic from "../components/ConfettiComponent_2";
+import Realistic from "../components/ConfettiComponent";
 import star from '../../public/images/shape/star.png';
 
 export default function TopContainer() {
@@ -36,17 +36,22 @@ export default function TopContainer() {
             <Realistic
                 scrollY={scrollY}
             />
-            <div className="mask">
-                <div className="reveal_0" style={{paddingRight: '5%', paddingLeft: '5%'}}>
+{/*            <div className="mask">
+                <div className="reveal_0" style={{width: '80%', margin: 'auto', paddingTop: '5%'}}>
                     <Image src={star}/>
+                </div>
+            </div>*/}
+            <div className={styles.wedding}>
+                <div className="mask">
+                    <div className="reveal">The Wedding of</div>
                 </div>
             </div>
             <div className={styles.name}>
                 <div className="mask">
-                    <div className="reveal">SEJOONG</div>
+                    <div className="reveal" style={{paddingTop:'2%'}}>SEJOONG</div>
                 </div>
                 <div className="mask">
-                    <div className="reveal_2">& YUJEONG</div>
+                    <div className="reveal_2" style={{paddingTop:'2%'}}>& YUJEONG</div>
                 </div>
             </div>
 
@@ -54,31 +59,12 @@ export default function TopContainer() {
                 <div ref={targetImage} className={styles.image}>
                     <Image src={picture} alt="" width="867.2" height="788"/>
                 </div>
-                <div className={styles.thin}>
-                    <div className="mask">
-                        <div className="reveal_3">
-                            ───<span style={{letterSpacing: '2px'}}> Save the Date </span>───
-                        </div>
+                <div className="reveal_3">
+                    <div className={styles.date}>
+                        2022.09.18
                     </div>
-                </div>
-                <div className="mask">
-                    <div className="reveal_3">
-                        <div className={styles.textContainer}>
-                            <div className={styles.date}>
-                                <div className={styles.first}>2022</div>
-                                09/18
-                            </div>
-                            <div>
-                                <div>
-                                    <div className={styles.eng}>
-                                        SUN 15:00 SONO FELICE CONVENTION
-                                    </div>
-                                    <div className={styles.kor}>
-                                        일요일 오후 3시 소노펠리체 컨벤션
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div className={styles.kor}>
+                        일요일 오후 3시 소노펠리체 컨벤션
                     </div>
                 </div>
             </div>

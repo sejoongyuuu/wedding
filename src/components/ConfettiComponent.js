@@ -10,58 +10,62 @@ const canvasStyles = {
     left: 0
 };
 
-function randomInRange(min, max) {
-    return Math.random() * (max - min) + min;
-}
-
-function getAnimationSettings() {
-    return {
-        particleCount: 1,
-        startVelocity: 1,
-        spread: 50,
-        ticks: 250,
-        drift: 0.2,
-        gravity: 0.2,
-        origin: {
-            x: Math.random(),
-            y: Math.random() * 0.999 - 0.2
-        },
-        colors: ["#ffde58", "#FFFCFC"],
-        scalar: randomInRange(0.6, 0.8)
-    };
-}
-
-export default function ConfettiComponent() {
+export default function Realistic(prop) {
     const refAnimationInstance = useRef(null);
-    const [intervalId, setIntervalId] = useState();
 
     const getInstance = useCallback((instance) => {
         refAnimationInstance.current = instance;
     }, []);
 
-    const nextTickAnimation = useCallback(() => {
-        if (refAnimationInstance.current) {
-            refAnimationInstance.current(getAnimationSettings(60, 0));
-            refAnimationInstance.current(getAnimationSettings(120, 1));
-        }
+    const makeShot = useCallback((particleRatio, opts) => {
+        refAnimationInstance.current &&
+        refAnimationInstance.current({
+            ...opts,
+            origin: {y: 0.7},
+            particleCount: Math.floor(200 * particleRatio)
+        });
     }, []);
 
-    const startAnimation = useCallback(() => {
-        if (!intervalId) {
-            setIntervalId(setInterval(nextTickAnimation, 16));
-        }
-    }, [nextTickAnimation, intervalId]);
+    const fire = useCallback(() => {
+        makeShot(0.25, {
+            spread: 26,
+            startVelocity: 55,
+            scalar: 0.6
+        });
+
+        makeShot(0.2, {
+            spread: 60,
+            scalar: 0.6
+        });
+
+        makeShot(0.35, {
+            spread: 100,
+            decay: 0.91,
+            scalar: 0.5
+        });
+
+        makeShot(0.1, {
+            spread: 120,
+            startVelocity: 25,
+            decay: 0.92,
+            scalar: 0.5
+        });
+
+        makeShot(0.1, {
+            spread: 120,
+            startVelocity: 45,
+            scalar: 0.7
+        });
+    }, [makeShot]);
 
     useEffect(() => {
-        return () => {
-            clearInterval(intervalId);
-        };
-    }, [intervalId]);
-
+        setTimeout(() => {
+            fire();
+        }, 1500)
+    }, []);
     return (
-        <div>
+        <>
             <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles}/>
-            {startAnimation()}
-        </div>
+        </>
     );
 }
