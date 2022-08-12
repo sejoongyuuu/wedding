@@ -31,11 +31,12 @@ body {
 }
 
 .titleDiv {
-    font-family: 'Gothic A1';
+    font-family: Nevrada;
     font-weight: 900;
-    font-size: 110%;
-    letter-spacing: 2px;
+    font-size: 130%;
     padding-bottom: 5%;
+    color: #5BB372;
+    letter-spacing: 1px;
 }
 
 td {

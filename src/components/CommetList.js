@@ -4,21 +4,16 @@ import styles from '../../styles/comment.module.css';
 import Grid from "@mui/material/Grid";
 import {
     Button,
-    Comment,
-    Container,
     Dimmer,
     Divider,
-    Header,
-    Icon,
     Input,
     Label,
-    List, Loader,
+    Loader,
     Modal,
     Segment
 } from "semantic-ui-react";
 import {Avatar, Box, IconButton} from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
-import Image from "next/image";
 
 export default function CommentList(props) {
     const {loading, comments, getComments} = props;
@@ -96,7 +91,7 @@ export default function CommentList(props) {
                                                     height: 30,
                                                     fontSize: '85%',
                                                     fontWeight: '500',
-                                                    backgroundColor: '#ff826c'
+                                                    backgroundColor: '#FFCFD0'
                                                 }}
                                             >{comment.name.substring(0, 1)}</Avatar>
                                         </Grid>

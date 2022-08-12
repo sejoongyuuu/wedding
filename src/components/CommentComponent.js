@@ -73,7 +73,7 @@ export default function CommentComponent() {
         <div>
             <div>
                 <IconButton onClick={handleClick} >
-                    <AddCircleRoundedIcon sx={{fontSize: 40, color: "#FF625B"}}/>
+                    <AddCircleRoundedIcon sx={{fontSize: 40, color: "#5bb372"}}/>
                 </IconButton>
                 {open &&
                     <div style={{backgroundColor: '#e8e8e8'}}>
@@ -124,7 +124,7 @@ export default function CommentComponent() {
 
                                 </div>
                                 <Form.Group widths='equal' className={styles.buttonGroup}>
-                                    <Button circular icon='write' size='tiny' color="red" onClick={handleSubmit}/>
+                                    <Button circular icon='write' size='small' onClick={handleSubmit}/>
                                 </Form.Group>
                             </Form>
                         </Container>

@@ -14,7 +14,7 @@ export default function LocationContainer() {
     return (
         <div className={styles.container}>
             <Fade>
-                <div className="titleDiv"> LOCATION</div>
+                <div className="titleDiv"> Location</div>
                 <div style={{paddingBottom: '5%'}}>
                     <div style={{width: '13%', margin: 'auto'}}>
                         <Image src={location} alt=""/>
