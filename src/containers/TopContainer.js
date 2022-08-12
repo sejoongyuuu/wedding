@@ -39,10 +39,10 @@ export default function TopContainer() {
             </div>
             <div className={styles.name}>
                 <div className="mask">
-                    <div className="reveal" style={{paddingTop: '2%'}}>SEJOONG</div>
+                    <div className="reveal" style={{paddingTop: '2%'}}>Sejoong</div>
                 </div>
                 <div className="mask">
-                    <div className="reveal_2" style={{paddingTop: '2%'}}>& YUJEONG</div>
+                    <div className="reveal_2" style={{paddingTop: '2%'}}>& Yujeong</div>
                 </div>
             </div>
 
@@ -52,10 +52,10 @@ export default function TopContainer() {
                 </div>
                 <div className="reveal_3">
                     <div className={styles.date}>
-                        2022.09.18
+                        2022.09.18 SUN 3:00 pm
                     </div>
                     <div className={styles.kor}>
-                        일요일 오후 3시 소노펠리체 컨벤션
+                        소노펠리체 컨벤션 (도심공항터미널 3층)
                     </div>
                 </div>
             </div>
