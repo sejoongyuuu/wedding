@@ -45,7 +45,8 @@
 
 .date {
     padding-top: 5%;
-    font-family: Nevrada;
+    font-family: "Open Sans";
+    font-weight: light;
     font-size: 150%;
     letter-spacing: 0px;
     line-height: 110%;

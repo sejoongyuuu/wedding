@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useRef, useState} from "react";
+import React, {forwardRef, useCallback, useEffect, useImperativeHandle, useRef, useState} from "react";
 import ReactCanvasConfetti from "react-canvas-confetti";
 
 const canvasStyles = {
@@ -10,7 +10,8 @@ const canvasStyles = {
     left: 0
 };
 
-export default function Realistic(prop) {
+const ConfettiComponent = forwardRef((props, ref) => {
+
     const refAnimationInstance = useRef(null);
 
     const getInstance = useCallback((instance) => {
@@ -63,9 +64,16 @@ export default function Realistic(prop) {
             fire();
         }, 1500)
     }, []);
+
+    useImperativeHandle(ref, () => ({
+        fire
+    }));
+
     return (
         <>
             <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles}/>
         </>
     );
-}
+})
+ConfettiComponent.displayName='ConfettiComponent';
+export default ConfettiComponent;
