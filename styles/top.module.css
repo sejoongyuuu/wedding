@@ -43,23 +43,13 @@
     text-align: center;
 }
 
-.textContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    vertical-align: center;
-    padding-top: 1%;
-}
-
 .date {
+    padding-top: 5%;
     font-family: Nevrada;
     font-size: 150%;
     letter-spacing: 0px;
     line-height: 110%;
-    color: #494949;
-}
-.date .first {
-    font-size: 120%;
+    color: #5e5e5e;
 }
 
 .eng {
