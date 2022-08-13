@@ -1,9 +1,8 @@
 import styles from '../../styles/top.module.css';
 import Image from 'next/image';
 import picture from '../../public/images/picture/picture1.PNG';
-import {useCallback, useEffect, useRef, useState} from "react";
-import ConfettiComponent, {fire} from "../components/ConfettiComponent";
-import star from '../../public/images/shape/star.png';
+import {useEffect, useRef} from "react";
+import ConfettiComponent from "../components/ConfettiComponent";
 
 export default function TopContainer() {
     const targetImage = useRef(null);
@@ -27,11 +26,6 @@ export default function TopContainer() {
     return (
         <div className={styles.container} onClick={handleTouch}>
             <ConfettiComponent ref={confettiRef}/>
-            {/*            <div className="mask">
-                <div className="reveal_0" style={{width: '80%', margin: 'auto', paddingTop: '5%'}}>
-                    <Image src={star}/>
-                </div>
-            </div>*/}
             <div className={styles.wedding}>
                 <div className="mask">
                     <div className="reveal">The Wedding of</div>
@@ -39,15 +33,15 @@ export default function TopContainer() {
             </div>
             <div className={styles.name}>
                 <div className="mask">
-                    <div className="reveal" style={{paddingTop: '2%'}}>Sejoong</div>
+                    <div className="reveal" style={{paddingTop: '3%'}}>Sejoong</div>
                 </div>
                 <div className="mask">
-                    <div className="reveal_2" style={{paddingTop: '2%'}}>& Yujeong</div>
+                    <div className="reveal_2" style={{paddingTop: '3%'}}>& Yujeong</div>
                 </div>
             </div>
-
             <div className="appear">
-                <div ref={targetImage} className={styles.image}>
+                <div className={styles.bar} />
+                <div className={styles.image}>
                     <Image src={picture} alt="" width="867.2" height="788"/>
                 </div>
                 <div className="reveal_3">

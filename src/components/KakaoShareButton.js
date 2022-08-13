@@ -1,5 +1,6 @@
 import React, {useEffect} from "react";
 import Script from "next/script";
+import Image from "next/image";
 
 
 export default function KakaoShareButton() {

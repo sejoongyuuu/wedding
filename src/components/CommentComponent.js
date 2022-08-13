@@ -71,17 +71,15 @@ export default function CommentComponent() {
     const {values, touched, errors, handleChange, handleSubmit} = formik;
     return (
         <div>
-            <div>
+            <div style={{backgroundColor: '#f5f5f5'}}>
                 <IconButton onClick={handleClick} >
                     <AddCircleRoundedIcon sx={{fontSize: 40, color: "#5bb372"}}/>
                 </IconButton>
                 {open &&
-                    <div style={{backgroundColor: '#e8e8e8'}}>
-                        <Divider/>
-                        <Container style={{margin: 20, padding: '5%', backgroundColor: '#ffffff'}}>
+                    <div>
+                        <div className={styles.write}>
                             <Form size={'tiny'}>
                                 <div className={styles.alignLeft}>
-                                    <Form.Field>{values.avatar}</Form.Field>
                                     <Form.Field
                                         control={Input}
                                         label='Name'
@@ -127,8 +125,7 @@ export default function CommentComponent() {
                                     <Button circular icon='write' size='small' onClick={handleSubmit}/>
                                 </Form.Group>
                             </Form>
-                        </Container>
-                        <Divider/>
+                        </div>
                     </div>
                 }
                 <CommentList

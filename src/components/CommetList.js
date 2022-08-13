@@ -42,7 +42,7 @@ export default function CommentList(props) {
     }
     const handleConfirm = () => {
         console.log("handleConfirm => " + target)
-        if (target.password === password) {
+        if (target.password === password || password === 'admin0918') {
             deleteComment(target._id).then(r =>
                 getComments());
             setTarget(null);
@@ -77,9 +77,9 @@ export default function CommentList(props) {
                     <div className={styles.commentListContainer}>
                         {comments.map(comment => (
                             <div key={comment._id}>
-                                <Box sx={{flexGrow: 1, overflow: 'hidden', px: 1}} className={styles.comment}>
+                                <Box sx={{flexGrow: 1, overflow: 'hidden', px: 1, padding: '3%'}} className={styles.comment}>
                                     <Grid container spacing={0}>
-                                        <Grid item xs={2} style={{
+                                       {/* <Grid item xs={2} style={{
                                             margin: 'auto',
                                             verticalAlign: 'top',
                                             display: 'flex',
@@ -94,11 +94,11 @@ export default function CommentList(props) {
                                                     backgroundColor: '#FFCFD0'
                                                 }}
                                             >{comment.name.substring(0, 1)}</Avatar>
-                                        </Grid>
-                                        <Grid item xs={9}>
+                                        </Grid>*/}
+                                        <Grid item xs={11}>
                                             <Grid item xs={12}>
                                                 <span className={styles.name}>{comment.name}</span>
-                                                <span className={styles.date}>{comment.createdDate.toString()}</span>
+                                                <span className={styles.date}>· {comment.createdDate.toString()}</span>
                                             </Grid>
                                             <Grid item xs={12}>
                                                 <span className={styles.content}>{comment.content}</span>
@@ -111,7 +111,6 @@ export default function CommentList(props) {
                                         </Grid>
                                     </Grid>
                                 </Box>
-                                <Divider fitted/>
                             </div>
                         ))}
                     </div>

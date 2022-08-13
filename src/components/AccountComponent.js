@@ -20,10 +20,9 @@ theme.typography.fontDetail = {
 const Accordion = styled((props) => (<MuiAccordion disableGutters elevation={0} square {...props} />))(({theme}) => ({
     marginLeft: '10%',
     marginRight: '10%',
-    boxShadow: '1px 1px 3px #CCCCCC',
+    border: '1px solid #d5d5d5',
     backgroundColor: '#FFFFF',
     '&:not(:last-child)': {
-        borderBottom: 0,
     }, '&:before': {
         display: 'none',
     }, marginBottom: '2%'
@@ -33,15 +32,17 @@ const AccordionSummary = styled((props) => (
     <MuiAccordionSummary
         {...props}
     />))(({}) => ({
+    color: '#5BB372',
+    fontWeight: '500',
     '& .MuiAccordionSummary-content': {
         paddingLeft: '5%',
-        fontWeight: '400'
     },
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({theme}) => ({
     paddingTop: '5%',
     fontSize: '95%',
+    paddingLeft: '9%'
 }));
 
 export default function AccountComponent() {
@@ -60,7 +61,7 @@ export default function AccountComponent() {
                     <AccordionDetails>
                         <Typography variant="fontDetail">
                             <div>
-                                <div className="regular" style={{paddingRight: '3%'}}>신부 최유정</div>
+                                <div className="regular" style={{paddingRight: '3%'}}>신랑 김세중</div>
                                 우리은행 <span style={{letterSpacing: '0'}}>1002-756-471511 </span>
                             </div>
                             <div>

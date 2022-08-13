@@ -16,9 +16,6 @@ export default function LocationContainer() {
             <Fade>
                 <div className="titleDiv"> Location</div>
                 <div style={{paddingBottom: '5%'}}>
-                    <div style={{width: '13%', margin: 'auto'}}>
-                        <Image src={location} alt=""/>
-                    </div>
                     <div className="medium" style={{fontSize: '110%'}}> 소노펠리체 컨벤션</div>
                     <div className="thin" style={{fontSize: '95%'}}> 서울특별시 강남구 테헤란로 87길 22 도심공항터미널 3층
                         <div className="numLight"> 02.2222.7401</div>

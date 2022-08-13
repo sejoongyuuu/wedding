@@ -27,10 +27,10 @@
     padding-left: 7%;
     padding-right: 7%;
     font-family: 'Nevrada';
-    font-size: 310%;
+    font-size: 350%;
     font-weight: 500;
     letter-spacing: 0px;
-    line-height: 100%;
+    line-height: 95%;
     color: #5BB372;
     vertical-align: center;
 }
@@ -69,3 +69,10 @@
     padding-bottom: 2%;
 }
 
+.bar{
+    width: 10%;
+    border-bottom: 2px solid #5BB372;
+    margin: auto;
+    padding-top: 3%;
+    padding-bottom: 4%;
+}
