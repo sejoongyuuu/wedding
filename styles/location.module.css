@@ -17,7 +17,9 @@
 
 
 .detailContainer {
-    padding: 5% 10%;
+    border: 1px solid #fcf0e9;
+    margin: 5% 7.5%;
+    background-color: white;
 }
 .way{
     margin: auto;

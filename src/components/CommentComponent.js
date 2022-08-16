@@ -71,7 +71,7 @@ export default function CommentComponent() {
     const {values, touched, errors, handleChange, handleSubmit} = formik;
     return (
         <div>
-            <div style={{ paddingTop: '5%'}}>
+            <div>
                 <div className={styles.text}>
                     세중 & 유정에게<br/>
                     축하메시지를 남겨주세요! 😊
@@ -126,7 +126,7 @@ export default function CommentComponent() {
 
                                 </div>
                                 <Form.Group widths='equal' className={styles.buttonGroup}>
-                                    <Button circular icon='yellow' size='small' onClick={handleSubmit}/>
+                                    <Button circular color={"green"} icon='write' size='small' onClick={handleSubmit}/>
                                 </Form.Group>
                             </Form>
                         </div>

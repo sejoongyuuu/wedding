@@ -27,14 +27,15 @@ export default function LocationContainer() {
             </Fade>
             <Box className={styles.detailContainer}>
                 <Fade>
-                    <Divider/>
                     <table style={{textAlign: 'left'}}>
                         <tr>
                             <td className={styles.title}>
                                 <DirectionsCarIcon/><br/>
                                 자가용
                             </td>
-                            <td style={{borderBottom: '0.5px solid #D0D0D0', verticalAlign:' top'}}>한국도심공항 터미널 주차장 이용</td>
+                            <td style={{borderBottom: '0.5px solid #D0D0D0', verticalAlign: ' top'}}>한국도심공항 터미널 주차장
+                                이용
+                            </td>
                             <Divider/>
                         </tr>
                         <tr>
@@ -69,25 +70,24 @@ export default function LocationContainer() {
                             </td>
                         </tr>
                     </table>
-                    <Divider/>
-                </Fade>
-                <Fade>
-                    <div className={styles.guideDiv}>
-                        <div style={{width: '70%', margin: 'auto'}}>
-                            <Image src={drink} alt=""/>
-                        </div>
-                        <div className={styles.guideBold}>
-                            예식 1시간 전부터<br/>
-                            웰컴드링크와 포토부스가 마련됩니다.
-                        </div>
-                        <div className={styles.guideBody}>
-                            촬영은 무료 및 무제한이며, <br/>
-                            좋은 날 추억을 기록으로 남길 수 있도록<br/>
-                            많은 참여 부탁드립니다.
-                        </div>
-                    </div>
                 </Fade>
             </Box>
+            <Fade>
+                <div className={styles.guideDiv}>
+                    <div style={{width: '60%', margin: 'auto'}}>
+                        <Image src={drink} alt=""/>
+                    </div>
+                    <div className={styles.guideBold}>
+                        예식 1시간 전부터<br/>
+                        웰컴드링크와 포토부스가 마련됩니다.
+                    </div>
+                    <div className={styles.guideBody}>
+                        촬영은 무료 및 무제한이며, <br/>
+                        좋은 날 추억을 기록으로 남길 수 있도록<br/>
+                        많은 참여 부탁드립니다.
+                    </div>
+                </div>
+            </Fade>
         </div>
     );
 }

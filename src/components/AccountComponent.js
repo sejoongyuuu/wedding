@@ -53,6 +53,7 @@ export default function AccountComponent() {
     }
     return (
         <div className="accountSection">
+            <div style={{paddingBottom: '3%'}}>* 계좌번호를 터치하면 복사됩니다 *</div>
             <ThemeProvider theme={theme}>
                 <Accordion>
                     <AccordionSummary

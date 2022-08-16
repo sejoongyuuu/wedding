@@ -90,7 +90,7 @@ export default function CommentList(props) {
                                                         height: 30,
                                                         fontSize: '95%',
                                                         fontWeight: '500',
-                                                        backgroundColor: '#ffd60b'
+                                                        backgroundColor: '#FF9369'
                                                     }}
                                                 >{comment.name.substring(0, 1)}</Avatar>
                                             </div>
