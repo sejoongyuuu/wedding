@@ -138,7 +138,7 @@ export default function CommentList(props) {
                                 <div className={styles.buttonGroup_2}>
                                     <Button circular icon='cancel' size='tiny' onClick={handleClose}
                                             style={{marginRight: '3%'}}/>
-                                    <Button circular icon='checkmark' size='tiny' color="red" onClick={handleConfirm}/>
+                                    <Button circular icon='trash alternate' size='tiny' color="red" onClick={handleConfirm}/>
                                 </div>
                             </Modal.Actions>
                         </Modal>

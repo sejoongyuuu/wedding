@@ -10,7 +10,7 @@ const canvasStyles = {
     left: 0
 };
 
-const ConfettiComponent = forwardRef((props, ref) => {
+const Confetti = () => {
 
     const refAnimationInstance = useRef(null);
 
@@ -23,7 +23,8 @@ const ConfettiComponent = forwardRef((props, ref) => {
         refAnimationInstance.current({
             ...opts,
             origin: {y: 0.7},
-            particleCount: Math.floor(200 * particleRatio)
+            particleCount: Math.floor(200 * particleRatio),
+            colors: ['#FF9C9F', '#FFF4CF', '#FFB6B8', '#9CFFB6', '#A8B1FF']
         });
     }, []);
 
@@ -65,15 +66,15 @@ const ConfettiComponent = forwardRef((props, ref) => {
         }, 1500)
     }, []);
 
-    useImperativeHandle(ref, () => ({
+/*    useImperativeHandle(ref, () => ({
         fire
-    }));
+    }));*/
 
     return (
         <>
             <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles}/>
         </>
     );
-})
-ConfettiComponent.displayName='ConfettiComponent';
-export default ConfettiComponent;
+}
+Confetti.displayName = 'Confetti';
+export default Confetti;
