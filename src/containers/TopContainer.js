@@ -24,7 +24,7 @@ export default function TopContainer() {
     }
 
     return (
-        <div className={styles.container} onClick={handleTouch}>
+        <div className={styles.container}>
             <ConfettiComponent ref={confettiRef}/>
             <div className={styles.wedding}>
                 <div className="mask">
