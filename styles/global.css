@@ -36,7 +36,8 @@ body {
     font-size: 150%;
     padding-bottom: 3%;
     color: #5BB372;
-    letter-spacing: 1px;
+    font-style: italic;
+    letter-spacing: 0.5px;
 }
 
 td {
@@ -232,4 +233,11 @@ ui.button {
 .font-color-green {
     color: #5BB372;
 
+}
+
+.footer {
+    font-family: "Open Sans";
+    letter-spacing: 0px;
+    font-size: 90%;
+    padding-bottom: 2%;
 }

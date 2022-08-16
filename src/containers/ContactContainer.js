@@ -17,11 +17,10 @@ export default function ContactContainer() {
                     참석이 어려우신 분들을 위해<br/>
                     축하의 마음을 전하실 곳을 안내드립니다.
                 </div>
-                <AccountComponent/>
                 <div className={styles.contactSection}>
                     <div style={{paddingLeft: '15%'}}>
                         <a href='tel:010-8875-8665'>
-                            <div style={{width: '35%', margin:'auto'}}>
+                            <div style={{width: '35%', margin: 'auto'}}>
                                 <Image src={telBlue} alt=""/>
                             </div>
                         </a>
@@ -32,7 +31,7 @@ export default function ContactContainer() {
                     </div>
                     <div style={{paddingRight: '15%'}}>
                         <a href='tel:010-8875-8665'>
-                            <div style={{width: '35%', margin:'auto'}}>
+                            <div style={{width: '35%', margin: 'auto'}}>
                                 <Image src={telPink} alt=""/>
                             </div>
                         </a>
@@ -42,6 +41,7 @@ export default function ContactContainer() {
                         </div>
                     </div>
                 </div>
+                <AccountComponent/>
             </Fade>
         </div>
     );

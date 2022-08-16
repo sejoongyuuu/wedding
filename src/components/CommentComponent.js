@@ -77,7 +77,7 @@ export default function CommentComponent() {
                     축하메시지를 남겨주세요! 😊
                 </div>
                 <IconButton onClick={handleClick} >
-                    <AddCircleRoundedIcon sx={{fontSize: 40, color: "#5bb372"}}/>
+                    <AddCircleRoundedIcon sx={{fontSize: 40, color: "#FFD966"}}/>
                 </IconButton>
                 {open &&
                     <div>

@@ -5,7 +5,6 @@ import {useEffect, useRef} from "react";
 import Confetti from "../components/Confetti";
 
 export default function TopContainer() {
-    const targetImage = useRef(null);
     const confettiRef = useRef({});
 
     useEffect(() => {
