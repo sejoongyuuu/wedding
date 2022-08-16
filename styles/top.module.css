@@ -34,19 +34,16 @@
     color: #5BB372;
     vertical-align: center;
 }
-
-.thin {
-    font-weight: 100;
-    line-height: 110%;
-    font-size: 150%;
-    padding-bottom: 2%;
-    text-align: center;
+.and{
+    color: transparent;
+    -webkit-text-stroke: 1px #5BB372;
 }
 
 .date {
     padding-top: 5%;
+    padding-bottom: 2%;
     font-family: "Open Sans";
-    font-weight: 100;
+    font-weight: 200;
     font-size: 100%;
     letter-spacing: 2px;
     line-height: 110%;
@@ -54,12 +51,10 @@
 }
 
 .kor {
-    padding-top: 1%;
     line-height: 100%;
-    color: #5E5C5A;
     font-weight: 300;
     font-size: 105%;
-    color: #3b3b3b;
+    color: #4d4d4d;
 }
 
 .image {

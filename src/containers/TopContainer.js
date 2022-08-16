@@ -1,6 +1,6 @@
 import styles from '../../styles/top.module.css';
 import Image from 'next/image';
-import picture from '../../public/images/picture/picture1.PNG';
+import picture from '../../public/images/picture/picture_line.PNG';
 import {useEffect, useRef} from "react";
 import ConfettiComponent from "../components/ConfettiComponent";
 
@@ -36,7 +36,7 @@ export default function TopContainer() {
                     <div className="reveal" style={{paddingTop: '3%'}}>Sejoong</div>
                 </div>
                 <div className="mask">
-                    <div className="reveal_2" style={{paddingTop: '3%'}}>& Yujeong</div>
+                    <div className="reveal_2" style={{paddingTop: '3%'}}><span className={styles.and}>&</span> Yujeong</div>
                 </div>
             </div>
             <div className="appear">

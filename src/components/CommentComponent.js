@@ -71,7 +71,11 @@ export default function CommentComponent() {
     const {values, touched, errors, handleChange, handleSubmit} = formik;
     return (
         <div>
-            <div style={{backgroundColor: '#f5f5f5'}}>
+            <div style={{ paddingTop: '5%'}}>
+                <div className={styles.text}>
+                    세중 & 유정에게<br/>
+                    축하메시지를 남겨주세요! 😊
+                </div>
                 <IconButton onClick={handleClick} >
                     <AddCircleRoundedIcon sx={{fontSize: 40, color: "#5bb372"}}/>
                 </IconButton>

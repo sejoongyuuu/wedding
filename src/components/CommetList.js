@@ -77,25 +77,25 @@ export default function CommentList(props) {
                     <div className={styles.commentListContainer}>
                         {comments.map(comment => (
                             <div key={comment._id}>
-                                <Box sx={{flexGrow: 1, overflow: 'hidden', px: 1, padding: '3%'}} className={styles.comment}>
+                                <Box sx={{flexGrow: 1, overflow: 'hidden', px: 1, padding: '3%'}}
+                                     className={styles.comment}>
                                     <Grid container spacing={0}>
-                                       {/* <Grid item xs={2} style={{
-                                            margin: 'auto',
-                                            verticalAlign: 'top',
-                                            display: 'flex',
-                                            justifyItems: 'top'
+                                        <Grid item xs={2} style={{
+                                            margin: 'auto'
                                         }}>
-                                            <Avatar
-                                                sx={{
-                                                    width: 30,
-                                                    height: 30,
-                                                    fontSize: '85%',
-                                                    fontWeight: '500',
-                                                    backgroundColor: '#FFCFD0'
-                                                }}
-                                            >{comment.name.substring(0, 1)}</Avatar>
-                                        </Grid>*/}
-                                        <Grid item xs={11}>
+                                            <div style={{display: 'flex', verticalAlign: 'top'}}>
+                                                <Avatar
+                                                    sx={{
+                                                        width: 30,
+                                                        height: 30,
+                                                        fontSize: '95%',
+                                                        fontWeight: '500',
+                                                        backgroundColor: '#ffd60b'
+                                                    }}
+                                                >{comment.name.substring(0, 1)}</Avatar>
+                                            </div>
+                                        </Grid>
+                                        <Grid item xs={9}>
                                             <Grid item xs={12}>
                                                 <span className={styles.name}>{comment.name}</span>
                                                 <span className={styles.date}>· {comment.createdDate.toString()}</span>

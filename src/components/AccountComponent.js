@@ -32,7 +32,7 @@ const AccordionSummary = styled((props) => (
     <MuiAccordionSummary
         {...props}
     />))(({}) => ({
-    color: '#5BB372',
+    color: '#424242',
     fontWeight: '500',
     '& .MuiAccordionSummary-content': {
         paddingLeft: '5%',
