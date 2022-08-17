@@ -26,6 +26,8 @@ const MapComponent = () => {
                     position: new kakao.maps.LatLng(37.50961746196608, 127.05947919675475), // 마커의 좌표
                     map: map // 마커를 표시할 지도 객체
                 });
+                marker.setMap(map);
+
                 // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
                 var content = '<div class="customoverlay">' +
                     '  <a href="https://map.kakao.com/?itemId=8229296" target="_blank">' +

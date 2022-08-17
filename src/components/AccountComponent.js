@@ -25,24 +25,25 @@ const Accordion = styled((props) => (<MuiAccordion disableGutters elevation={0} 
     backgroundColor: 'transparent',
     '&:not(:last-child)': {}, '&:before': {
         display: 'none',
-    }, marginBottom: '2%'
+    },
 }));
 
 const AccordionSummary = styled((props) => (
     <MuiAccordionSummary
         {...props}
     />))(({}) => ({
-    color: '#5BB372',
+    color: '#4b4b4b',
     height: '5%',
-    fontWeight: '500',
-    fontSize: '105%',
-    paddingRight: '20%',
-    paddingLeft: '20%',
+    fontWeight: '400',
+    fontSize: '100%',
+    marginRight: '20%',
+    marginLeft: '20%',
+    borderBottom: '1px solid #D4D4D4',
     '& .MuiAccordionSummary-content': {
-        borderBottom: '1px solid 5BB372',
-        textAlign: 'center'
+        '& Mui-expanded':{
+            color: '#5BB372'
+        }
     },
-
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({theme}) => ({
@@ -58,7 +59,6 @@ export default function AccountComponent() {
     }
     return (
         <div className={styles.accountSection}>
-            <div style={{paddingBottom: '3%', fontSize: '95%', color: '#484848'}}>* 계좌번호를 터치하면 복사됩니다 *</div>
             <ThemeProvider theme={theme}>
                 <Accordion>
                     <AccordionSummary
@@ -71,21 +71,19 @@ export default function AccountComponent() {
                         <Typography variant="fontDetail">
                             <div>
                                 <div className="regular">신랑 · 김세중</div>
-                                국민은행 <span style={{letterSpacing: '0.5px'}}
-                                           onClick={e => handleClick(e)}>852501-04-198554</span>
+                                국민은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>852501-04-198554</span>
                             </div>
                             <Divider/>
                             <div>
                                 <div className="regular">신랑 부 · 김용석
                                 </div>
-                                국민은행 <span style={{letterSpacing: '0.5px'}}  onClick={e => handleClick(e)}>210-24-0626-360</span>
+                                국민은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>210-24-0626-360</span>
                             </div>
                             <Divider/>
                             <div>
                                 <div className="regular">신랑 모 · 김난주
                                 </div>
-                                국민은행 <span style={{letterSpacing: '0.5px'}}
-                                           onClick={e => handleClick(e)}>444402-01-361184</span>
+                                국민은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>444402-01-361184</span>
                             </div>
                             <Divider/>
                         </Typography>
@@ -105,21 +103,19 @@ export default function AccountComponent() {
                         <Typography variant="fontDetail">
                             <div>
                                 <div className="regular">신부 · 최유정</div>
-                                우리은행 <span style={{letterSpacing: '0.5px'}}  onClick={e => handleClick(e)}>1002-756-471511</span>
+                                우리은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>1002-756-471511</span>
                             </div>
                             <Divider/>
                             <div>
                                 <div className="regular">신부 부 · 최성대
                                 </div>
-                                농협은행 <span style={{letterSpacing: '0.5px'}}
-                                           onClick={e => handleClick(e)}>302-0562-9216-11</span>
+                                농협은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>302-0562-9216-11</span>
                             </div>
                             <Divider/>
                             <div>
                                 <div className="regular">신부 모 · 백순조
                                 </div>
-                                국민은행 <span style={{letterSpacing: '0.5px'}}
-                                           onClick={e => handleClick(e)}>444401-04-064755</span>
+                                국민은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>444401-04-064755</span>
                             </div>
                             <Divider/>
                         </Typography>

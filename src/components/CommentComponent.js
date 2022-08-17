@@ -55,8 +55,8 @@ export default function CommentComponent() {
             resetForm({});
             createComment(values).then(res => {
                 console.log(res);
-                getComments().then();
                 handleClick();
+                getComments().then();
             });
         },
     });

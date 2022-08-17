@@ -17,10 +17,10 @@ const PageLi = styled.li`
   padding: 2%;
   &:hover {
     cursor: pointer;
-    color: #FD3C22;
+    color: #FF9369;
   }
   &:focus::after {
-    color: #FD3C22;
+    color: #FF9369;
   }
 `;
 
