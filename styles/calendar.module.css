@@ -1,0 +1,23 @@
+.eng {
+    font-family: Nevrada;
+    font-size: 150%;
+    color: #5BB372;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    padding-bottom: 1%;
+}
+
+.date {
+    font-size: 110%;
+    font-weight: 500;
+    color: #5BB372;
+    font-style: italic;
+    padding-bottom: 5%;
+}
+
+.time {
+    font-size: 110%;
+    font-weight: 400;
+    color: #5b5b5b;
+
+}

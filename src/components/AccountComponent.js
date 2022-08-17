@@ -53,8 +53,8 @@ const AccordionDetails = styled(MuiAccordionDetails)(({theme}) => ({
 
 export default function AccountComponent() {
     const handleClick = e => {
-        console.log(e.target.innerText);
-        navigator.clipboard.writeText(e.target.innerText).then(alert('복사되었습니다! ' + e.target.innerText));
+        e.preventDefault()
+        e.clipboardData.setData("Text", e.target.innerText).then(alert("계좌번호가 복사되었습니다. "));
     }
     return (
         <div className={styles.accountSection}>
@@ -72,21 +72,22 @@ export default function AccountComponent() {
                             <div>
                                 <div className="regular">신랑 · 김세중</div>
                                 국민은행 <span style={{letterSpacing: '0.5px'}}
-                                           onClick={handleClick}>852501-04-198554</span>
+                                           onClick={e => handleClick(e)}>852501-04-198554</span>
                             </div>
                             <Divider/>
                             <div>
                                 <div className="regular">신랑 부 · 김용석
                                 </div>
-                                국민은행 <span style={{letterSpacing: '0.5px'}} onClick={handleClick}>210-24-0626-360</span>
+                                국민은행 <span style={{letterSpacing: '0.5px'}}  onClick={e => handleClick(e)}>210-24-0626-360</span>
                             </div>
                             <Divider/>
                             <div>
                                 <div className="regular">신랑 모 · 김난주
                                 </div>
                                 국민은행 <span style={{letterSpacing: '0.5px'}}
-                                           onClick={handleClick}>444402-01-361184</span>
+                                           onClick={e => handleClick(e)}>444402-01-361184</span>
                             </div>
+                            <Divider/>
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
@@ -104,22 +105,23 @@ export default function AccountComponent() {
                         <Typography variant="fontDetail">
                             <div>
                                 <div className="regular">신부 · 최유정</div>
-                                우리은행 <span style={{letterSpacing: '0.5px'}} onClick={handleClick}>1002-756-471511</span>
+                                우리은행 <span style={{letterSpacing: '0.5px'}}  onClick={e => handleClick(e)}>1002-756-471511</span>
                             </div>
                             <Divider/>
                             <div>
                                 <div className="regular">신부 부 · 최성대
                                 </div>
                                 농협은행 <span style={{letterSpacing: '0.5px'}}
-                                           onClick={handleClick}>302-0562-9216-11</span>
+                                           onClick={e => handleClick(e)}>302-0562-9216-11</span>
                             </div>
                             <Divider/>
                             <div>
                                 <div className="regular">신부 모 · 백순조
                                 </div>
                                 국민은행 <span style={{letterSpacing: '0.5px'}}
-                                           onClick={handleClick}>444401-04-064755</span>
+                                           onClick={e => handleClick(e)}>444401-04-064755</span>
                             </div>
+                            <Divider/>
                         </Typography>
                     </AccordionDetails>
                 </Accordion>

@@ -4,6 +4,7 @@ import GalleryContainer from "./containers/GalleryContainer";
 import ShareContainer from "./containers/ShareContainer";
 import ContentsContainer from "./containers/ContentsContainer";
 import Footer from "./components/footer";
+import CalendarContainer from "./containers/CalendarContainer";
 
 export default function MainContainer() {
     const GalleryContainer = dynamic(() => import("../src/containers/GalleryContainer"),)
@@ -15,8 +16,9 @@ export default function MainContainer() {
         <div>
             <TopContainer/>
             <ContentsContainer/>
-            <LocationContainer/>
+            <CalendarContainer/>
             <GalleryContainer/>
+            <LocationContainer/>
             <ContactContainer/>
             <CommentContainer/>
             <ShareContainer/>

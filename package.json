@@ -16,6 +16,7 @@
     "@mui/material": "^5.9.1",
     "@mui/styled-engine-sc": "^5.8.0",
     "@mui/styles": "^5.9.1",
+    "clsx": "^1.2.1",
     "dynamic": "^4.2.2",
     "formik": "^2.2.9",
     "middlewares": "^0.1.1",
