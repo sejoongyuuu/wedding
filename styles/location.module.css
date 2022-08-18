@@ -34,7 +34,7 @@
 }
 
 .detail {
-    font-weight: 100;
+    font-weight: 200;
     font-size: 88%;
 }
 
@@ -44,11 +44,11 @@
     font-size: 90%;
     color: white;
     background: #2F9F27;
-    border-radius: 50%;
+    border-radius: 100%;
     width: 21px;
     height: 21px;
     text-align: center;
-    vertical-align: center;
+    vertical-align: middle;
 }
 
 .line9 {

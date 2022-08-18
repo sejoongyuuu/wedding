@@ -17,8 +17,8 @@ export default function LocationContainer() {
                 <div className="titleDiv"> Location</div>
                 <div style={{paddingBottom: '5%'}}>
                     <div className="medium" style={{fontSize: '110%', paddingBottom: '2%'}}> 소노펠리체 컨벤션</div>
-                    <div> 서울특별시 강남구 테헤란로 87길 22<br/>도심공항터미널 3층
-                        <div className="numLight" style={{paddingTop: '2%'}}> 02.2222.7401</div>
+                    <div style={{fontSize: '96%'}}> 서울특별시 강남구 테헤란로 87길 22<br/>도심공항터미널 3층
+                        <div className="num" style={{paddingTop: '2%'}}> 02.2222.7401</div>
                     </div>
                 </div>
                 <div className={styles.mapDiv}>
@@ -60,12 +60,12 @@ export default function LocationContainer() {
                             <td>한국무역센터삼성역 정류장<br/>
                                 (정류장 코드 23-201)<br/>
                                 <span className="medium">간선</span> <span
-                                    className="numLight">146, 333, 341, 360, 740</span><br/>
+                                    className="num">146, 333, 341, 360, 740</span><br/>
                                 <span className="medium">지선</span><span
-                                    className="numLight"> 3411</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+                                    className="num"> 3411</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
                                     className="medium">광역</span> <span
-                                    className="numLight">M6450</span><br/>
-                                <span className="medium">직행</span> <span className="numLight">1100, 1700, 2000, 2000-1, 7007,
+                                    className="num">M6450</span><br/>
+                                <span className="medium">직행</span> <span className="num">1100, 1700, 2000, 2000-1, 7007,
                                 500-2, 9303</span>
                             </td>
                         </tr>
