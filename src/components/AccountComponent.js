@@ -50,14 +50,14 @@ const AccordionSummary = styled((props) => (
 const ColorButton = styled(Button)(({theme}) => ({
     fontWeight: '400',
     fontSize: '90%',
-    backgroundColor: 'transparent',
-    border: '1.5px solid #5BB372',
-    color: '#5BB372',
-    height: '20px',
+    backgroundColor: '#696969',
+    color: '#FFFFFF',
+    height: 'auto',
     minWidth: '0',
     marginLeft: 'auto',
+    padding: '0px 5px',
     "&:hover": {
-        backgroundColor: "#5BB372",
+        backgroundColor: "#696969",
         color: '#FFFFFF',
         fontWeight: '400',
         fontStyle: 'none'
