@@ -1,6 +1,7 @@
 import styles from '../../styles/top.module.css';
 import Image from 'next/image';
 import picture from '../../public/images/picture/picture_line.PNG';
+import leaf from '../../public/images/shape/leaf.png';
 import {useEffect, useRef} from "react";
 import Confetti from "../components/Confetti";
 
@@ -29,9 +30,12 @@ export default function TopContainer() {
                 </div>
             </div>
             <div className="appear">
-                    <div className={styles.image}>
-                        <Image src={picture} alt="" width="867.2" height="788"/>
-                    </div>
+                <div className={styles.image}>
+                    <Image src={picture} alt="" width="867.2" height="788"/>
+                </div>
+                <div style={{width: '8%', margin: 'auto'}}>
+                    <Image src={leaf} alt=''/>
+                </div>
                 <div className={styles.saveTheDate}>
                     <div className="reveal_4" style={{paddingTop: '3%'}}>Save the Date!</div>
                 </div>

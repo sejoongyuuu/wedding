@@ -5,8 +5,11 @@ import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import {Button, Divider} from "semantic-ui-react";
 import styles from '../../styles/contact.module.css';
+import {CopyToClipboard} from "react-copy-to-clipboard/src";
+import {useState} from "react";
+import Button from "@mui/material/Button";
+import {Divider} from "semantic-ui-react";
 
 const theme = createTheme();
 
@@ -20,8 +23,8 @@ theme.typography.fontDetail = {
 
 
 const Accordion = styled((props) => (<MuiAccordion disableGutters elevation={0} square {...props} />))(({theme}) => ({
-    marginLeft: '10%',
-    marginRight: '10%',
+    marginLeft: '20%',
+    marginRight: '20%',
     backgroundColor: 'transparent',
     '&:not(:last-child)': {}, '&:before': {
         display: 'none',
@@ -36,27 +39,37 @@ const AccordionSummary = styled((props) => (
     height: '5%',
     fontWeight: '400',
     fontSize: '100%',
-    marginRight: '20%',
-    marginLeft: '20%',
     borderBottom: '1px solid #D4D4D4',
     '& .MuiAccordionSummary-content': {
-        '& Mui-expanded':{
+        '& Mui-expanded': {
             color: '#5BB372'
         }
     },
 }));
 
+const ColorButton = styled(Button)(({theme}) => ({
+    fontWeight: '400',
+    fontSize: '90%',
+    backgroundColor: 'transparent',
+    border: '1.5px solid #5BB372',
+    color: '#5BB372',
+    height: '20px',
+    minWidth: '0',
+    marginLeft: 'auto',
+    "&:hover": {
+        backgroundColor: "#5BB372",
+        color: '#FFFFFF',
+        fontWeight: '400',
+        fontStyle: 'none'
+    },
+}));
 const AccordionDetails = styled(MuiAccordionDetails)(({theme}) => ({
     paddingTop: '5%',
     fontSize: '95%',
-    paddingLeft: '10%'
 }));
 
 export default function AccountComponent() {
-    const handleClick = e => {
-        e.preventDefault()
-        e.clipboardData.setData("Text", e.target.innerText).then(alert("계좌번호가 복사되었습니다. "));
-    }
+
     return (
         <div className={styles.accountSection}>
             <ThemeProvider theme={theme}>
@@ -71,19 +84,37 @@ export default function AccountComponent() {
                         <Typography variant="fontDetail">
                             <div>
                                 <div className="regular">신랑 · 김세중</div>
-                                국민은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>852501-04-198554</span>
+                                <div style={{display: 'flex'}}>
+                                    <div>국민은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>852501-04-198554</span>
+                                    </div>
+                                    <CopyToClipboard text='852501-04-198554'>
+                                        <ColorButton size='small'>복사</ColorButton>
+                                    </CopyToClipboard>
+                                </div>
                             </div>
                             <Divider/>
                             <div>
                                 <div className="regular">신랑 부 · 김용석
                                 </div>
-                                국민은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>210-24-0626-360</span>
+                                <div style={{display: 'flex'}}>
+                                    <div>국민은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>210-24-0626-360</span>
+                                    </div>
+                                    <CopyToClipboard text='210-24-0626-360'>
+                                        <ColorButton size='small'>복사</ColorButton>
+                                    </CopyToClipboard>
+                                </div>
                             </div>
                             <Divider/>
                             <div>
                                 <div className="regular">신랑 모 · 김난주
                                 </div>
-                                국민은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>444402-01-361184</span>
+                                <div style={{display: 'flex'}}>
+                                    <div>국민은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>444402-01-361184</span>
+                                    </div>
+                                    <CopyToClipboard text='444402-01-361184'>
+                                        <ColorButton size='small'>복사</ColorButton>
+                                    </CopyToClipboard>
+                                </div>
                             </div>
                             <Divider/>
                         </Typography>
@@ -103,19 +134,37 @@ export default function AccountComponent() {
                         <Typography variant="fontDetail">
                             <div>
                                 <div className="regular">신부 · 최유정</div>
-                                우리은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>1002-756-471511</span>
+                                <div style={{display: 'flex'}}>
+                                    <div>우리은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>1002-756-471511</span>
+                                    </div>
+                                    <CopyToClipboard text='1002-756-471511'>
+                                        <ColorButton size='small'>복사</ColorButton>
+                                    </CopyToClipboard>
+                                </div>
                             </div>
                             <Divider/>
                             <div>
                                 <div className="regular">신부 부 · 최성대
                                 </div>
-                                농협은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>302-0562-9216-11</span>
+                                <div style={{display: 'flex'}}>
+                                    <div>농협은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>302-0562-9216-11</span>
+                                    </div>
+                                    <CopyToClipboard text='302-0562-9216-11'>
+                                        <ColorButton size='small'>복사</ColorButton>
+                                    </CopyToClipboard>
+                                </div>
                             </div>
                             <Divider/>
                             <div>
                                 <div className="regular">신부 모 · 백순조
                                 </div>
-                                국민은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>444401-04-064755</span>
+                                <div style={{display: 'flex'}}>
+                                    <div>국민은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>444401-04-064755</span>
+                                    </div>
+                                    <CopyToClipboard text='444401-04-064755'>
+                                        <ColorButton size='small'>복사</ColorButton>
+                                    </CopyToClipboard>
+                                </div>
                             </div>
                             <Divider/>
                         </Typography>
