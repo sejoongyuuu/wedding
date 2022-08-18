@@ -19,13 +19,16 @@ export default function ContentsContainer(prop) {
                         <Image src={flower} alt="" width="100" height="40"/>
                     </div>
                 </div>
-                <div className={styles.title}>
-                    <div>초대합니다.</div>
+                <div className="titleDiv">
+                    <div>Invitation</div>
                 </div>
                 <div className={styles.body}>
                     <div>함께 맞는 여섯 번째 가을,</div>
                     <div>결혼합니다.</div>
-                    <div>소중한 분들을 모시고자 합니다.</div>
+                    <br/>
+                    <br/>
+                    <div>소중한 분들을 </div>
+                    <div>모시고자 합니다.</div>
                     <div>참석하여 축복해주시면</div>
                     <div>감사하겠습니다.</div>
                 </div>

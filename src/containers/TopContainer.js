@@ -33,7 +33,7 @@ export default function TopContainer() {
                 <div className={styles.image}>
                     <Image src={picture} alt="" width="867.2" height="788"/>
                 </div>
-                <div style={{width: '8%', margin: 'auto'}}>
+                <div style={{width: '12%', margin: 'auto'}}>
                     <Image src={leaf} alt=''/>
                 </div>
                 <div className={styles.saveTheDate}>
