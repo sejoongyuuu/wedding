@@ -68,7 +68,9 @@ const AccordionDetails = styled(MuiAccordionDetails)(({theme}) => ({
 }));
 
 export default function AccountComponent() {
-
+    const handleClick = () => {
+        alert("계좌번호가 복사되었습니다.");
+    }
     return (
         <div className={styles.accountSection}>
             <ThemeProvider theme={theme}>
@@ -82,12 +84,12 @@ export default function AccountComponent() {
                     <AccordionDetails>
                         <Typography variant="fontDetail">
                             <div>
-                               <span className="bold">김세중</span><span className="regular"> · 신랑 </span>
+                                <span className="bold">김세중</span><span className="regular"> · 신랑 </span>
                                 <div style={{display: 'flex'}}>
                                     <div>국민은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>852501-04-198554</span>
                                     </div>
                                     <CopyToClipboard text='852501-04-198554'>
-                                        <ColorButton size='small'>복사</ColorButton>
+                                        <ColorButton size='small' onClick={handleClick}>복사</ColorButton>
                                     </CopyToClipboard>
                                 </div>
                             </div>
@@ -98,7 +100,7 @@ export default function AccountComponent() {
                                     <div>국민은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>210-24-0626-360</span>
                                     </div>
                                     <CopyToClipboard text='210-24-0626-360'>
-                                        <ColorButton size='small'>복사</ColorButton>
+                                        <ColorButton size='small' onClick={handleClick}>복사</ColorButton>
                                     </CopyToClipboard>
                                 </div>
                             </div>
@@ -109,7 +111,7 @@ export default function AccountComponent() {
                                     <div>국민은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>444402-01-361184</span>
                                     </div>
                                     <CopyToClipboard text='444402-01-361184'>
-                                        <ColorButton size='small'>복사</ColorButton>
+                                        <ColorButton size='small' onClick={handleClick}>복사</ColorButton>
                                     </CopyToClipboard>
                                 </div>
                             </div>
@@ -135,18 +137,18 @@ export default function AccountComponent() {
                                     <div>우리은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>1002-756-471511</span>
                                     </div>
                                     <CopyToClipboard text='1002-756-471511'>
-                                        <ColorButton size='small'>복사</ColorButton>
+                                        <ColorButton size='small' onClick={handleClick}>복사</ColorButton>
                                     </CopyToClipboard>
                                 </div>
                             </div>
                             <Divider/>
                             <div>
-                               <span className="bold">최성대</span> <span className="regular"> · 신부 부</span>
+                                <span className="bold">최성대</span> <span className="regular"> · 신부 부</span>
                                 <div style={{display: 'flex'}}>
                                     <div>농협은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>302-0562-9216-11</span>
                                     </div>
                                     <CopyToClipboard text='302-0562-9216-11'>
-                                        <ColorButton size='small'>복사</ColorButton>
+                                        <ColorButton size='small' onClick={handleClick}>복사</ColorButton>
                                     </CopyToClipboard>
                                 </div>
                             </div>
@@ -157,7 +159,7 @@ export default function AccountComponent() {
                                     <div>국민은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>444401-04-064755</span>
                                     </div>
                                     <CopyToClipboard text='444401-04-064755'>
-                                        <ColorButton size='small'>복사</ColorButton>
+                                        <ColorButton size='small' onClick={handleClick}>복사</ColorButton>
                                     </CopyToClipboard>
                                 </div>
                             </div>
