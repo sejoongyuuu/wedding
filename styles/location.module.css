@@ -40,26 +40,26 @@
 
 .line2 {
     display: inline-block;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 90%;
     color: white;
     background: #2F9F27;
-    border-radius: 100%;
-    width: 21px;
-    height: 21px;
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
     text-align: center;
-    vertical-align: middle;
+    vertical-align: center;
 }
 
 .line9 {
     display: inline-block;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 90%;
     color: white;
     background: #B0963C;
-    border-radius: 50%;
-    width: 21px;
-    height: 21px;
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
     text-align: center;
     vertical-align: center;
 }
