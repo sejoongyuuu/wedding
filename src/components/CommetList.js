@@ -90,7 +90,8 @@ export default function CommentList(props) {
                                                         height: 30,
                                                         fontSize: '95%',
                                                         fontWeight: '500',
-                                                        backgroundColor: '#FF9369'
+                                                        backgroundColor: '#FF9369',
+                                                        fontFamily: "S-CoreDream",
                                                     }}
                                                 >{comment.name.substring(0, 1)}</Avatar>
                                             </div>
@@ -126,17 +127,19 @@ export default function CommentList(props) {
                                 </div>
                             </Modal.Header>
                             <Modal.Content>
-                                <p>삭제하려면 비밀번호를 입력해주세요.</p>
-                                <Input size='mini' placeholder='비밀번호'
-                                       value={password}
-                                       onChange={handleChange}
-                                       name={password}
-                                /><br/>
-                                {invalid &&
-                                    <Label basic color='red' pointing>
-                                        비밀번호가 일치하지 않습니다.
-                                    </Label>
-                                }
+                                <div style={{textAlign:'center', fontSize: '100%'}}>
+                                    <p>삭제하려면 비밀번호를 입력해주세요.</p>
+                                    <Input size='mini' placeholder='비밀번호'
+                                           value={password}
+                                           onChange={handleChange}
+                                           name={password}
+                                    /><br/>
+                                    {invalid &&
+                                        <Label basic color='red' pointing>
+                                            비밀번호가 일치하지 않습니다.
+                                        </Label>
+                                    }
+                                </div>
                             </Modal.Content>
                             <Modal.Actions>
                                 <div className={styles.buttonGroup_2}>

@@ -24,7 +24,7 @@ const Confetti = () => {
             ...opts,
             origin: {y: 0.7},
             particleCount: Math.floor(200 * particleRatio),
-            colors: ['#ff5b94', '#ffb700', '#52d36c']
+            colors: ['#ff604d', '#ff9c71', '#ffc73c', '#ffffff']
         });
     }, []);
 
@@ -66,9 +66,9 @@ const Confetti = () => {
         }, 1500)
     }, []);
 
-/*    useImperativeHandle(ref, () => ({
-        fire
-    }));*/
+    /*    useImperativeHandle(ref, () => ({
+            fire
+        }));*/
     return (
         <>
             <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles}/>

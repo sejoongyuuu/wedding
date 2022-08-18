@@ -223,18 +223,18 @@ td {
     font-weight: 400;
 }
 
-.ui red pointing basic label {
-    font-weight: 400;
+.ui.label {
+    font-size: 95%;
+    font-weight: 400 !important;
 }
 
 ui.button {
-    font-family: "Noto Sans KR" !important;
+    font-family: "S-CoreDream" !important;
     font-weight: 500 !important;
 }
 
 .font-color-green {
     color: #5BB372;
-
 }
 .ui.modal>.header{
     font-size: 100% !important;
