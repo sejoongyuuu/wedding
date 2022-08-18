@@ -16,7 +16,7 @@ export default function LocationContainer() {
             <Fade>
                 <div className="titleDiv"> Location</div>
                 <div style={{paddingBottom: '5%'}}>
-                    <div className="medium" style={{fontSize: '110%', paddingBottom: '2%'}}> 소노펠리체 컨벤션</div>
+                    <div className="bold" style={{fontSize: '110%', paddingBottom: '2%'}}> 소노펠리체 컨벤션</div>
                     <div style={{fontSize: '96%'}}> 서울특별시 강남구 테헤란로 87길 22<br/>도심공항터미널 3층
                         <div className="num" style={{paddingTop: '2%'}}> 02.2222.7401</div>
                     </div>
