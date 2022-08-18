@@ -236,6 +236,11 @@ ui.button {
     color: #5BB372;
 
 }
+.ui.modal>.header{
+    font-size: 100% !important;
+    font-family: S-CoreDream !important;
+    font-weight: 400 !important;
+}
 
 .footer {
     font-family: 'S-CoreDream';

@@ -120,9 +120,13 @@ export default function CommentList(props) {
                             open={open}
                             onClose={handleClose}
                         >
-                            <Modal.Header>메시지 삭제</Modal.Header>
+                            <Modal.Header>
+                                <div>
+                                    메시지 삭제
+                                </div>
+                            </Modal.Header>
                             <Modal.Content>
-                                <p>삭제하시려면 비밀번호를 입력해주세요.</p>
+                                <p>삭제하려면 비밀번호를 입력해주세요.</p>
                                 <Input size='mini' placeholder='비밀번호'
                                        value={password}
                                        onChange={handleChange}
@@ -138,7 +142,8 @@ export default function CommentList(props) {
                                 <div className={styles.buttonGroup_2}>
                                     <Button circular icon='cancel' size='tiny' onClick={handleClose}
                                             style={{marginRight: '3%'}}/>
-                                    <Button circular icon='trash alternate' size='tiny' color="red" onClick={handleConfirm}/>
+                                    <Button circular icon='trash alternate' size='tiny' color="red"
+                                            onClick={handleConfirm}/>
                                 </div>
                             </Modal.Actions>
                         </Modal>
