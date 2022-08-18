@@ -14,11 +14,6 @@ export default function ContentsContainer(prop) {
     return (
         <div className={styles.container}>
             <Fade>
-                <div style={{width: '20%', margin: 'auto'}}>
-                    <div>
-                        <Image src={flower} alt="" width="100" height="40"/>
-                    </div>
-                </div>
                 <div className="titleDiv">
                     <div>Invitation</div>
                 </div>
@@ -29,6 +24,8 @@ export default function ContentsContainer(prop) {
                     <br/>
                     <div>소중한 분들을 </div>
                     <div>모시고자 합니다.</div>
+                    <br/>
+                    <br/>
                     <div>참석하여 축복해주시면</div>
                     <div>감사하겠습니다.</div>
                 </div>

@@ -9,7 +9,7 @@ export default function CalendarContainer() {
         <>
             <Fade>
                 <div>
-                    <div style={{width: '8%', margin: 'auto', paddingBottom: '2%'}}>
+                    <div style={{width: '12%', margin: 'auto', paddingBottom: '2%'}}>
                         <Image src={leaf} alt=''/>
                     </div>
                     <div className={styles.eng}>The Wedding Day</div>

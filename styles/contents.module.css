@@ -1,5 +1,5 @@
 .container {
-    padding-top: 40%;
+    padding-top: 50%;
     padding-bottom: 30%;
 }
 
@@ -10,5 +10,6 @@
     font-size: 110%;
 }
 .body {
-    padding-bottom: 10%;
+    padding-top: 10%;
+    padding-bottom: 15%;
 }
