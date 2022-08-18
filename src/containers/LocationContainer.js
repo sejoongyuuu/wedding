@@ -70,7 +70,7 @@ export default function LocationContainer() {
                             </td>
                         </tr>
                     </table>
-                    <div style={{width: '90%'}}>
+                    <div style={{width: '95%'}}>
                         <Divider fitted/>
                     </div>
                 </Fade>

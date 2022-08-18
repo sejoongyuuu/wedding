@@ -72,9 +72,9 @@ export default function CommentComponent() {
     return (
         <div>
             <div>
-                <div className={styles.text}>
+                <div>
                     세중 & 유정에게<br/>
-                    축하메시지를 남겨주세요! 😊
+                    축하메시지를 남겨주세요!
                 </div>
                 <IconButton onClick={handleClick} >
                     <AddCircleRoundedIcon sx={{fontSize: 40, color: "#FFD966"}}/>

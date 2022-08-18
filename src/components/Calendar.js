@@ -7,15 +7,15 @@ import clsx from "clsx";
 
 const useStyles = makeStyles(theme => ({
     head: {
-        fontFamily: 'Nevrada',
+        fontFamily: 'S-CoreDream',
         color: '#676767',
         display: "flex", justifyContent: "center", alignItems: "center",
-        fontSize: '90%', textAlign: "center", width: 30, height: 30
+        fontSize: '90%', textAlign: "center", width: 30, height: 30, fontWeight: '500'
     },
     body: {
         fontFamily: 'S-CoreDream',
         display: "flex", justifyContent: "center", alignItems: "center",
-        fontSize: '95%', textAlign: "center", width: 30, height: 30, fontWeight: '500'
+        fontSize: '95%', textAlign: "center", width: 30, height: 30, fontWeight: '300'
     },
     checkedDay: {
         backgroundColor: '#5BB372', color: '#ffffff !important', borderRadius: '100%', fontWeight: '500'

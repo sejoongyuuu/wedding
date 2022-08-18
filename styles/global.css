@@ -6,11 +6,12 @@ body {
     background-color: #FBF7F4 !important;
     font-family: "S-CoreDream" !important;
     font-weight: 300 !important;
-    font-size: 95% !important;
 }
 
 .num {
+    font-weight: 200;
     letter-spacing: 0;
+    font-size: 95%;
 }
 
 .thin {
@@ -23,6 +24,10 @@ body {
 
 .medium {
     font-weight: 400;
+}
+
+.bold {
+    font-weight: 500;
 }
 
 .font-Large {

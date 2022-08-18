@@ -21,7 +21,6 @@ theme.typography.fontDetail = {
     textAlign: 'left',
 };
 
-
 const Accordion = styled((props) => (<MuiAccordion disableGutters elevation={0} square {...props} />))(({theme}) => ({
     marginLeft: '15%',
     marginRight: '15%',
@@ -37,7 +36,7 @@ const AccordionSummary = styled((props) => (
     />))(({}) => ({
     color: '#4b4b4b',
     height: '5%',
-    fontWeight: '400',
+    fontWeight: '500',
     fontSize: '100%',
     borderBottom: '1px solid #D4D4D4',
     '& .MuiAccordionSummary-content': {
@@ -83,7 +82,7 @@ export default function AccountComponent() {
                     <AccordionDetails>
                         <Typography variant="fontDetail">
                             <div>
-                                <div className="regular">신랑 · 김세중</div>
+                               <span className="bold">김세중</span><span className="regular"> · 신랑 </span>
                                 <div style={{display: 'flex'}}>
                                     <div>국민은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>852501-04-198554</span>
                                     </div>
@@ -94,8 +93,7 @@ export default function AccountComponent() {
                             </div>
                             <Divider/>
                             <div>
-                                <div className="regular">신랑 부 · 김용석
-                                </div>
+                                <span className="bold">김용석</span><span className="regular"> · 신랑 부</span>
                                 <div style={{display: 'flex'}}>
                                     <div>국민은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>210-24-0626-360</span>
                                     </div>
@@ -106,8 +104,7 @@ export default function AccountComponent() {
                             </div>
                             <Divider/>
                             <div>
-                                <div className="regular">신랑 모 · 김난주
-                                </div>
+                                <span className="bold">김난주</span><span className="regular"> · 신랑 모</span>
                                 <div style={{display: 'flex'}}>
                                     <div>국민은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>444402-01-361184</span>
                                     </div>
@@ -133,7 +130,7 @@ export default function AccountComponent() {
                     <AccordionDetails>
                         <Typography variant="fontDetail">
                             <div>
-                                <div className="regular">신부 · 최유정</div>
+                                <span className="bold">최유정</span><span className="regular"> · 신부</span>
                                 <div style={{display: 'flex'}}>
                                     <div>우리은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>1002-756-471511</span>
                                     </div>
@@ -144,8 +141,7 @@ export default function AccountComponent() {
                             </div>
                             <Divider/>
                             <div>
-                                <div className="regular">신부 부 · 최성대
-                                </div>
+                               <span className="bold">최성대</span> <span className="regular"> · 신부 부</span>
                                 <div style={{display: 'flex'}}>
                                     <div>농협은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>302-0562-9216-11</span>
                                     </div>
@@ -156,8 +152,7 @@ export default function AccountComponent() {
                             </div>
                             <Divider/>
                             <div>
-                                <div className="regular">신부 모 · 백순조
-                                </div>
+                                <span className="bold">백순조</span><span className="regular"> · 신부 모</span>
                                 <div style={{display: 'flex'}}>
                                     <div>국민은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>444401-04-064755</span>
                                     </div>

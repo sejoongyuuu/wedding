@@ -15,7 +15,9 @@ export default function CalendarContainer() {
                     <div className={styles.eng}>The Wedding Day</div>
                     <div className={styles.date}>9월 18일 일요일 오후 3시</div>
                 </div>
-                <Calendar/>
+                <div style={{width: '90%', margin:'auto'}}>
+                    <Calendar/>
+                </div>
             </Fade>
         </>
     )
