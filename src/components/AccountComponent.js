@@ -23,8 +23,8 @@ theme.typography.fontDetail = {
 
 
 const Accordion = styled((props) => (<MuiAccordion disableGutters elevation={0} square {...props} />))(({theme}) => ({
-    marginLeft: '20%',
-    marginRight: '20%',
+    marginLeft: '15%',
+    marginRight: '15%',
     backgroundColor: 'transparent',
     '&:not(:last-child)': {}, '&:before': {
         display: 'none',

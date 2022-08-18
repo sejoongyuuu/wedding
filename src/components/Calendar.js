@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
         fontSize: '90%', textAlign: "center", width: 30, height: 30
     },
     body: {
-        fontFamily: 'OpenSans',
+        fontFamily: 'S-CoreDream',
         display: "flex", justifyContent: "center", alignItems: "center",
         fontSize: '95%', textAlign: "center", width: 30, height: 30, fontWeight: '500'
     },

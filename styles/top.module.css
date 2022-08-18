@@ -39,8 +39,7 @@
 
 .date {
     padding-bottom: 1%;
-    font-family: "Open Sans";
-    font-weight: 200;
+    font-weight: 100;
     font-size: 100%;
     letter-spacing: 2px;
     line-height: 110%;
@@ -49,8 +48,7 @@
 
 .kor {
     line-height: 100%;
-    font-weight: 400;
-    font-size: 105%;
+    font-weight: 300;
     color: #4d4d4d;
 }
 

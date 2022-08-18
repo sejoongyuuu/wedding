@@ -34,13 +34,13 @@
 }
 
 .detail {
-    font-weight: 300;
+    font-weight: 100;
     font-size: 88%;
 }
 
 .line2 {
     display: inline-block;
-    font-weight: 500;
+    font-weight: 300;
     font-size: 90%;
     color: white;
     background: #2F9F27;

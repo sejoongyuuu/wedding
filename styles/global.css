@@ -2,15 +2,15 @@ body {
     width: 100%;
     margin: 0;
     text-align: center;
-    color: #232323;
+    color: #363636;
     background-color: #FBF7F4 !important;
-    font-family: 'Noto Sans KR' !important;
-    font-weight: 300;
-    letter-spacing: -1px;
+    font-family: "S-CoreDream" !important;
+    font-weight: 200 !important;
+    font-size: 95% !important;
 }
 
 .numLight {
-    font-weight: 300;
+    font-weight: 100;
     letter-spacing: 0;
 }
 
@@ -19,11 +19,11 @@ body {
 }
 
 .regular {
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .medium {
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .font-Large {
@@ -65,13 +65,13 @@ td {
 .customoverlay a {
     display: block;
     text-decoration: none;
-    color: #000;
+    color: #565656;
     text-align: center;
     border-radius: 6px;
     font-size: 14px;
     overflow: hidden;
-    background: #3a3a3a;
-    background: #3a3a3a url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;
+    background: #5BB372;
+    background: #5BB372 url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;
 }
 
 .customoverlay .title {
@@ -234,7 +234,7 @@ ui.button {
 }
 
 .footer {
-    font-family: "Open Sans";
+    font-family: 'S-CoreDream';
     letter-spacing: 0px;
     font-size: 90%;
     padding-bottom: 2%;

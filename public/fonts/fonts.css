@@ -137,54 +137,6 @@
 }
 
 @font-face {
-    font-family: 'Coco Gothic';
-    font-display: block;
-    font-style: normal;
-    font-weight: 300;
-    src: url('../fonts/coco_gothic/CocoGothic_trial.ttf') format('woff2'),
-    url('../fonts/coco_gothic/CocoGothic_trial.ttf') format('woff'),
-    url('../fonts/coco_gothic/CocoGothic_trial.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Coco Gothic';
-    font-display: block;
-    font-style: normal;
-    font-weight: 100;
-    src: url('../fonts/coco_gothic/CocoGothic-UltraLight_trial.ttf') format('woff2'),
-    url('../fonts/coco_gothic/CocoGothic-UltraLight_trial.ttf') format('woff'),
-    url('../fonts/coco_gothic/CocoGothic-UltraLight_trial.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Coco Gothic';
-    font-display: block;
-    font-style: normal;
-    font-weight: 200;
-    src: url('../fonts/coco_gothic/CocoGothic-Light_trial.ttf') format('woff2'),
-    url('../fonts/coco_gothic/CocoGothic-Light_trial.ttf') format('woff'),
-    url('../fonts/coco_gothic/CocoGothic-Light_trial.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Coco Gothic';
-    font-display: block;
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/coco_gothic/CocoGothic-Bold_trial.ttf') format('woff2'),
-    url('../fonts/coco_gothic/CocoGothic-Bold_trial.ttf') format('woff'),
-    url('../fonts/coco_gothic/CocoGothic-Bold_trial.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Coco Gothic';
-    font-display: block;
-    font-style: normal;
-    font-weight: 500;
-    src: url('../fonts/coco_gothic/CocoGothic-Heavy_trial.ttf') format('woff2'),
-    url('../fonts/coco_gothic/CocoGothic-Heavy_trial.ttf') format('woff'),
-    url('../fonts/coco_gothic/CocoGothic-Heavy_trial.ttf') format('truetype');
-}
-
-@font-face {
     font-family: 'Nevrada';
     font-display: block;
     font-style: normal;
@@ -198,6 +150,7 @@
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
     font-weight: normal;
     font-style: normal;
+
 }
 
 @font-face {
@@ -205,4 +158,43 @@
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeMiMi.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('../fonts/S-Core_Dream_OTF/SCDream1.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('../fonts/S-Core_Dream_OTF/SCDream2.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('../fonts/S-Core_Dream_OTF/SCDream3.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('../fonts/S-Core_Dream_OTF/SCDream4.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('../fonts/S-Core_Dream_OTF/SCDream5.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-weight: 500;
 }
