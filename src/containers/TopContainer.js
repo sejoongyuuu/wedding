@@ -14,15 +14,13 @@ export default function TopContainer() {
 
     return (
         <div className={styles.container}>
-            <Confetti ref={confettiRef}/>
-
-
             <div className="appear">
                 <div className={styles.imageDiv}>
                     <div className={styles.image}>
                         <Image src={picture} alt="" width="867.2" height="788"/>
                     </div>
                 </div>
+                <Confetti ref={confettiRef}/>
                 <div className={styles.wedding}>
                     <div className="mask">
                         <div className="reveal">The Wedding of</div>
