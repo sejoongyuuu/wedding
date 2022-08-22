@@ -1,37 +1,42 @@
 .container {
 }
 
-.wedding{
+.wedding {
     padding-top: 18%;
-    padding-bottom: 2%;
-    color: #363636;
-    font-family: "Coco Gothic";
-    font-weight: 200;
-    font-size: 110%;
-    letter-spacing: 2px;
-    color: #595959;
+    color: #ffffff;
+    font-family: 'Coco Gothic';
+    font-weight: 500;
+    font-size: 270%;
+    line-height: 110%;
+    text-shadow: -1px -1px 0 #5BB372,
+    1px -1px 0 #5BB372,
+    -1px 1px 0 #5BB372,
+    1px 1px 0 #5BB372;
+    padding-bottom: 3%;
 }
 
 .name {
     text-align: center;
     padding-left: 7%;
     padding-right: 7%;
-    font-family: 'Nevrada';
-    font-size: 370%;
+    font-family: 'Coco Gothic';
+    font-size: 350%;
     font-weight: 500;
     letter-spacing: 0px;
-    line-height: 95%;
+    line-height: 100%;
     color: #5BB372;
     vertical-align: center;
     padding-bottom: 5%;
 }
-.and{
+
+.and {
     color: transparent;
     -webkit-text-stroke: 1px #5BB372;
 }
-.saveTheDate{
+
+.saveTheDate {
     font-family: 'Nevrada';
-    color: #676767;
+    color: #565656;
     font-style: italic;
     font-size: 160%;
     letter-spacing: 0.5px;
@@ -58,7 +63,7 @@
     margin: auto;
 }
 
-.bar{
+.bar {
     width: 10%;
     border-bottom: 2px solid #5BB372;
     margin: auto;

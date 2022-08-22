@@ -17,24 +17,21 @@ export default function TopContainer() {
             <Confetti ref={confettiRef}/>
             <div className={styles.wedding}>
                 <div className="mask">
-                    <div className="reveal">The Wedding of</div>
+                    <div className="reveal">THE<br/>WEDDING OF</div>
                 </div>
             </div>
             <div className={styles.name}>
                 <div className="mask">
-                    <div className="reveal_2" style={{paddingTop: '3%'}}>Sejoong</div>
+                    <div className="reveal_2" >SEJOONG</div>
                 </div>
                 <div className="mask">
-                    <div className="reveal_3" style={{paddingTop: '3%'}}><span className={styles.and}>&</span> Yujeong
+                    <div className="reveal_3">& YUJEONG
                     </div>
                 </div>
             </div>
             <div className="appear">
                 <div className={styles.image}>
                     <Image src={picture} alt="" width="867.2" height="788"/>
-                </div>
-                <div style={{width: '12%', margin: 'auto'}}>
-                    <Image src={leaf} alt=''/>
                 </div>
                 <div className={styles.saveTheDate}>
                     <div className="reveal_4" style={{paddingTop: '3%'}}>Save the Date!</div>

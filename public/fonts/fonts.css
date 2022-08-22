@@ -218,3 +218,11 @@
     url('../fonts/coco_gothic/CocoGothic-Light_trial.ttf') format('woff'),
     url('../fonts/coco_gothic/CocoGothic-Light_trial.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'Coco Gothic';
+    font-display: block;
+    font-style: normal;
+    font-weight: 500;
+    src:
+    url('../fonts/coco_gothic/CocoGothic-Heavy_trial.ttf') format('woff');
+}
