@@ -7,6 +7,7 @@
     url('../fonts/GothicA1/GothicA1-Thin.ttf') format('woff'),
     url('../fonts/GothicA1/GothicA1-Thin.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'Gothic A1';
     font-display: block;
@@ -16,6 +17,7 @@
     url('../fonts/GothicA1/GothicA1-ExtraLight.ttf') format('woff'),
     url('../fonts/GothicA1/GothicA1-ExtraLight.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'Gothic A1';
     font-display: block;
@@ -25,6 +27,7 @@
     url('../fonts/GothicA1/GothicA1-Light.ttf') format('woff'),
     url('../fonts/GothicA1/GothicA1-Light.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'Gothic A1';
     font-display: block;
@@ -34,6 +37,7 @@
     url('../fonts/GothicA1/GothicA1-Regular.ttf') format('woff'),
     url('../fonts/GothicA1/GothicA1-Regular.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'Gothic A1';
     font-display: block;
@@ -43,6 +47,7 @@
     url('../fonts/GothicA1/GothicA1-Medium.ttf') format('woff'),
     url('../fonts/GothicA1/GothicA1-Medium.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'Gothic A1';
     font-display: block;
@@ -52,6 +57,7 @@
     url('../fonts/GothicA1/GothicA1-SemiBold.ttf') format('woff'),
     url('../fonts/GothicA1/GothicA1-SemiBold.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'Gothic A1';
     font-display: block;
@@ -61,6 +67,7 @@
     url('../fonts/GothicA1/GothicA1-Bold.ttf') format('woff'),
     url('../fonts/GothicA1/GothicA1-Bold.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'Gothic A1';
     font-display: block;
@@ -70,6 +77,7 @@
     url('../fonts/GothicA1/GothicA1-ExtraBold.ttf') format('woff'),
     url('../fonts/GothicA1/GothicA1-ExtraBold.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'Gothic A1';
     font-display: block;
@@ -90,6 +98,7 @@
     url('../fonts/Noto_Sans_KR/NotoSansKR-Thin.otf') format('woff'),
     url('../fonts/Noto_Sans_KR/NotoSansKR-Thin.otf') format('truetype');
 }
+
 @font-face {
     font-family: 'Noto Sans KR';
     font-display: block;
@@ -99,6 +108,7 @@
     url('../fonts/Noto_Sans_KR/NotoSansKR-Light.otf') format('woff'),
     url('../fonts/Noto_Sans_KR/NotoSansKR-Light.otf') format('truetype');
 }
+
 @font-face {
     font-family: 'Noto Sans KR';
     font-display: block;
@@ -108,6 +118,7 @@
     url('../fonts/Noto_Sans_KR/NotoSansKR-Regular.otf') format('woff'),
     url('../fonts/Noto_Sans_KR/NotoSansKR-Regular.otf') format('truetype');
 }
+
 @font-face {
     font-family: 'Noto Sans KR';
     font-display: block;
@@ -117,6 +128,7 @@
     url('../fonts/Noto_Sans_KR/NotoSansKR-Medium.otf') format('woff'),
     url('../fonts/Noto_Sans_KR/NotoSansKR-Medium.otf') format('truetype');
 }
+
 @font-face {
     font-family: 'Noto Sans KR';
     font-display: block;
@@ -126,6 +138,7 @@
     url('../fonts/Noto_Sans_KR/NotoSansKR-Bold.otf') format('woff'),
     url('../fonts/Noto_Sans_KR/NotoSansKR-Bold.otf') format('truetype');
 }
+
 @font-face {
     font-family: 'Noto Sans KR';
     font-display: block;
@@ -168,6 +181,7 @@
     font-style: normal;
     font-weight: 100;
 }
+
 @font-face {
     font-family: 'S-CoreDream';
     src: url('../fonts/S-Core_Dream_OTF/SCDream2.otf') format('woff');
@@ -175,6 +189,7 @@
     font-style: normal;
     font-weight: 200;
 }
+
 @font-face {
     font-family: 'S-CoreDream';
     src: url('../fonts/S-Core_Dream_OTF/SCDream3.otf') format('woff');
@@ -218,11 +233,65 @@
     url('../fonts/coco_gothic/CocoGothic-Light_trial.ttf') format('woff'),
     url('../fonts/coco_gothic/CocoGothic-Light_trial.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'Coco Gothic';
     font-display: block;
     font-style: normal;
     font-weight: 500;
-    src:
-    url('../fonts/coco_gothic/CocoGothic-Heavy_trial.ttf') format('woff');
+    src: url('../fonts/coco_gothic/CocoGothic-Heavy_trial.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'Noto Serif';
+    font-display: block;
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/Noto_Serif/NotoSerif-Bold.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'Noto Serif';
+    font-display: block;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Noto_Serif/NotoSerif-BoldItalic.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'Lovelace';
+    font-display: block;
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/Lovelace/Zetafonts - Lovelace Text Regular.otf') format('woff');
+}
+
+@font-face {
+    font-family: 'Lovelace';
+    font-display: block;
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/Lovelace/Zetafonts - Lovelace Text Bold Italic.otf') format('woff');
+}
+
+@font-face {
+    font-family: 'Silkscreen';
+    font-display: block;
+    font-style: normal;
+    font-weight: 300;
+    src: url('./Silkscreen/Silkscreen-Regular.ttf') format('woff');
+}
+@font-face {
+    font-family: 'Silkscreen';
+    font-display: block;
+    font-style: normal;
+    font-weight: 500;
+    src: url('./Silkscreen/Silkscreen-Bold.ttf') format('woff');
+}
+@font-face {
+    font-family: 'PF스타더스트';
+    font-display: block;
+    font-style: normal;
+    font-weight: 300;
+    src: url('./PF스타더스트.ttf') format('woff');
 }

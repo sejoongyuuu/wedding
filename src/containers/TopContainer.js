@@ -15,33 +15,34 @@ export default function TopContainer() {
     return (
         <div className={styles.container}>
             <Confetti ref={confettiRef}/>
-            <div className={styles.wedding}>
-                <div className="mask">
-                    <div className="reveal">THE<br/>WEDDING OF</div>
-                </div>
-            </div>
-            <div className={styles.name}>
-                <div className="mask">
-                    <div className="reveal_2" >SEJOONG</div>
-                </div>
-                <div className="mask">
-                    <div className="reveal_3">& YUJEONG
+
+
+            <div className="appear">
+                <div className={styles.imageDiv}>
+                    <div className={styles.image}>
+                        <Image src={picture} alt="" width="867.2" height="788"/>
                     </div>
                 </div>
-            </div>
-            <div className="appear">
-                <div className={styles.image}>
-                    <Image src={picture} alt="" width="867.2" height="788"/>
+                <div className={styles.wedding}>
+                    <div className="mask">
+                        <div className="reveal">The Wedding of</div>
+                    </div>
                 </div>
-                <div className={styles.saveTheDate}>
-                    <div className="reveal_4" style={{paddingTop: '3%'}}>Save the Date!</div>
+                <div className={styles.name}>
+                    <div className="mask">
+                        <div className="reveal_2">Sejoong · Yujeong
+                        </div>
+                    </div>
                 </div>
                 <div className="reveal_4">
                     <div className={styles.date}>
-                        2022.09.18 SUN 3:00 pm
+                        2022.09.18
                     </div>
-                    <div className={styles.kor}>
-                        소노펠리체 컨벤션
+                    <div className={styles.location} style={{letterSpacing: '1px'}}>
+                        SUN 15:00 SONO FELICE CONVENTION
+                    </div>
+                    <div className={styles.location} style={{paddingTop: '1%'}}>
+                        일요일 오후 3시 소노펠리체 컨벤션
                     </div>
                 </div>
             </div>

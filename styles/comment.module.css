@@ -24,6 +24,7 @@
     margin-right: 8%;
     margin-left: 8%;
     font-family: 'S-CoreDream';
+    background-color: #FBF7F4;
 }
 
 .comment {
@@ -37,12 +38,13 @@
 .name {
     color: #383838;
     padding-right: 4%;
-    font-weight: 500;
+    font-family:'PF스타더스트' ;
 }
 
 .content {
     font-weight: 300;
-    font-size: 95%;
+    font-size: 100%;
+    font-family:'PF스타더스트' ;
 }
 
 .date {

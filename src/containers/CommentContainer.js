@@ -5,7 +5,7 @@ import * as React from "react";
 export default function CommentContainer() {
     return (
         <div className={styles.container}>
-            <div className="titleDiv" style={{fontStyle: "italic"}}>
+            <div className="titleDiv">
                 Congratulatory Messages
             </div>
             <CommentComponent/>
