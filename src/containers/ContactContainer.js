@@ -27,7 +27,7 @@ export default function ContactContainer() {
                         </div>
                     </div>
                     <div style={{paddingRight: '15%'}}>
-                        <a href='tel:010-8875-8665'>
+                        <a href='tel:010-6510-9229'>
                             <div style={{width: '35%', margin: 'auto'}}>
                                 <Image src={telPink} alt=""/>
                             </div>

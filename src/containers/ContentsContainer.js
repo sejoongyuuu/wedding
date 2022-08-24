@@ -34,6 +34,10 @@ export default function ContentsContainer(prop) {
                         <Image src={flower} alt="" width="100" height="40"/>
                     </div>
                 </div>
+                <div className={styles.name}>
+                    김용석 · 김난주의 장남 김세중<br/>
+                    최성대 · 백순조의 장녀 최유정
+                </div>
             </Fade>
         </div>
     );
