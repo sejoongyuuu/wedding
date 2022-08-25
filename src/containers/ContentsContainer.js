@@ -22,7 +22,7 @@ export default function ContentsContainer(prop) {
                     <div>결혼합니다.</div>
                     <br/>
                     <br/>
-                    <div>소중한 분들을 </div>
+                    <div>소중한 분들을</div>
                     <div>모시고자 합니다.</div>
                     <br/>
                     <br/>
@@ -35,8 +35,8 @@ export default function ContentsContainer(prop) {
                     </div>
                 </div>
                 <div className={styles.name}>
-                    김용석 · 김난주의 장남 김세중<br/>
-                    최성대 · 백순조의 장녀 최유정
+                    <div>김용석 · 김난주의 장남 <span className="bold">김세중</span></div>
+                    <div style={{paddingTop: '3%'}}>최성대 · 백순조의 장녀 <span className="bold">최유정</span></div>
                 </div>
             </Fade>
         </div>
