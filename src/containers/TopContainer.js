@@ -14,24 +14,26 @@ export default function TopContainer() {
 
     return (
         <div className={styles.container}>
-            <div className="appear">
-                <div className={styles.imageDiv}>
+            <Confetti ref={confettiRef}/>
+            <div className="mask">
+                <div className="reveal">
                     <div className={styles.image}>
                         <Image src={picture} alt="" width="867.2" height="788"/>
                     </div>
                 </div>
-                <Confetti ref={confettiRef}/>
-                <div className={styles.wedding}>
-                    <div className="mask">
-                        <div className="reveal">The Wedding of</div>
+            </div>
+            <div className={styles.name}>
+                <div className="mask">
+                    <div className="reveal_2">Sejoong · Yujeong
                     </div>
                 </div>
-                <div className={styles.name}>
-                    <div className="mask">
-                        <div className="reveal_2" style={{paddingTop: '2%'}}>Sejoong · Yujeong
-                        </div>
-                    </div>
+            </div>
+            <div className={styles.wedding}>
+                <div className="mask">
+                    <div className="reveal">The Wedding</div>
                 </div>
+            </div>
+            <div className="appear">
                 <div className="reveal_4">
                     <div className={styles.date}>
                         2022.09.18
@@ -45,5 +47,6 @@ export default function TopContainer() {
                 </div>
             </div>
         </div>
-    );
+    )
+        ;
 }
