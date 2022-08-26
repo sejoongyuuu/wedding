@@ -297,8 +297,8 @@
 }
 
 @font-face {
-    font-family: 'Edwards';
+    font-family: 'Pacifico';
     font-display: block;
     font-style: normal;
-    src: url('./Edwards.otf') format('woff');
+    src: url('./Pacifico-Regular.ttf') format('woff');
 }

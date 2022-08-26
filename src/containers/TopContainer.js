@@ -38,7 +38,7 @@ export default function TopContainer() {
                     <div className={styles.date}>
                         2022.09.18
                     </div>
-                    <div className={styles.location} style={{letterSpacing: '1px'}}>
+                    <div className={styles.location} style={{letterSpacing: '1px', paddingTop: '3%'}}>
                         SUN 15:00 SONO FELICE CONVENTION
                     </div>
                     <div className={styles.location} style={{paddingTop: '1%'}}>
