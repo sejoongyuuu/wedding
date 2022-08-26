@@ -76,77 +76,81 @@ export default function CommentComponent() {
                     세중 & 유정에게<br/>
                     축하메시지를 남겨주세요!
                 </div>
-                <IconButton onClick={handleClick} >
+
+                <IconButton onClick={handleClick}>
                     <AddCircleRoundedIcon sx={{fontSize: 40, color: "#FFD966"}}/>
                 </IconButton>
-                {open &&
-                    <div>
-                        <div className={styles.write}>
-                            <Form size={'tiny'}>
-                                <div className={styles.alignLeft}>
-                                    <Form.Field
-                                        control={Input}
-                                        label='Name'
-                                        placeholder='이름'
-                                        name={"name"}
-                                        value={values.name}
-                                        error={touched.name && Boolean(errors.name) && {
-                                            content: '이름을 입력해주세요',
-                                            pointing: 'below',
-                                        }}
-                                        onChange={handleChange}
-                                    />
-                                    <Form.Field
-                                        control={TextArea}
-                                        rows={2}
-                                        label='Content'
-                                        placeholder='내용'
-                                        name={"content"}
-                                        value={values.content}
-                                        error={touched.content && Boolean(errors.content)&& {
-                                            content: '내용을 입력해주세요',
-                                            pointing: 'below',
-                                        }}
-                                        onChange={handleChange}
-                                        helperText={touched.content && errors.content}
-                                    />
-                                    <Form.Field
-                                        control={Input}
-                                        label='Password'
-                                        placeholder='비밀번호'
-                                        name={"password"}
-                                        value={values.password}
-                                        error={touched.password && Boolean(errors.password)&& {
-                                            content: '비밀번호를 입력해주세요',
-                                            pointing: 'below',
-                                        }}
-                                        onChange={handleChange}
-                                        helperText={touched.password && errors.password}
-                                    />
+                <div className={styles.container_2}>
+                    {open &&
+                        <div>
+                            <div className={styles.write}>
+                                <Form size={'tiny'}>
+                                    <div className={styles.alignLeft}>
+                                        <Form.Field
+                                            control={Input}
+                                            label='Name'
+                                            placeholder='이름'
+                                            name={"name"}
+                                            value={values.name}
+                                            error={touched.name && Boolean(errors.name) && {
+                                                content: '이름을 입력해주세요',
+                                                pointing: 'below',
+                                            }}
+                                            onChange={handleChange}
+                                        />
+                                        <Form.Field
+                                            control={TextArea}
+                                            rows={2}
+                                            label='Content'
+                                            placeholder='내용'
+                                            name={"content"}
+                                            value={values.content}
+                                            error={touched.content && Boolean(errors.content) && {
+                                                content: '내용을 입력해주세요',
+                                                pointing: 'below',
+                                            }}
+                                            onChange={handleChange}
+                                            helperText={touched.content && errors.content}
+                                        />
+                                        <Form.Field
+                                            control={Input}
+                                            label='Password'
+                                            placeholder='비밀번호'
+                                            name={"password"}
+                                            value={values.password}
+                                            error={touched.password && Boolean(errors.password) && {
+                                                content: '비밀번호를 입력해주세요',
+                                                pointing: 'below',
+                                            }}
+                                            onChange={handleChange}
+                                            helperText={touched.password && errors.password}
+                                        />
 
-                                </div>
-                                <Form.Group widths='equal' className={styles.buttonGroup}>
-                                    <Button circular color={"green"} icon='write' size='small' onClick={handleSubmit}/>
-                                </Form.Group>
-                            </Form>
+                                    </div>
+                                    <Form.Group widths='equal' className={styles.buttonGroup}>
+                                        <Button circular color={"green"} icon='write' size='small'
+                                                onClick={handleSubmit}/>
+                                    </Form.Group>
+                                </Form>
+                            </div>
+
                         </div>
-                    </div>
-                }
-                <CommentList
-                    loading={loading}
-                    comments={currentComments(comments)}
-                    getComments={getComments}
-                />
-                <div>
-                    <Pagination
-                        postsPerPage={commentsPerPage}
-                        totalPosts={totalCount}
-                        paginate={setCurrentPage}
-                        currentPage={currentPage}
+                    }
+                    <CommentList
+                        loading={loading}
+                        comments={currentComments(comments)}
+                        getComments={getComments}
                     />
+                    <div>
+                        <Pagination
+                            postsPerPage={commentsPerPage}
+                            totalPosts={totalCount}
+                            paginate={setCurrentPage}
+                            currentPage={currentPage}
+                        />
+                    </div>
                 </div>
             </div>
-
         </div>
     )
 }

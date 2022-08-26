@@ -293,12 +293,26 @@
     font-display: block;
     font-style: normal;
     font-weight: 300;
-    src: url('./PF스타더스트.ttf') format('woff');
+    src: url('./etc/PF스타더스트.ttf') format('woff');
 }
 
 @font-face {
     font-family: 'Pacifico';
     font-display: block;
     font-style: normal;
-    src: url('./Pacifico-Regular.ttf') format('woff');
+    src: url('./etc/Pacifico-Regular.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'Barcelony';
+    font-display: block;
+    font-style: normal;
+    src: url('./etc/Barcelony.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'QwitcherGrypen';
+    font-display: block;
+    font-style: normal;
+    src: url('./etc/QwitcherGrypen-Regular.ttf') format('woff');
 }
