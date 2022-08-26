@@ -24,13 +24,13 @@ export default function TopContainer() {
             </div>
             <div className={styles.name}>
                 <div className="mask">
-                    <div className="reveal_2">Sejoong · Yujeong
+                    <div className="reveal_2">Sejoong & Yujeong
                     </div>
                 </div>
             </div>
             <div className={styles.wedding}>
                 <div className="mask">
-                    <div className="reveal">The Wedding</div>
+                    <div className="reveal_3">The Wedding</div>
                 </div>
             </div>
             <div className="appear">
