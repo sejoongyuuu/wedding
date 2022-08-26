@@ -24,8 +24,7 @@ export default function TopContainer() {
             </div>
             <div className={styles.name}>
                 <div className="mask">
-                    <div className="reveal_2">Sejoong · Yujeong
-                    </div>
+                    <div className="reveal_2">SEJOONG <span className={styles.and}>and</span> YUJEONG</div>
                 </div>
             </div>
             <div className={styles.wedding}>
