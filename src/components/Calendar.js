@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
         fontSize: '95%', textAlign: "center", width: 30, height: 30, fontWeight: '300'
     },
     checkedDay: {
-        backgroundColor: '#5BB372', color: '#ffffff !important', borderRadius: '100%', fontWeight: '500'
+        backgroundColor: '#ff7b69', color: '#ffffff !important', borderRadius: '100%', fontWeight: '500'
     },
     sunday: {color: '#ff4c29'},
     none: {visibility: 'hidden'}

@@ -6,7 +6,7 @@ export default function CommentContainer() {
     return (
         <div className={styles.container}>
             <div className="titleDiv">
-                Congratulatory Messages
+                Guest Book
             </div>
             <CommentComponent/>
         </div>

@@ -128,7 +128,7 @@ export default function CommentComponent() {
 
                                     </div>
                                     <Form.Group widths='equal' className={styles.buttonGroup}>
-                                        <Button circular color={"green"} icon='write' size='small'
+                                        <Button circular color={"red"} icon='write' size='small'
                                                 onClick={handleSubmit}/>
                                     </Form.Group>
                                 </Form>

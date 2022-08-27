@@ -4,16 +4,12 @@
 }
 
 .container_2{
-    background-color: #f5f5f5;
+    background-color: #fcf3f3;
     padding-top: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
-
-.text{
-    font-family: "UhBeeMiMi";
-    font-size: 150%;
-    padding-bottom: 5%;
-}
 .write{
     margin-right: 8% !important;
     margin-left: 8% !important;
