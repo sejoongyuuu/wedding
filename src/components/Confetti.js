@@ -24,7 +24,7 @@ const Confetti = () => {
             ...opts,
             origin: {y: 0.7},
             particleCount: Math.floor(200 * particleRatio),
-            colors: ['#ff5977', '#fff561']
+            colors: ['#ff5977', '#f1b647', '#5ae8af']
         });
     }, []);
 
