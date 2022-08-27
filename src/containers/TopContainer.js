@@ -15,10 +15,7 @@ export default function TopContainer() {
 
     return (
         <div>
-            <div style={{
-                margin: '3% 3%',
-                border: '1px solid #cbcbcb'
-            }}>
+            <div className={styles.container}>
                 <Confetti ref={confettiRef}/>
                 <div className="appear">
                     <div className={styles.image}>

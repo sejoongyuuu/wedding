@@ -1,6 +1,7 @@
 .container {
     margin: 3% 3%;
     border: 1px solid #cbcbcb;
+    border-radius: 50vw 50vw 0px 0px;
 }
 
 .wedding {
@@ -40,6 +41,7 @@
     letter-spacing: 1px;
 
 }
+
 .location{
     font-weight: 300;
     line-height: 110%;
@@ -57,7 +59,7 @@
 }
 
 .image {
-    padding-top: 18%;
+    padding-top: 23%;
     width: 80%;
     margin: auto;
 }
