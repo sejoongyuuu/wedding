@@ -13,7 +13,7 @@ export default function MainContainer() {
     const Footer = dynamic(() => import("../src/components/footer"),)
 
     return (
-        <div>
+        <div >
             <TopContainer/>
             <ContentsContainer/>
             <CalendarContainer/>

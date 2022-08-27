@@ -297,6 +297,14 @@
 }
 
 @font-face {
+    font-family: 'Edwards';
+    font-display: block;
+    font-style: normal;
+    src: url('./etc/Edwards.otf') format('woff');
+}
+
+
+@font-face {
     font-family: 'Pacifico';
     font-display: block;
     font-style: normal;
