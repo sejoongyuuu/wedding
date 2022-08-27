@@ -35,12 +35,12 @@ body {
 }
 
 .titleDiv {
-    font-family: 'Noto Serif';
+    font-family: 'Lovelace';
     font-weight: 300;
-    font-size: 130%;
+    font-size: 120%;
     padding-bottom: 5%;
     color: #464646;
-    letter-spacing: 0px;
+    letter-spacing: 3px;
 }
 
 td {
