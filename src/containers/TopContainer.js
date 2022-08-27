@@ -30,10 +30,9 @@ export default function TopContainer() {
                         <div className="reveal_3"><span className={styles.and}>and</span> YUJEONG</div>
                     </div>
                 </div>
-
                 <div className="appear">
                     <div style={{paddingLeft: '20%', paddingRight: '20%', marginTop: '10%', marginBottom: '3%'}}>
-                        <Divider><Image src={star} alt=""/></Divider>
+                        <Divider><Image src={star} alt="" width="19" height="19"/></Divider>
                     </div>
                 </div>
                 <div className={styles.date}>
