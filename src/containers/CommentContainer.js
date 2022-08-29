@@ -5,9 +5,6 @@ import * as React from "react";
 export default function CommentContainer() {
     return (
         <div className={styles.container}>
-            <div className="titleDiv">
-                Guest Book
-            </div>
             <CommentComponent/>
         </div>
     );
