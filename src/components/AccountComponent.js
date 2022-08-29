@@ -156,7 +156,7 @@ export default function AccountComponent() {
                             <div>
                                 <span className="bold">백순조</span><span className="regular"> · 신부 모</span>
                                 <div style={{display: 'flex'}}>
-                                    <div>국민은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>444401-04-064755</span>
+                                    <div>국민은행&nbsp;&nbsp;<span style={{letterSpacing: '0.5px'}}>444001-04-064755</span>
                                     </div>
                                     <CopyToClipboard text='444401-04-064755'>
                                         <ColorButton size='small' onClick={handleClick}>복사</ColorButton>
