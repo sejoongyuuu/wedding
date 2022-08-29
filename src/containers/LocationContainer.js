@@ -32,7 +32,7 @@ export default function LocationContainer() {
                 </div>
             </Fade>
             <Box className={styles.detailContainer}>
-                <Fade>
+                <Fade bottom>
                     <table style={{textAlign: 'left'}}>
                         <tr>
                             <td className={styles.title}>
