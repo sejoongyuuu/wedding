@@ -8,7 +8,7 @@ import telBlue from '../../public/images/picture/tel_blue.PNG';
 export default function ContactContainer() {
     return (
         <div className={styles.container}>
-            <Fade>
+            <Fade bottom>
                 <div className='titleDiv'>Contact</div>
                 <div>
                     참석이 어려우신 분들을 위해<br/>

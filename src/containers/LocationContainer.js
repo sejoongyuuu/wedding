@@ -13,7 +13,7 @@ import {Box} from "@mui/material";
 export default function LocationContainer() {
     return (
         <div className={styles.container}>
-            <Fade>
+            <Fade bottom>
                 <div className="titleDiv"> Location</div>
                 <div style={{paddingBottom: '5%'}}>
                     <div className="bold" style={{fontSize: '110%'}}>

@@ -13,7 +13,7 @@ export default function ContentsContainer(prop) {
 
     return (
         <div className={styles.container}>
-            <Fade>
+            <Fade bottom>
                 <div className="titleDiv">
                     <div>Invitation</div>
                 </div>
